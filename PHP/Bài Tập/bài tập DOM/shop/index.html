@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="asset/css/main.css">
     
     <title>MOSI</title>
+    <style>
+        .btn-add{
+            color: #fff;
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
     <div class="header__navbar">
@@ -20,16 +26,15 @@
             <span class="menu"> Menu</span>
             <div class="input">
                 <span class="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28.22"><g id="_01_align_center" data-name="01 align center"><path d="M24,22.586l-6.262-6.262a10.016,10.016,0,1,0-1.414,1.414L22.586,24ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z"/></g></svg></span>
-                 <input type="text" placeholder="Search">
+                <input type="text" placeholder="Search">
             </div>
         </div>   
             <div class="item_mosi">
             <span class="mosi"> MOSI</span>
             </div>
-           
         <div style="width: 381.97px;" class="header__right">
             <span class="masi"> My MASI</span>
-             <span class="cart"> <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="39.87" height="40.19"><path d="M24,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H0V2H1.222a1,1,0,0,1,.993.883L3.8,16.351A3,3,0,0,0,6.778,19H20V17H6.778a1,1,0,0,1-.993-.884L5.654,15H21.836Z"/><circle cx="7" cy="22" r="2"/><circle cx="17" cy="22" r="2"/></svg></span>
+            <span class="cart"> <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="39.87" height="40.19"><path d="M24,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H0V2H1.222a1,1,0,0,1,.993.883L3.8,16.351A3,3,0,0,0,6.778,19H20V17H6.778a1,1,0,0,1-.993-.884L5.654,15H21.836Z"/><circle cx="7" cy="22" r="2"/><circle cx="17" cy="22" r="2"/></svg></span>
 
         </div>                       
         
@@ -45,13 +50,21 @@
         <div class="container">
             <div class="title">
                 <strong>TOÀN BỘ SẢN PHẨM</strong>
-                <div style="display: flex;align-items: center;
-                ">
-                    <span style=" margin-right:26px"> SẮP XẾP</span>
-                    <div class="item_mn">
-                    Mới nhất <i class="fa-solid fa-angle-down"></i>
+                <div style="display: flex;align-items: center;">
+                    <section></section>
+                    <section class="container"></section>
+                    <span style=" margin-right:20px"> SẮP XẾP</span>
+                    <div  class="category">
+                        <select style="margin-right: 10px;" id="search-category">
+                            <option value=""> Lọc Sản Phẩm</option>
+                            <option value="Quần"> Quần</option>
+                            <option value="Áo"> Áo</option>
+                        </select>
                     </div>
-                </div>
+                    <div class="btn">
+                        <button style="width: 59px;" id="btn-search"  ">Search</button>
+                    </div>
+                </div>    
 
             </div>
 
@@ -61,14 +74,15 @@
                         <img src="../shop/asset/img/" alt="">
                     </div>
                     <div>
-                        <button class="block" style="background-color: var(--black-color);"></button>
-                        <button class="block"></button>
-                        <button class="block" style="background-color: var(--blue-color);"></button> 
+                        <button class="block" style="background-color: var(--black-color);"> </button>
+                        <button class="block"> </button>
+                        <button class="block" style="background-color: var(--blue-color);"> </button> 
                     </div>
                     <div>
-                        <span> </span></br>
-                        <span> <strong></strong> </span>
+                        <span>  </span></br>
+                        <span> <strong> </strong> </span>
                     </div>
+                    <button class="btn-add" style="width: auto; margin-bottom: 10px" class="btn-add"> THÊM GIỎ HÀNG </button>
                 </div>
             </div>
 
@@ -77,7 +91,7 @@
             <div>
                 <div class="content">
                     <div class="content__img"> 
-                        <img src="/shop/asset/img/image 9.png" alt="">
+                        <img src="../shop/asset/img/image 9.png" alt="">
                     </div>
                 
                     <div class="h2">  

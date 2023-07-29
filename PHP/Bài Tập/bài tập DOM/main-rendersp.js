@@ -73,10 +73,10 @@ for (let i = 0; i < productSearch.length; i++) {
         <div>
                 <span>
                 <a  id="information-1" style="color: rgb(127, 157, 255) !important;"
-                href="ttsp.html?id=1"> ${productSearch[i].name} </a></span><br>
+                href="ttsp.html?id=1">MSP : ${productSearch[i].id} <br>${productSearch[i].name} </a></span><br>
                 <span ><strong> ${productSearch[i].price.toLocaleString()} Đ </strong></span>
         </div>
-        <button class="btn-add"> THÊM </button>
+        <button  id = " add_product" style="width: auto;  margin-bottom: 10px" class="btn-add"> THÊM GIỎ HÀNG </button>
         </div>
     ` 
 }
