@@ -1,0 +1,19 @@
+:root{
+    --black-color:#000000;
+    --while-color:#fff;
+    --blue-color:#BFECFF;
+}
+
+html{
+    background-color: #F5F5F5;
+    line-height:24.2px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    
+   
+    width:1830px;
+    height: 5302px;
+    width: 100%;
+    
+ 
+}

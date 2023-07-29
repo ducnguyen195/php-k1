@@ -1,0 +1,64 @@
+@@ -1,63 +0,0 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		background-image: url(./image/background.jpg);
+		
+	}
+	label{
+		font-size: 20px;
+		color:blanchedalmond;
+	}
+
+	.block{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		margin-top: 20%;
+	}
+	
+	
+	
+	#signup{
+		padding: 10px 30px;
+		background-color: rgb(102, 159, 160);
+		border-radius: 10px;
+		border: none;
+	}
+	a{
+		display: flex;
+		justify-content:end;
+	}
+	
+
+
+
+</style>
+<body>
+	<div class="block">
+		<form  >
+			<label for="username">Tên đăng nhập</label> <br>
+			<input type="text" id="username" name="username"> <br>
+			<label for="password">Mật khẩu</label>  <br>
+			<input type="password" id="password" name="password"> <span> </span> <br>
+			
+			<div class="box__signup">
+				<label for="">Nhập lại mật khẩu</label><br>
+				<input type="password" id="enter-password"><br>
+				
+			</div>
+			<a href="login.html">Login</a> <br>
+			<button id="signup">Sign Up</button>
+		  </form>
+		  
+	</div>
+	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script src="./main-login.js"></script>
+</body>
+</html>
