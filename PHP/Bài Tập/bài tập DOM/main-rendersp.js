@@ -63,7 +63,7 @@ for (let i = 0; i < productSearch.length; i++) {
     html += `
         <div>
         <div class="img">
-            <img src="/shop/asset/img/${productSearch[i].img}" alt="">
+            <img src="../shop/asset/img/${productSearch[i].img}" alt="">
         </div>
         <div>
             <button class="block" style="background-color: var(--black-color);"> </button>

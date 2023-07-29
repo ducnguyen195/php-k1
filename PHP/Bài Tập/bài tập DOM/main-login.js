@@ -7,7 +7,6 @@ $(document).ready(function(){
     
             let users = JSON.stringify(user);
             localStorage.setItem('user',users);
-            window.location.href('login.html') 
             alert('Đăng Ký Thành Công');     
       });             
 
