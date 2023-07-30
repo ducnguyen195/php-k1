@@ -73,10 +73,10 @@ for (let i = 0; i < productSearch.length; i++) {
         <div>
                 <span>
                 <a  id="information-1" style="color: rgb(127, 157, 255) !important;"
-                href="ttsp.html?id=1">MSP : ${productSearch[i].id} <br>${productSearch[i].name} </a></span><br>
+                href="ttsp.html?id=1">MSP : ${productSearch[i].name} </a></span><br>
                 <span ><strong> ${productSearch[i].price.toLocaleString()} Đ </strong></span>
         </div>
-        <button  id = " add_product" style="width: auto;  margin-bottom: 10px" class="btn-add"> THÊM GIỎ HÀNG </button>
+        <button  id = "add-product" onclick ="handleAdd() ${products[i].id}" style="width: auto;  margin-bottom: 10px" class="btn-add"> THÊM GIỎ HÀNG </button>
         </div>
     ` 
 }
@@ -97,3 +97,11 @@ $('#btn-search').click( function(){
     }
     renderUI(productSearch); 
 });
+
+function handleAdd() {
+console.log('alo');
+
+
+};
+
+
