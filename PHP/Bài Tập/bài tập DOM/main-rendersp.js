@@ -1,4 +1,4 @@
-let products = [
+const products = [
     {
         id: 1,
         name: 'Áo Phông Masi Basic  ',
@@ -73,10 +73,10 @@ for (let i = 0; i < productSearch.length; i++) {
         <div>
                 <span>
                 <a  id="information-1" style="color: rgb(127, 157, 255) !important;"
-                href="ttsp.html?id=1">MSP : ${productSearch[i].name} </a></span><br>
+                href="ttsp.html?id=1">MSP : ${products[i].id} <br> ${productSearch[i].name} </a></span><br>
                 <span ><strong> ${productSearch[i].price.toLocaleString()} Đ </strong></span>
         </div>
-        <button  id = "add-product" onclick ="handleAdd() ${products[i].id}" style="width: auto;  margin-bottom: 10px" class="btn-add"> THÊM GIỎ HÀNG </button>
+        <button  id = "add-product" onclick ="handleAdd(${products[i].id})"onclick="renderAddProduct(${products[i].id})" style="width: auto;  margin-bottom: 10px" class="btn-add"> THÊM GIỎ HÀNG </button>
         </div>
     ` 
 }
@@ -90,18 +90,21 @@ $('#btn-search').click( function(){
 
     let productName = $('#search-category').val();
     let productSearch = products;
-    console.log(productName);
     if(productName){
         productSearch = productSearch.filter(e => e.name.includes(productName));
-        console.log(productSearch);
     }
     renderUI(productSearch); 
 });
 
-function handleAdd() {
-console.log('alo');
-
-
+function handleAdd(id) {
+    let product = products.find(e => e.id ===id);
+    console.log(product);
+    let data = JSON.stringify(product);
+    localStorage.setItem('Add',data);
+    
 };
+handleAdd()
+
+
 
 

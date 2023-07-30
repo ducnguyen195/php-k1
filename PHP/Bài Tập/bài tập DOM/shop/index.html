@@ -36,7 +36,7 @@
             </div>
         <div style="width: 381.97px;" class="header__right">
             <span class="masi"> My MASI</span>
-            <span class="cart"> <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="39.87" height="40.19"><path d="M24,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H0V2H1.222a1,1,0,0,1,.993.883L3.8,16.351A3,3,0,0,0,6.778,19H20V17H6.778a1,1,0,0,1-.993-.884L5.654,15H21.836Z"/><circle cx="7" cy="22" r="2"/><circle cx="17" cy="22" r="2"/></svg></span>
+            <span class="cart"> <a onclick="renderAddProduct()" href="../cart.html"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="39.87" height="40.19"><path d="M24,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H0V2H1.222a1,1,0,0,1,.993.883L3.8,16.351A3,3,0,0,0,6.778,19H20V17H6.778a1,1,0,0,1-.993-.884L5.654,15H21.836Z"/><circle cx="7" cy="22" r="2"/><circle cx="17" cy="22" r="2"/></svg></span></a>
 
         </div>                       
         
@@ -55,9 +55,9 @@
                 <div style="display: flex;align-items: center;">
                     <section></section>
                     <section class="container"></section>
-                    <span style=" margin-right:20px"> SẮP XẾP</span>
+                    <span style=" margin-right:20px; font-size: 20px;"> SẮP XẾP</span>
                     <div  class="category">
-                        <select style="margin-right: 10px;" id="search-category">
+                        <select  style="margin-right: 10px; font-size: 20px;" id="search-category">
                             <option value=""> Lọc Sản Phẩm</option>
                             <option value="Quần"> Quần</option>
                             <option value="Áo"> Áo</option>
@@ -66,8 +66,7 @@
                     <div class="btn">
                         <button style="width: 59px;" id="btn-search"  ">Search</button>
                     </div>
-                </div>    
-
+                </div> 
             </div>
 
             <div id="products" class="box">
@@ -83,8 +82,8 @@
                     <div>
                         <span>  </span></br>
                         <span> <strong> </strong> </span>
-                    </div>
-                    <button id = "add-product" onclick="handleAdd()" class="btn-add" style="width: auto; margin-bottom: 10px" class="btn-add"> THÊM GIỎ HÀNG </button>
+                    </div onclick="handleAdd()">
+                    <button id = "add-product" class="btn-add" style="width: auto; margin-bottom: 10px" class="btn-add"> THÊM GIỎ HÀNG </button>
                 </div>
             </div>
 
