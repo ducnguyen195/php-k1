@@ -1,22 +1,28 @@
-function renderAddProduct(){
-    let render ='';
-    let ProductUser = localStorage.getItem('Add')
-    console.log(ProductUser);
-        let data =JSON.parse(ProductUser);
-        console.log(data); 
-    for (let i = 0; i < data.length; i++) {   
-        console.log(data); 
-    render +=`
+let getData = () => {
+    let value = localStorage.getItem("Add");
+    if(value){
+        return JSON.parse(value);
+    }
+    return 'Chưa có sản phẩm nào'
+}
+
+let listAddCart = getData();
+    
+    function renderAddProduct(listAddCart) { 
+        let html = '';
+        for (let i = 0; i < listAddCart.length; i++) {   
+        console.log(listAddCart);  
+    html +=`
     <li class="row">
                     <div class="col left">
                         <div class="thumbnail">
                             <a href="#">
-                                <img src="../shop/asset/img/${data.img}" alt="" />
+                                <img src="./shop/asset/img/${data[i].img}" alt="" />
                             </a>
                         </div>
                         <div class="detail">
-                            <div class="name"><a href="#">${data.name}</a></div>
-                            <div class="price">${data.price.toLocaleString()} Đ</div>
+                            <div class="name"><a href="#">${data[i].name}</a></div>
+                            <div class="price">${data.price[i].toLocaleString()} Đ</div>
                         </div>
                     </div>
 
@@ -33,11 +39,10 @@ function renderAddProduct(){
 
     `
     }
-    $('.products-add').html(render);
-    console.log();
-
+    $('.products-add').html(html);
 }
-renderAddProduct();
+renderAddProduct(listAddCart);
+
 
 
 

@@ -95,10 +95,11 @@ $('#btn-search').click( function(){
     }
     renderUI(productSearch); 
 });
-
+let randomArr = Math.floor(Math.random() *10);
+console.log(randomArr);
 function handleAdd(id) {
     let product = products.find(e => e.id ===id);
-    console.log(product);
+    
     let data = JSON.stringify(product);
     localStorage.setItem('Add',data);
     
