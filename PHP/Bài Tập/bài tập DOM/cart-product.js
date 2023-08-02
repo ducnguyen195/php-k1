@@ -3,10 +3,10 @@ let getData = () => {
     if(value){
         return JSON.parse(value);
     }
-    return 'Chưa có sản phẩm nào'
+    return [];
 }
 
-let listAddCart = getData();
+const listAddCart = getData();
     
     function renderAddProduct(listAddCart) { 
         let html = '';
