@@ -11,7 +11,7 @@ section{
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url("../image/background6.jpg")no-repeat;
+    background: url("../image/background8.jpg")no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -54,7 +54,7 @@ h2{
 }
 
 input:focus ~ label,
-input:valid {
+input:valid ~ label{
 top: -5px;
 }
 
@@ -106,7 +106,7 @@ button{
     background: #fff;
     border: none;
     outline: none;
-    cursor: pointer;
+    cursor:pointer;
     font-size: 1em;
     font-weight: 600;
 }
