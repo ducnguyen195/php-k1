@@ -7,20 +7,62 @@
     <link rel="icon" type="image/png" sizes="16x16"  href="./html/image/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./html/css/style.css">
 </head>
 <body>
-<div class="title">
-    <div class="login"> ĐĂNG NHẬP</div>
-    <div class="register">ĐĂNG KÝ</div>
+<div class="aiz-main-wrapper">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="title col-lg-5">
+            <div class="title__item title-hotline"> 
+                <ion-icon name="call-outline"></ion-icon>
+                Hotline : 09.12.18.2772 
+            </div>
+            <div class="title__item title-login"><a href="./html/login.html"> ĐĂNG NHẬP </a></div>
+            <div class="title__item title-register"><a href="./html/signup.html"> ĐĂNG KÝ </a></div>
+        </div>
+    </div>
 </div>
 <div class="hearder">
-    <div class="logo">
-        <img src="" alt="">
+    <div class="hearder__logo">
+        <a href="index.html"> <img src="./html/image/logo.png" alt="Logo" width="100px" height="100px"> </a>
     </div>
     <div>
-        
+        <div class="hearder__search">
+            <input type="text" placeholder="Tìm sản phẩm cần mua..">
+        </div>
+        <div class="hearder__search-icon">
+            <ion-icon name="search-outline"></ion-icon>
+        </div>
     </div>
+    <div class="icon__cart">
+        <div class="like">
+            <ion-icon name="heart-outline"></ion-icon>
+        </div>
+        <div  class="cart">
+            <ion-icon name="cart-outline"></ion-icon>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <ul>
+        <li> <a href="index.html"> Trang Chủ</a> </li>
+        <li> <a href=""> Tất Cả Danh Mục </a></li>
+        <li> <a href=""> Nhãn Hiệu</a></li>
+        <li> <a href=""> Blog </a> </li>
+    </ul>
 
 </div>
+</div>
+
+
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
