@@ -9,17 +9,20 @@ body{
 }
 
 .container-fluid{
-    border: 1px solid;
+    border-top: 1px solid;
     border-color: #d6d6db;
     display: inline-block;
     justify-content: center;
     padding: .5em;
+    box-shadow: 0 2px 0 0 #f1f1f4;
 }
 
 .row{
     display: flex;
     justify-content: end;
-    border: 1px 0 solid;
+    border-bottom: 1px  solid;
+    padding-bottom:5px;
+    border-color: #d6d6db;
 }
 
 .title{
@@ -53,8 +56,12 @@ body{
 
 .hearder{
     display: flex;
-    margin-top:30px;
+    margin-top:20px;
     justify-content: space-around;
+}
+
+.hearder__logo{
+    margin-top: -20px;
 }
 
 .hearder__input{
@@ -62,44 +69,83 @@ body{
     margin-left: -150px;
 
 }
+
+.menu{
+    margin-top: 1.8em;
+    height: 37px;
+    width: 50px;
+    background-color: #e4e1e1 ;
+    margin-right:20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.menu ion-icon{
+    margin: 6px 0 0 4px;
+    width: 25px;
+    height: 25px;
+}
+.arrow{
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 1px;
+    right:5px ;
+}
+
 .hearder__search{
     padding: 20px 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .hearder__search input{
-    padding: 11px 200px;
+    padding: .3em 100px;
+    border: 1px solid #e2e5ec ;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius:5px;
     
 }
 
 .hearder__search-icon {
     border: 1px solid;
     width: 53px;
-    height: 49px;
-    margin-top: 40px; 
+    height: 36px;
+    margin-top: 30px; 
     background-color: red;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border: none;
+    position: relative;
 }
 
 .hearder__search-icon ion-icon{
-    margin: 8px;
-    width: 36px;
-    height: 31px;
+    margin: 5px;
+    width: 28px;
+    height: 28px;
+    margin-left: 13px;
+    color: #e1dede;
+    position: absolute;
+    top: 0;
+    left:0;
 }
 .icon__cart {
     display: flex;
     font-weight: 300;
-    margin-top: 29px;  
+    margin-top: 23px; 
+    margin-left: 40px; 
 }
 
 .icon__cart ion-icon{
     display: flex;
-    width: 36px;
-    height: 31px;
+    width: 30px;
+    height: 25px;
     
+}
+
+strong {
+    font-size:.7em;
 }
 
 .like{
@@ -111,7 +157,7 @@ body{
 .like p{
     position: absolute;
     top: -5px;
-    right: 93px;
+    right: 50px;
     background-color: red;
     width: 20px;
     height: 20px;
@@ -129,7 +175,7 @@ body{
 .cart p{
     position: absolute;
     top: -3px;
-    right: 12px;
+    right: -8px;
     background-color: red;
     padding: 0px 3px;
     border-radius: 50%;
@@ -138,17 +184,66 @@ body{
     font-weight: 600;
     color: #ffff;
     padding-left:6px;
-    font-size: 13px;
+    font-size: 12px;
+}
+
+.nav{
+    height:2em;
+    border-top:1px solid;
+    margin-top:10px;
+    border-color: #f0f0f1;
 }
 
 .nav__item{
     display: flex;
     margin: 0 auto;
     list-style-type: none;
+    margin-top: 10px;
 }
 .nav__item > li{
     margin-left:30px ;
+    color: #6b6b7a;
+    font-weight: 500;    
 }
 
+.nav__item li a{
+    color: #6b6b7a;
+    font-weight: 500;
+}
+
+.container-1{
+    background-color: antiquewhite;
+}
+
+.hover__menu{
+    margin-top:10px;
+    margin-left: -170px;
+    width: 220px;
+    border-radius: 2px #e1dede ;
+    position: relative;
+    display: none;
+}
+
+.hover__menu li{
+    list-style-type:none;  
+}
+.menu__before{
+    background-color: rgb(244, 244, 242);
+    margin-top:-8px;
+}
+h6{
+    background-color:rgba(238, 71, 45, 0.707);
+    padding-top:10px;
+}
+.hover__menu ion-icon{
+    position: absolute;
+    top:-22px ;
+    right: 23px;
+    color: burlywood ;
+}
+/* HOVER */
+.hearder__search-icon:hover{
+    background-color: #2828b6;
+}
 
 
