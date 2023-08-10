@@ -57,3 +57,98 @@ body{
     justify-content: space-around;
 }
 
+.hearder__input{
+    display: flex;
+    margin-left: -150px;
+
+}
+.hearder__search{
+    padding: 20px 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 20px;
+}
+
+.hearder__search input{
+    padding: 11px 200px;
+    
+}
+
+.hearder__search-icon {
+    border: 1px solid;
+    width: 53px;
+    height: 49px;
+    margin-top: 40px; 
+    background-color: red;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.hearder__search-icon ion-icon{
+    margin: 8px;
+    width: 36px;
+    height: 31px;
+}
+.icon__cart {
+    display: flex;
+    font-weight: 300;
+    margin-top: 29px;  
+}
+
+.icon__cart ion-icon{
+    display: flex;
+    width: 36px;
+    height: 31px;
+    
+}
+
+.like{
+    margin-left: -200px;
+    margin-right: 30px;
+    position: relative;  
+}
+
+.like p{
+    position: absolute;
+    top: -5px;
+    right: 93px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding-left:6px;
+    font-weight: 600;
+    color: #ffff;
+    font-size: 13px;
+}
+
+.cart{
+    position: relative;
+}
+
+.cart p{
+    position: absolute;
+    top: -3px;
+    right: 12px;
+    background-color: red;
+    padding: 0px 3px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-weight: 600;
+    color: #ffff;
+    padding-left:6px;
+    font-size: 13px;
+}
+
+.nav__item{
+    display: flex;
+    margin: 0 auto;
+    list-style-type: none;
+}
+.nav__item > li{
+    margin-left:30px ;
+}
+
+
+
