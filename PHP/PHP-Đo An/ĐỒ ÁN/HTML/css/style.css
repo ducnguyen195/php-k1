@@ -7,6 +7,7 @@
 body{
     color: #1b1b28;
     background-color: #ededed;
+    opacity: 1;
 }
 
 .container-fluid{
@@ -16,7 +17,6 @@ body{
     justify-content: center;
     padding: .5em;
     box-shadow: 0 2px 0 0 #f1f1f4;
-    background-color: #ffff;
     border-bottom: 1px solid;
 }
 
@@ -149,7 +149,7 @@ body{
     height: 25px;
 }
 
-strong {
+.cart strong, .like strong {
     font-size:.7em;
 }
 
@@ -241,8 +241,8 @@ strong {
 }
 
 .menu__before{
-    background-color: rgba(240, 240, 240, 0.489);
     margin-top:-8px;
+    background-color: #ffff;
 }
 
 h6{
@@ -268,6 +268,7 @@ h6{
 
 .menu:hover > .hover__menu{
     display: block;
+    z-index: 2;
 }
 .carousel-inner{
     margin-right:10px
@@ -283,7 +284,6 @@ h6{
 }
 
 .item__img-2 img{
-    width: ;
     height: 195px;
 }
 
@@ -311,6 +311,7 @@ h6{
 .item__img-8 img{
     margin-left: -1px;
 }
+
 .item__img-9 img{
     margin-left:-2px
 }
@@ -318,11 +319,120 @@ h6{
 .item__img-10{
     margin-top:30px;
 }
+
 .item__img-10 img{
     width: 100%;
 }
 
+.list__product__sample{
+    margin-top: 20px;
+    box-shadow:2px  ;
+    border-radius: 5px;
+    opacity: 2;
+    background-color: #ffff;
+}
 
+.list__sample{
+    align-items: center;
+    display: flex;
+    border-bottom:1px solid   #e1dede;
+    justify-content: space-between;
+    width: 100%;
+    height: 4em;
+    font-weight: 600;
+
+}
+
+.food{
+    margin-left:33px;
+    margin-bottom:0px
+}
+
+.btn__more{
+    margin-right:33px;
+    outline: none;
+    border: none;
+}
+
+.element-list{
+    margin-top:20px;
+    margin-left: .4px;
+}
+
+
+
+.product{
+    display: flex;
+}
+
+.list__products{
+    border: 1px solid  rgb(233, 232, 232);
+    padding-bottom: 20px;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.list__products:hover{
+    box-shadow: 3px 5px 4px 0px rgb(233, 232, 232);
+}
+
+.list__products img{
+    border-radius: 5px;
+}
+.product-imfor{
+    padding-left: 10px;
+}
+
+.product-imfor p{
+    margin-top:15px;
+}
+
+.product-img img{
+    width: 100%;
+}
+
+.product-1 img{
+    width: 100%;
+
+}
+
+.product-imfor a{
+    text-decoration: none;
+}
+.ion-star{
+    margin-top: -8px;
+}
+
+.list__product__sample{
+    padding-bottom:30px;
+}
+
+.item-brand img{
+    width: 100%;
+}
+
+.brand{
+    background-color: #FFFF;
+    margin-top: 30px;
+}
+
+.block__brand{
+    display: flex;
+}
+
+.brand-item{
+    border-bottom:1px solid rgb(233, 232, 232);
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.brand-item p{
+    font-weight:600;
+    font-size: 25px;
+    margin-bottom: 0;
+
+}
 
 
 
