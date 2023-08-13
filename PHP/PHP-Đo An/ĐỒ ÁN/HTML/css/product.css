@@ -1,0 +1,48 @@
+.list-detail{
+    list-style-type: none;
+}
+
+.css__tag-list{
+    background-color: antiquewhite;
+}
+
+.detail-tag{
+    margin-top: 15px;
+}
+
+.block__list-detail{
+    box-shadow:2px 3px 4px 0 rgba(155, 153, 152, 0.519);
+}
+
+.list-detail a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.list-detail li{
+    margin-left:10px;
+    padding-bottom:10px;
+}
+
+.list-detail a:hover{
+    color: blue;
+}
+.product-img{
+    margin-right: 10px;
+    
+}
+
+.search-section{
+    margin-right:15px;
+}
+
+.product-imfor a{
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 20px;
+}
+.product-imfor p{
+    font-weight: 600;
+    font-size: 20px;
+}
