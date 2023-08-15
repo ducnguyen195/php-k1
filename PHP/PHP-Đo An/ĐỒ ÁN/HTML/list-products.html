@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="./css/product.css">
 </head>
 <body>
-
 <div class="container-fluid  container-header">
     <div class="row title-row">
-        <div class="title col-lg-5">
+        <div class="title col-lg-5 col-md-5">
             <div class="title__item title-hotline"> 
                 <ion-icon name="call-outline"></ion-icon>
                 Hotline : 09.12.18.2772 
@@ -29,31 +28,32 @@
     <div class="sticky sticky-top" >
         <div class="hearder">
             <div class="hearder__logo">
-                <a href="index.html"> <img src="./image/logosam.jpg" alt="Logo" width="150px" height="100px"> </a>
+                <a href="../index.html"> <img src="../html/image/logosam.jpg" alt="Logo" width="150px" height="100px"> </a>
+            </div>
+            <div class="menu">
+                <ion-icon name="menu-outline"></ion-icon> 
+                <ion-icon class="arrow" style="width: 17px" name="chevron-down-outline"></ion-icon>
+                <div class="hover__menu">
+                    <h6>  Thể Loại <ion-icon name="caret-up-outline"></ion-icon> </h6>
+                    <ul class="menu__before">
+                        <li> <a href=""> Nông sản </a> </li>
+                        <li> <a href=""> Thực Phẩm </a> </li>
+                        <li> <a href=""> Bánh Kẹo </a> </li>
+                        <li> <a href=""> Gia Vị </a> </li>
+                        <li> <a href=""> Thủy Hải Sản </a> </li>
+                        <li> <a href=""> Đồ Chơi </a> </li>
+                        <li> <a href=""> Ô Tô & Xe Máy & Xe Đạp </a> </li>
+                    </ul>
+                </div>
             </div>
             <div class="hearder__input">
-                <div class="menu">
-                    <ion-icon name="menu-outline"></ion-icon> 
-                    <ion-icon class="arrow" style="width: 17px" name="chevron-down-outline"></ion-icon>
-                    <div class="hover__menu">
-                        <h6>  Thể Loại <ion-icon name="caret-up-outline"></ion-icon> </h6>
-                        <ul class="menu__before">
-                            <li> <a href=""> Nông sản </a> </li>
-                            <li> <a href=""> Thực Phẩm </a> </li>
-                            <li> <a href=""> Bánh Kẹo </a> </li>
-                            <li> <a href=""> Gia Vị </a> </li>
-                            <li> <a href=""> Thủy Hải Sản </a> </li>
-                            <li> <a href=""> Đồ Chơi </a> </li>
-                            <li> <a href=""> Ô Tô & Xe Máy & Xe Đạp </a> </li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="hearder__search">
                     <input type="text" placeholder="Tìm sản phẩm cần mua..">
+                    <button class="hearder__search-icon"> 
+                        <ion-icon style="outline:none;" name="search-outline"></ion-icon>
+                    </button>
                 </div>
-                <button class="hearder__search-icon"> 
-                    <ion-icon style="outline:none;" name="search-outline"></ion-icon>
-                </button>
+                
                 <div class="icon__cart">
                     <div class="like">
                         <a href=""><ion-icon name="heart-outline"> </ion-icon></a>
@@ -70,8 +70,8 @@
         </div>
         <div class="nav">
             <ul class="nav__item">
-                <li> <a href="index.html"> Trang Chủ</a> </li>
-                <li> <a href=""> Tất Cả Sản Phẩm </a> </li>
+                <li> <a href="../index.html"> Trang Chủ</a> </li>
+                <li> <a href="./list-products.html"> Tất Cả Sản Phẩm </a> </li>
                 <li> <a href=""> Nhãn Hiệu</a> </li>
                 <li> <a href=""> Blog </a> </li>
                 <li> <a href=""> Đăng Ký Bán Hàng </a> </li>
@@ -95,11 +95,11 @@
             </div>
             <div class="search-section">
                 <section ></section>
-                <select style="outline: none; border-radius: 5px;" name="" id=""> 
+                <select style="outline: none; border-radius: 5px; height: 25px;" name="" id=""> 
                     <option value=""> Mới nhất </option>
                     <option value=""> Cũ nhất </option>
-                    <option value=""> Giá từ thấp đến cao</option>
-                    <option value="">Giá từ cao đến thấp</option>
+                    <option value=""> Giá từ thấp đến cao </option>
+                    <option value="">Giá từ cao đến thấp </option>
                 </select>
             </div>
         </div>
@@ -125,10 +125,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row product col-lg-9">
-                    <div class="list__products col-lg-4" >
+                <div class="row product col-md-9">
+                    <div class="list__products col-md-4" >
                         <div class="product-1">
-                            <a href=""> <img src="./image/product1.jpg" alt=""></a>
+                            <a href="./product-detail.html"> <img src="./image/product1.jpg" alt=""></a>
                         </div>
                         <div class="product-imfor">
                             <p> 150.000 VND </p>
@@ -139,10 +139,18 @@
                                 <ion-icon name="star-outline"></ion-icon>
                                 <ion-icon name="star-outline"></ion-icon>
                             </div>
-                            <a href=""> Quả hồ đào Calo Nuts </a>
+                            <a href="./product-detail.html"> Quả hồ đào Calo Nuts </a>
+                        </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="list__products col-lg-4 ">
+                    <div class="list__products col-md-4 ">
                         <div class="product-1">
                             <a href=""> <img src="./image/product2.jpg" alt=""> </a>
                         </div>
@@ -157,8 +165,16 @@
                             </div>
                             <a href=""> Hạnh nhân Mỹ Calo Nuts </a>
                         </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="list__products col-lg-4 ">
+                    <div class="list__products col-md-4 ">
                         <div class="product-1">
                             <a href=""> <img src="./image/product3.jpg" alt=""></a>
                         </div>
@@ -173,8 +189,16 @@
                             </div>
                             <a href=""> Hạt dẻ cười Mỹ Calo Nuts </a>
                         </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="list__products col-lg-4 " style="margin-top: 10px;">
+                    <div class="list__products col-md-4 " style="margin-top: 10px;">
                         <div class="product-1">
                             <a href=""> <img src="./image/product4.jpg" alt=""> </a>
                         </div>
@@ -189,8 +213,16 @@
                             </div>
                             <a href=""> Hạt Macca Úc Calo Nuts </a>
                         </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="list__products col-lg-4 " style="margin-top: 10px;">
+                    <div class="list__products col-md-4 " style="margin-top: 10px;">
                         <div class="product-1">
                             <a href=""> <img src="./image/product5.jpg" alt=""> </a>
                         </div>
@@ -205,8 +237,16 @@
                             </div>
                             <a href=""> Ngũ cốc Granola Calo Nuts </a>
                         </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="list__products col-lg-4 " style="margin-top: 10px;">
+                    <div class="list__products col-md-4 " style="margin-top: 10px;">
                         <div class="product-1">
                             <a href=""><img src="./image/product6.jpg" alt=""></a>
                         </div>
@@ -221,8 +261,16 @@
                             </div>
                             <a href="">Hạt điều Bình Phước Cala Nuts </a>
                         </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="list__products col-lg-4" style="margin-top: 10px;">
+                    <div class="list__products col-md-4" style="margin-top: 10px;">
                         <div class="product-1">
                             <a href=""><img src="./image/product7.jpg" alt=""></a>
                         </div>
@@ -237,8 +285,16 @@
                             </div>
                             <a href=""> Hạt chia Mỹ Calo Nuts </a>
                         </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="list__products col-lg-4 " style="margin-top: 10px;">
+                    <div class="list__products col-md-4 " style="margin-top: 10px;">
                         <div class="product-1">
                             <a href=""> <img src="./image/product8.jpg" alt=""></a>
                         </div>
@@ -253,8 +309,16 @@
                             </div>
                             <a href=""> Quả óc chó Mỹ Cala Nuts </a>
                         </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="list__products col-lg-4 " style="margin-top: 10px;">
+                    <div class="list__products col-md-4 " style="margin-top: 10px;">
                         <div class="product-1">
                             <a href=""> <img src="./image/product9.png" alt=""></a>
                         </div>
@@ -268,6 +332,14 @@
                                 <ion-icon name="star-outline"></ion-icon>
                             </div>
                             <a href=""> Bún ngô </a>
+                        </div>
+                        <div class="hover__product">
+                            <div class="hove__heart">
+                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                            </div>
+                            <div class=" hover__cart">
+                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                            </div>
                         </div>
                     </div>
                 </div>

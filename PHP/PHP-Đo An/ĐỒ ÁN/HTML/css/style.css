@@ -7,7 +7,7 @@
 }
 body{
     color: #1b1b28;
-    background-color: #f0f0f070;
+    background-color: #dedbdb70;
     opacity: 1;
     line-height: 1.5;
 }
@@ -20,8 +20,8 @@ div .sticky{
     position: fixed;
     bottom:5em;
     right:5em;
-    width: 50px;
-    height: 50px;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
     outline: none;
     border: none;
@@ -31,8 +31,8 @@ div .sticky{
 
 .box-fixed ion-icon{
     color: #FFFF;
-    width:40px;
-    height: 40px;
+    width:2em;
+    height: 2em;
 }
 
 .container-header{
@@ -91,22 +91,22 @@ div .sticky{
 }
 
 .hearder__logo{
-    margin-top:-1.1em;
-    margin-left: -14em;
+    margin-right:-20%;
+    margin-top:-1em;
 }
 
 .hearder__input{
     display: flex;
     justify-content: center;
-    margin-left:-55em;
+    margin-right:36em;
 }
 
 .menu{
     margin-top: 1.8em;
-    height: 37px;
-    width: 50px;
+    height: 2.5em;
+    width: 4%;
     background-color: #e4e1e1 ;
-    margin-right:20px;
+    margin-right: -24em;
     border-radius: 5px;
     position: relative;
 }
@@ -125,15 +125,17 @@ div .sticky{
 }
 
 .hearder__search{
+    width: 400%;
     padding: 20px 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     margin-top: 10px;
+    position: relative;
 }
 
 .hearder__search input{
-    width: 35em;
-    height: 2.2em;
+    width: 250%;
+    height: 2.4em;
     border: 1px solid #e2e5ec ;
     border-top-left-radius: 5px;
     border-bottom-left-radius:5px;
@@ -142,25 +144,28 @@ div .sticky{
 
 .hearder__search-icon {
     border: 1px solid;
-    width: 53px;
-    height: 36px;
-    margin-top: 30px; 
+    width: 33%;
+    height: 49%;
+    display: flex;
     background-color: red;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: none;
     position: relative;
     outline: none;
+    position: absolute;
+    top:1.28em;
+    right:-18em;
 }
 
 .hearder__search-icon ion-icon{
     margin: 5px;
     width: 28px;
     height: 28px;
-    margin-left: 13px;
+    margin-left: 12px;
     color: #e1dede;
     position: absolute;
-    top: 0;
+    top: -2px;
     left:0;
 }
 .icon__cart {
@@ -225,7 +230,7 @@ div .sticky{
     border-top:1px solid;
     margin-top:10px;
     border-color: #f0f0f1;
-    padding-bottom: 44px;
+    padding-bottom: 3em;
     border-bottom: none;
     box-shadow: 0 1px 0 0  #c2c2c4 ;
 }
@@ -251,8 +256,8 @@ div .sticky{
 
 .hover__menu{
     margin-top:10px;
-    margin-left: -170px;
-    width: 220px;
+    margin-left: -10em;
+    width: 15em;
     box-shadow: 2px 2px  #e1dede ;
     position: relative;
     display: none;
@@ -267,6 +272,7 @@ div .sticky{
 .menu__before{
     margin-top:-8px;
     background-color: #ffff;
+    z-index: 10;
 }
 
 h6{
@@ -294,12 +300,31 @@ h6{
     display: block;
     z-index: 2;
 }
+
+.list__products:hover{
+    box-shadow: 3px 5px 4px 0px rgb(233, 232, 232);
+}
+
+.list__products:hover .hover__product{
+    display: block;
+    top: 5px;
+    right: 10px;
+}
+.hover__product button:hover{
+    background-color: red;
+    color: #ffff;
+    width: 2.2em;
+    height: 2.2em
+}
+
+/* <<<>>> */
+
 .carousel-inner{
     margin-right:10px
 }
 .carousel-item img{
-    width: 798px;
-    height: 400px
+    width: 99%;
+    height: 25em;
 }
 
 .item__img{
@@ -308,11 +333,11 @@ h6{
 }
 
 .item__img-2 img{
-    height: 195px;
+    height: 12.2em;
 }
 
 .item__img-3 img{
-    height: 195px;
+    height: 12.2em;
 }
 .item__img-3{
     margin-top: 10px;
@@ -324,8 +349,8 @@ h6{
     
 }
 .item__img-6 img , .item__img-7 img, .item__img-8 img, .item__img-9 img{
-    width: 256px;
-    height: 130px;
+    width: 100%;
+    height: 9em;
 }
 
 .item__img-7 img{
@@ -383,8 +408,6 @@ h6{
     margin-left: .4px;
 }
 
-
-
 .product{
     display: flex;
 }
@@ -394,9 +417,7 @@ h6{
     padding-bottom: 20px;
     padding: 5px 5px;
     border-radius: 5px;
-}
-.list__products:hover{
-    box-shadow: 3px 5px 4px 0px rgb(233, 232, 232);
+    position: relative;
 }
 
 .list__products img{
@@ -422,6 +443,30 @@ h6{
 .product-imfor a{
     text-decoration: none;
 }
+
+.hover__product{
+    position: absolute;
+    top: 0;
+    right: -40px;
+    display: none;
+    transition: .2s linear 1s ;
+    
+}
+
+.hover__product ion-icon{
+    height: 1.8em;
+}
+
+.hover__product button{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    margin-top: 3px;
+    border: none;
+    outline: none;
+    background-color: #FFFF;
+}
+
 .ion-star{
     margin-top: -8px;
 }
@@ -438,7 +483,6 @@ h6{
     background-color: #FFFF;
     margin-top: 30px;
 }
-
 
 .brand-item{
     border-bottom:1px solid rgb(233, 232, 232);
@@ -462,6 +506,7 @@ h6{
 .block-brand{
     justify-content: space-evenly;
 }
+
 .list{
     justify-content: space-around;
 }
@@ -483,19 +528,23 @@ h6{
 .nsv-item strong {
     margin-left: 45%;
 }
+
 .list__item-footer {
     margin-left:3em;
     list-style-type: none;
     padding: 0 2em;
     color: #FFFF;
 }
+
 .item-list a{
     color: #FFFF;
     text-decoration: none;
 }
+
 .item-list{
     padding-top: 10px;
 }
+
 .hot, .email{
     width:32px;
     height:32px;

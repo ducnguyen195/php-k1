@@ -17,7 +17,6 @@
 .list-detail a{
     text-decoration: none;
     color: black;
-    
 }
 
 .list-detail li{
@@ -25,12 +24,15 @@
     padding-bottom:10px;
 }
 
+/* HOVER */
 .list-detail a:hover{
     color: blue;
 }
+
+/* <<<>>> */
+
 .product-img{
     margin-right: 10px;
-    
 }
 
 .search-section{
@@ -42,7 +44,8 @@
     line-height: 1.5;
     font-size: 20px;
 }
+
 .product-imfor p{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
 }
