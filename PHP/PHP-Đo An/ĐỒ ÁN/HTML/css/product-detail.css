@@ -127,9 +127,45 @@ p{
     border-radius: 5px;
 }
 
+.add__cart{
+    width: 30%;
+    height: 2.5em;
+    border-radius: 5px;
+    background-color: red;
+    color: #FFFF;
+    border: none;
+    outline: none;
+}
+
+.add__like {
+    margin-top:10px;
+}
+
+.share{
+    margin-top: 15px;
+}
+
+.share__item{
+    margin-left: 3em;
+}
+.share__item span{
+    width: ;
+}
+
 /* HOVER */
 
 .content__detail-item button:hover{
     color: #FFFF;
     background-color: red;
 }
+
+.detail__add .add__bag:hover{
+    background-color: red;
+    color: #FFFF;
+}
+
+.detail__add .add__cart:hover{
+    background-color: blue;
+}
+
+
