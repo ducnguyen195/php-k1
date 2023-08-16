@@ -1,0 +1,135 @@
+.detail__product{
+    box-shadow: 2px 3px 2px 0 #cbc6c6aa;
+    background-color: #ffff;
+    margin-top:1em;
+    border-radius: 5px;
+}
+
+.detail__img{
+    margin-top:10px;
+}
+
+.detail__img-sm{
+    margin-left: 1em;
+}
+
+.detail__img-lg{
+    margin-left: 1em;
+}
+
+.content__detail{
+    margin-top:1em;
+}
+
+.ion-star p{
+    font-weight: 300;
+    font-size: .8em;
+}
+
+.content__detail-item{
+    border-top: 1px solid  #cbc6c6aa ;
+    margin-right:20px;
+    padding-top:20px;
+}
+
+.content__detail-item button{
+    margin-left:15px;
+    height: 2em;
+    width: 10em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgba(237,28,36,0.15);
+    color: red;
+}
+
+.detail__item-1 p{
+    font-weight: 300;
+    font-size: .8em;
+    margin-bottom:1px;
+}
+
+.detail__price{
+    border-top:1px solid  #cbc6c6aa;
+    margin-top: 15px;
+    margin-right:20px;  
+}
+
+.detail__price span {
+    margin-top: 2em;
+    display: flex
+}
+
+.detail__price strong{
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 2em;
+    margin-top: -.6em;
+    color: red;
+}
+
+p{
+    font-weight:300;
+    font-size: .8em;
+}
+
+.detail__quantity{
+    border-top: 1px solid  #cbc6c6aa;
+    margin-top:15px;
+    padding-top: 15px;
+    margin-right: 20px;
+}
+
+.detail__quantity button{
+    margin-left:20px;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.detail__quantity input{
+    width: 2em;
+    margin-left:2em;
+    border: none;
+    outline: none;
+    margin-top:-10px;
+}
+
+.price__total{
+    margin-top:15px;
+    display: flex;
+    border-top: 1px solid #cbc6c6aa;
+    padding-top: 20px;
+}
+
+.price__total strong{
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-left:1.5em;
+    margin-top:-12px;
+    color: red;
+}
+
+.detail__add{
+    margin-top: 20px;
+
+}
+
+.add__bag{
+    background-color: rgba(237,28,36,0.15);
+    color: red;
+    width: 40%;
+    height: 2.5em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+/* HOVER */
+
+.content__detail-item button:hover{
+    color: #FFFF;
+    background-color: red;
+}

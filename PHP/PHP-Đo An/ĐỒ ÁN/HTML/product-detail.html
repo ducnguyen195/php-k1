@@ -11,6 +11,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/product-detail.css">
 </head>
 <body>
 <div class="container-fluid  container-header">
@@ -81,16 +82,16 @@
 <div class="container">
     <div class="detail__product">
         <div class="row">
-            <div class="detail__img col-md-6 d-flex">
+            <div class="detail__img col-xl-6 d-flex">
                 <div class="detail__img-sm">
                     <img src="./image/product1.jpg" width="100px" height="100px" alt=" Ảnh">
                 </div>
-                <div class="detail__img-sm">
-                    <img src="./image/product1.jpg" width="300px" height=" 300px" alt=" Ảnh">
+                <div class="detail__img-lg">
+                    <img src="./image/product1.jpg" width="400px" height=" 400px" alt=" Ảnh">
                 </div>
             </div>
-            <div class="content__detail col-md-6 ">
-                <div>
+            <div class="content__detail col-xl-6 ">
+                <div >
                     <h3> Quả hồ đào Calo Nuts</h3>
                     <div class="ion-star">
                         <ion-icon name="star-outline"></ion-icon>
@@ -101,27 +102,30 @@
                         <p> (0 Đánh giá)</p>
                     </div>
                 </div>
-                <div style="display: flex;">
-                    <div>
+                <div class="content__detail-item" style="display: flex;">
+                    <div class="detail__item-1">
                         <p> Được bán bởi:</p>
                         <strong> Calo Nuts</strong>
                     </div>
                     <button> Chat với Người bán</button>
                 </div>
-                <div>
-                    <strong> Giá bán : 150.000 VND /500g</strong>
+                <div class="detail__price">
+                    <span> <p>Giá bán :</p> <strong> 150.000 VND</strong> <p> /500g</p></span>
                 </div>
-                <div style="display: flex;">
-                    <p> Số lượng : </p>
-                    <button> - </button><input type="text" value="1"> <button> + </button>
-                    <p> (10 còn hàng)</p>
+                <div  class="detail__quantity" style="display: flex;">
+                    <p style="margin-top: 10px;"> Số lượng : </p>
+                    <button class="minus"> - </button><input type="text" value="1"> <button class="plus"> + </button>
+                    <p style="margin-left: 10px; margin-top:10px"> (10 còn hàng)</p>
+                </div>
+                <div class="price__total">
+                    <p>Tổng tiền :</p> <strong> 150.000 VND</strong>
+                </div>
+                <div class="detail__add">
+                    <button class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
+                    <button class="add__cart"> <ion-icon name="cart-outline"></ion-icon> Mua ngay</button>
                 </div>
                 <div>
-                    <button><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
-                    <button> <ion-icon name="cart-outline"></ion-icon> Mua ngay</button>
-                </div>
-                <div>
-                    Thêm vào danh sách yêu thích
+                    <a href=""> Thêm vào danh sách yêu thích </a>
                 </div>
                 <div style="display: flex;">
                     <p> Chia sẻ : </p>
