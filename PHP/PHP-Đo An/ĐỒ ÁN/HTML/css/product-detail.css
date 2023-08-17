@@ -141,15 +141,22 @@ p{
     margin-top:10px;
 }
 
-.share{
-    margin-top: 15px;
+.imfor__detail{
+    margin-top: 20px;
+    margin-left: 14px;
 }
 
-.share__item{
-    margin-left: 3em;
+.list__imfor{
+    margin-left: 20px;
 }
-.share__item span{
-    width: ;
+
+.title__add-product{
+    display: flex;
+    justify-content: center;
+    height: 4em;
+    align-items: center;
+    border-bottom: 1px solid #cbc6c6aa ;
+    
 }
 
 /* HOVER */
@@ -166,6 +173,10 @@ p{
 
 .detail__add .add__cart:hover{
     background-color: blue;
+}
+.product-add{
+    background-color: #FFFF;
+    margin-top:20px;
 }
 
 
