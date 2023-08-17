@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng-Nông Sản Việt</title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="./image/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    
+</head>
+<body>
+<div class="container-fluid  container-header">
+    <div class="row title-row">
+        <div class="title col-lg-5 col-md-6 col-sm-">
+            <div class="title__item title-hotline"> 
+                <ion-icon name="call-outline"></ion-icon>
+                Hotline : 09.12.18.2772 
+            </div>
+            <div class="title__item title-login"><a href="./login.html"> ĐĂNG NHẬP </a></div>
+            <div class="title__item title-register"><a href="./signup.html"> ĐĂNG KÝ </a></div>
+        </div>
+    </div>
+    <div class="sticky sticky-top" >
+        <div class="hearder">
+            <div class="hearder__logo">
+                <a href="../index.html"> <img src="./image/logosam.jpg" alt="Logo" width="150px" height="100px"> </a>
+            </div>
+            <div class="menu">
+                <ion-icon name="menu-outline"></ion-icon> 
+                <ion-icon class="arrow" style="width: 17px" name="chevron-down-outline"></ion-icon>
+                <div class="hover__menu">
+                    <h6>  Thể Loại <ion-icon name="caret-up-outline"></ion-icon> </h6>
+                    <ul class="menu__before">
+                        <li> <a href=""> Nông sản </a> </li>
+                        <li> <a href=""> Thực Phẩm </a> </li>
+                        <li> <a href=""> Bánh Kẹo </a> </li>
+                        <li> <a href=""> Gia Vị </a> </li>
+                        <li> <a href=""> Thủy Hải Sản </a> </li>
+                        <li> <a href=""> Đồ Chơi </a> </li>
+                        <li> <a href=""> Ô Tô & Xe Máy & Xe Đạp </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hearder__input">
+                <div class="hearder__search">
+                    <input type="text" placeholder="Tìm sản phẩm cần mua..">
+                    <button class="hearder__search-icon"> 
+                        <ion-icon style="outline:none;" name="search-outline"></ion-icon>
+                    </button>
+                </div>
+                
+                <div class="icon__cart">
+                    <div class="like">
+                        <a href=""><ion-icon name="heart-outline"> </ion-icon></a>
+                        <p> 0 </p>
+                        <strong> Yêu Thích </strong>
+                    </div>
+                    <div  class="cart">
+                        <a href=""><ion-icon name="cart-outline"> </ion-icon> </a>
+                        <p> 0 </p>
+                        <strong> Giỏ Hàng </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hover__nav">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Trang Chủ</a>
+                        <a class="nav-link" href="./list-products.html">Tất Cả Sản Phẩm</a>
+                        <a class="nav-link" href="#">Thương Hiệu</a>
+                        <a class="nav-link " href="#" >Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container container__cart">
+    <div class="row col-md-12">
+        <div class="title__cart-product col-md-4">
+            <p> Sản Phẩm</p>
+        </div>
+        <div class="title__cart-imfor col-md-8 d-flex">
+            <p> Giá bán</p>
+            <p> Thuế</p>
+            <p> Số lượng</p>
+            <p style="margin-right: 1.5em;"> TỔNG TIỀN</p>        
+        </div>
+    </div>
+    <div class="row col-md-12 cart__product-css">
+        <div class="carl__product col-md-4">
+            <img src="./image/product4.jpg" width="20%" alt="Ảnh">
+            <strong> Hạt Macca Úc Calo Nuts</strong>
+        </div>
+        <div class="cart__price col-md-8 d-flex">
+            <div class="cart__price-item" style="font-size: 18px; margin-left: -1em;"> <strong> 150.000 VND</strong> </div>
+            <div class="cart__price-item"> <strong> 0 VND</strong> </div>
+            <div class="cart__price-item ml-2">
+                <button> - </button>
+                <input style="width: 25px; padding-left:8px; " type="text" value="1">
+                <button> + </button>
+            </div>
+            <div class="cart__price-item    " style="font-size: 18px; margin-right: -1em; color: red   ;"> <strong> 150.000 VND </strong> </div>
+            <div class="cart__price-item" style="margin-right: -2.5em; "> <button style="background-color: rgba(237, 28, 36, 0.15);"> <ion-icon style="color: red;" name="trash-outline"></ion-icon> </button> </div>
+        </div>
+        <div class="price__cart-total d-flex" >
+            <p>Tạm tính :</p>
+            <strong style="font-size: 20px; padding-right: 1.5em;"> 150.000 VND</strong>
+        </div>
+    </div>
+    <div class="cart__payment d-flex">
+        <a style="text-decoration: none; color: red;" href="">
+            <ion-icon style="height: .9em;" name="arrow-back-outline"></ion-icon>
+            Quay lại Trang chủ
+        </a>
+        <button> Thanh Toán </button>
+    </div>
+</div>
+
+<div class="container-fluid footer mt-5 ">
+    <div class="row d-flex">
+        <div class="mosi nsv-item"> <strong> NÔNG SẢN VIỆT </strong> </div>
+        <div class="list d-flex mt-5">
+            <ul class="list__item-footer">
+                <li class="item-list"> <a href="">Chính sách hoạt động</a></li>
+                <li class="item-list"> <a href=""> Chính sách đổi trả</a></li>
+                <li class="item-list"> <a href="">Chính sách giao hàng</a></li>
+            </ul>
+            <ul class="list__item-footer">
+                <li class="item-list"> <a href=""> Đăng ký bán hàng</a></li>
+                <li class="item-list"> <a href=""> Các dich vụ khác </a></li>
+                <li class="item-list"> <a href=""> Hướng dẫn sử dụng</a></li>
+            </ul>
+            <ul class="list__item-footer">
+                <li class="item-list"><a href=""> Blogs</a></li>
+                <li class="item-list"> <a href=""> Hỏi đáp - FAGs</a></li>
+                <li class="item-list"><a href=""> Chăm sóc khách hàng</a></li>
+            </ul>
+            <ul class="list__item-footer">
+                <li class="item-list"> <a href=""> Tuyển dụng</a></li>
+                <li class="item-list"> <a href=""> Hợp tác kinh doanh</a></li>
+            </ul>
+            <ul class="list__item-footer ">
+                <li > <button class="button" style="border-bottom-width: 0.9em;"><span style="font-weight: 500;"> Gửi Phản Hồi</span> </br> <span style="font-size: 8px;"> chúng tôi luôn mong đợi ý kiến từ bạn </span> </button></li>
+                <li class=" d-flex">
+                    <div class="hot">
+                        <span ><img src="./html/image/call.png" alt=""></span>
+                    </div>
+                    <div class="ml-3">
+                    <span style="font-weight: 700;">Hotline </span></br>
+                    <span style="font-weight: 400;" > (+84) 912.18.2772 </span>
+                    </div>
+                </li>
+                <li class=" d-flex">
+                    <div class="email">
+                    <span > <img src="./html/image/email.png" alt=""> </span>
+                    </div>
+                    <div class="ml-3">
+                        <span style="font-weight: 700;"> Email </span></br>
+                        <span style="font-weight: 400;" >  nongsanviet@gmail.com </span>
+                    </div>
+                </li>
+                <li class="d-flex"> 
+                    <div class="loca">
+                        <span > <img src="./html/image/location.png" alt=""></span>
+                    </div>
+                    <div class="ml-3" >
+                        <span style="font-weight: 700;"> Địa chỉ </span> </br>
+                        <span style="font-weight: 400;" >  9/71/17/4 Vân Canh Hoài Đức Hà Nội </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+.container__cart{
+    background-color: #FFFF;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.title__cart-product{
+    display: flex;
+    align-items: center;
+    height: 4em;
+}
+
+.title__cart-product p {
+    margin:0;
+    font-weight: 600;
+}
+
+.title__cart-imfor{
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 600;
+    
+}
+
+.title__cart-imfor p{
+    margin: 0;
+}
+
+.cart__product-css{
+    border-top: 1px solid rgba(209, 209, 208, 0.568);
+    margin-left: 3px;
+    padding-top: 10px;
+}
+
+.cart__price{
+    padding-top:20px;
+    justify-content: space-around;
+}
+
+.cart__price-item button , .cart__price-item input{
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+}
+
+.price__cart-total{
+    width: 100%;
+    border-top: 1px solid  rgba(209, 209, 208, 0.568);
+    margin-top:30px;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.cart__payment{
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    padding-right: 2em;
+}
+
+.cart__payment button{
+    width: 15%;
+    height: 2.5em;
+    border-radius: 10px;
+    color: #FFFF;
+    background-color: red;
+    border: none;
+    outline: none;
+}
+
+/* HOVER */
+.cart__payment button:hover{
+    background-color: blue;
+}
+

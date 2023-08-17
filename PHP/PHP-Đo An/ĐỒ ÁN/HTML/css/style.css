@@ -134,12 +134,13 @@ div .sticky{
 }
 
 .hearder__search input{
-    width: 250%;
-    height: 2.4em;
+    width: 230%;
+    height: 2.48em;
     border: 1px solid #e2e5ec ;
     border-top-left-radius: 5px;
     border-bottom-left-radius:5px;
-    outline: none;    
+    outline: none;
+    padding: 0 10px;  
 }
 
 .hearder__search-icon {
@@ -224,34 +225,9 @@ div .sticky{
     padding-left:6px;
     font-size: 12px;
 }
-
-.nav{
-    height:2em;
-    border-top:1px solid;
-    margin-top:10px;
-    border-color: #f0f0f1;
-    padding-bottom: 3em;
-    border-bottom: none;
-    box-shadow: 0 1px 0 0  #c2c2c4 ;
-}
-
-.nav__item{
+.hover__nav{
     display: flex;
-    margin: 0 auto;
-    list-style-type: none;
-    margin-top: 10px; 
-    padding-bottom: 10px;
-}
-.nav__item > li{
-    margin-left:30px ;
-    color: #6b6b7a;
-    font-weight: 500; 
-}
-
-.nav__item li a{
-    color: #6b6b7a;
-    font-weight: 500;
-    text-decoration: none
+    justify-content: center;
 }
 
 .hover__menu{
@@ -292,6 +268,9 @@ h6{
 }
 
 /* HOVER */
+.hover__nav:hover{
+
+}
 .hearder__search-icon:hover{
     background-color: #2828b6;
 }
