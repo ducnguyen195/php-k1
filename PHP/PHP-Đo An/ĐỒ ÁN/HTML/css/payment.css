@@ -1,0 +1,120 @@
+body{
+    background-color: #e3e1e140;
+}
+.payment__container{
+    background-color: #ffff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.title__payment{
+    margin-left: 45%;
+}
+
+.title__payment ion-icon{
+    width: 5em;
+    height: 5em;
+}
+
+.title__payment h2{
+    margin-left: -1em;
+}
+
+.title__payment p{
+    margin-left: -12em;
+}
+
+.row__item{
+    margin-top: 3em;
+}
+
+.payment__block p{
+    margin: 1em 0 0 0;
+}
+
+.payment__block input{
+    width: 80%;
+    padding: 0 10px ;
+    border-radius: 10px;
+    background-color: rgba(250, 236, 218, 0.282);
+    outline: none;
+    height: 2em;
+}
+
+.payment__block select{
+    width: 20%;
+    border-radius:10px;
+    padding: 0 10px;
+    height: 2em;
+}
+
+.payments{
+    margin-top: 2em;
+}
+
+.payments input{
+    width: 1em;
+    height: 1em;
+}
+
+.payments label{
+    font-size: 1.2em;
+}
+
+.btn__oder{
+    padding-bottom: 2em;
+}
+
+.btn__oder button{
+    justify-content: center;
+    padding: .5em 3em;
+}
+
+.block__item{
+    border: 1px solid #e6e5e551;
+}
+
+.block__item p{
+    margin:0;
+}
+
+.payment__imfor{
+    width: 100%;
+    border: 1px  #e6e5e551;
+    justify-content: space-between;
+}
+
+.imfor__product{
+    justify-content: space-between;
+    border: 1px solid  #e6e5e551;
+    align-items: center;
+    padding: 0 10px ;
+}
+
+.payment__total{
+    justify-content: space-between;
+    height: 2em;
+    align-items: center;
+}
+
+.code__sale{
+    margin-top: 1em;
+}
+
+.code__sale button{
+    outline: none;
+    border: none;
+}
+
+/* HOVER */
+.code__sale button:hover{
+    background-color: green;
+}
+
+.btn__oder button:hover{
+    background-color: green;
+}
+
+
+
+

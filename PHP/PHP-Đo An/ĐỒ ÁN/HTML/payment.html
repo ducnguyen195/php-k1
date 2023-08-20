@@ -11,6 +11,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/payment.css">
 </head>
 <body>
 <div class="container-fluid  container-header">
@@ -90,47 +91,100 @@
 <div class="box-fixed">
     <button> <ion-icon name="caret-up-outline"></ion-icon></button>
 </div>
-<div class="container">
+<div class="container payment__container" >
     <div class="title__payment"> 
         <ion-icon name="card-outline"></ion-icon>
-        <h3> Thanh Toán</h3>
+        <h2> Thanh Toán</h2>
+        <p>Vui lòng kiểm tra thông tin Khách hàng và Giỏ hàng trước khi Đặt hàng</p>
     </div>
-    <div class="row">
-        <div class="col-md-8">
+    <div class="row row__item">
+        <div class=" payment__block col-md-7 ">
             <div class="imfor__payment">
-                <strong> Thông tin khách hàng</strong>
+                <h4> Thông tin khách hàng</h4>
             </div>
             <div>
                 <p>Họ và Tên :</p>
-                <input type="text">
+                <input type="text" placeholder=" Nhập Họ và Tên....">
             </div>
             <div>
                 <p>Giới tính :</p>
-                <input type="text">
+                <section></section>
+                <select name="" id="">
+                    <option value="">Nam</option>
+                    <option value=""> Nữ</option>
+                </select>
             </div>
             <div>
                 <p> Địa chỉ:</p>
-                <input type="text">
+                <input type="text" placeholder="Nhập địa chỉ....">
             </div>
             <div>
                 <p> Điện thoại :</p>
-                <input type="text">
+                <input type="text" placeholder="Nhập số điện thoại...">
             </div>
             <div>
                 <p>Email</p>
-                <input type="text">
+                <input type="text" placeholder="Nhập Email...">
             </div>
-            <div>
-                <h4> Hình thức thanh toán</h4>
-                <div>
-                    <p>  <input type="radio"> Tiền mặt</p>
-                    <p>  <input type="radio"> Chuyển khoản</p>
-                </div>
+            <div class=" payments">
+                <form action="">
+                    <h4> Hình thức thanh toán</h4>
+                    <input type="radio" name="" id=" tiền mặt" value="Tiền mặt">
+                    <label for="tiền mặt"> Tiền mặt</label><br>
+                    <input type="radio" id="chuyển khoản" value="Chuyển khoản">
+                    <label for="chuyển khoản"> Chuyển khoản</label>
+                </form>
+            </div>
+            <div class="btn__oder">
+                <button class=" btn btn-primary"> Đặt hàng </button>
             </div>
         </div>
-    </div>
-    <div class="col-md-4">
-
+        <div class="col-md-5 ca">
+            <h4> Giỏ hàng </h4>
+            <div class="block__item">
+                <div class="name__product d-flex">
+                    <div  class="payment__imfor d-flex">
+                        <p>Tên sản phẩm</p>
+                        <p> Số lượng</p>
+                        <p>Thành tiền</p>
+                    </div>
+                </div>
+                <div  class="imfor__product d-flex">
+                    <div class="" >
+                        <p> Bún Ngô</p>
+                        <p> 150.000</p> 
+                    </div>
+                    <div>
+                        <p> 2</p>
+                    </div>
+                    
+                    <div>
+                        <p>300.000 VND</p>
+                    </div>
+                </div>
+                <div  class="imfor__product d-flex">
+                    <div >
+                        <p> Hạt óc chó Mỹ Calo Nuts</p>
+                        <p> 150.000</p> 
+                    </div>
+                    <div>
+                        <p> 2</p>
+                    </div>                    
+                    <div>
+                        <p>300.000 VND</p>
+                    </div>
+                </div>
+                <div class="payment__total d-flex">
+                    <p> Tổng tiền :</p>
+                    <strong> 600.000 VND</strong>
+                </div>
+                
+            </div>
+            <div class="code__sale">
+                <input style="padding: 4px 10px;" type="text" placeholder="Mã khuyến mãi"> 
+                <button class="btn btn-primary">  Xác Nhận </button>
+            </div>
+        </div>
     </div>
 </div>
 
