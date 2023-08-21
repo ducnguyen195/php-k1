@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán- Nông Sản Việt</title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="./image/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/payment.css">
+</head>
+<body>
+<div class="container-fluid  container-header">
+    <div class="row title-row">
+        <div class="title col-lg-5 col-md-5">
+            <div class="title__item title-hotline"> 
+                <ion-icon name="call-outline"></ion-icon>
+                Hotline : 09.12.18.2772 
+            </div>
+            <div class="title__item title-login"><a href="./login.html"> ĐĂNG NHẬP </a></div>
+            <div class="title__item title-register"><a href="./signup.html"> ĐĂNG KÝ </a></div>
+        </div>
+    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a style="margin-left: 8em;" class="navbar-brand" href="#"><img src="./image/ogo.png" height="140px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link "  href="../index.html"> TRANG CHỦ </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./list-products.html"> TẤT CẢ SẢN PHẨM</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#"> THƯƠNG HIỆU</a>  
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#"> LIÊN HỆ</a>
+            </li>
+            </ul>
+            <form class="d-flex" >
+            <input style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Tìm kiêm</button>
+            </form>
+        </div>
+        <div class="icon__cart" style="margin-right: -3em;">
+            <div class="like">
+                <a href=""><ion-icon name="heart-outline"> </ion-icon></a>
+                <p> 0 </p>
+                <strong> Yêu Thích </strong>
+            </div>
+            <div  class="cart">
+                <a href="./html/cart.html"><ion-icon name="cart-outline"> </ion-icon> </a>
+                <p> 0 </p>
+                <strong> Giỏ Hàng </strong>
+            </div>
+        </div>    
+    </div>
+</nav>   
+</div>
+<div class="box-fixed">
+    <button> <ion-icon name="caret-up-outline"></ion-icon></button>
+</div>
+<div class="container payment__container" >
+    <div class="title__payment"> 
+        <ion-icon name="card-outline"></ion-icon>
+        <h2> Thanh Toán</h2>
+        <p>Vui lòng kiểm tra thông tin Khách hàng và Giỏ hàng trước khi Đặt hàng</p>
+    </div>
+    <div class="row row__item">
+        <div class=" payment__block col-md-7 ">
+            <div class="imfor__payment">
+                <h4> Thông tin khách hàng</h4>
+            </div>
+            <div>
+                <p>Họ và Tên :</p>
+                <input type="text" placeholder=" Nhập Họ và Tên....">
+            </div>
+            <div>
+                <p>Giới tính :</p>
+                <section></section>
+                <select name="" id="">
+                    <option value="">Nam</option>
+                    <option value=""> Nữ</option>
+                </select>
+            </div>
+            <div>
+                <p> Địa chỉ:</p>
+                <input type="text" placeholder="Nhập địa chỉ....">
+            </div>
+            <div>
+                <p> Điện thoại :</p>
+                <input type="text" placeholder="Nhập số điện thoại...">
+            </div>
+            <div>
+                <p>Email</p>
+                <input type="text" placeholder="Nhập Email...">
+            </div>
+            <div class=" payments">
+                <form action="">
+                    <h4> Hình thức thanh toán</h4>
+                    <input type="radio" name="" id=" tiền mặt" value="Tiền mặt">
+                    <label for="tiền mặt"> Tiền mặt</label><br>
+                    <input type="radio" id="chuyển khoản" value="Chuyển khoản">
+                    <label for="chuyển khoản"> Chuyển khoản</label>
+                </form>
+            </div>
+            <div class="btn__oder">
+                <button class=" btn btn-primary"> Đặt hàng </button>
+            </div>
+        </div>
+        <div class="col-md-5 ca">
+            <h4> Giỏ hàng </h4>
+            <div class="block__item">
+                <div class="name__product d-flex">
+                    <div  class="payment__imfor d-flex">
+                        <p>Tên sản phẩm</p>
+                        <p> Số lượng</p>
+                        <p>Thành tiền</p>
+                    </div>
+                </div>
+                <div  class="imfor__product d-flex">
+                    <div class="" >
+                        <p> Bún Ngô</p>
+                        <p> 150.000</p> 
+                    </div>
+                    <div>
+                        <p> 2</p>
+                    </div>
+                    
+                    <div>
+                        <p>300.000 VND</p>
+                    </div>
+                </div>
+                <div  class="imfor__product d-flex">
+                    <div >
+                        <p> Hạt óc chó Mỹ Calo Nuts</p>
+                        <p> 150.000</p> 
+                    </div>
+                    <div>
+                        <p> 2</p>
+                    </div>                    
+                    <div>
+                        <p>300.000 VND</p>
+                    </div>
+                </div>
+                <div class="payment__total d-flex">
+                    <p> Tổng tiền :</p>
+                    <strong> 600.000 VND</strong>
+                </div>
+                
+            </div>
+            <div class="code__sale">
+                <input style="padding: 4px 10px;" type="text" placeholder="Mã khuyến mãi"> 
+                <button class="btn btn-primary">  Xác Nhận </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center text-lg-start text-muted" style="background-color: black;">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+            <span > NÔNG SẢN VIỆT</span>
+        </div>
+        <div>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+            </a>
+        </div>
+        </section>
+        <section class="">
+        <div class="container container-footer text-center text-md-start mt-5">
+            <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h3 class="text-uppercase fw-bold mb-4" style="color: #FFFF;">
+                <i class="fas fa-gem me-3"></i>NÔNG SẢN VIỆT
+                </h3>
+                <p>
+                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">
+                TÀI KHOẢN CỦA TÔI
+                </h5>
+                <p>
+                <a href="#!" class="text-reset">Đăng nhập</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Lịch sử mua hàng</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Sản phẩm yêu thích</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Theo dõi đơn hàng </a>
+                </p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">
+                VỀ CHÚNG TÔI
+                </h5>
+                <p>
+                <a href="#!" class="text-reset"> Hướng dẫn mua hàng</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Chính sách bảo mật</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Đăng ký bán hàng</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Giải Đáp</a>
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">THÔNG TIN LIÊN HỆ</h5>
+                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@example.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i> + 84 969 999 999 </p>
+                <p><i class="fas fa-print me-3"></i> + 84 912 18 2772</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 - Bản quyền thuộc về Duc Nguyen Media
+    </div>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

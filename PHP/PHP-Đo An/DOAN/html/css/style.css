@@ -104,11 +104,19 @@ form button{
 }
 
 .carousel {
-    width: 100%;
+    width: 98%;
 }
 .carousel-item{
     width: 98%;
     right: -1em;
+}
+.carousel-item img{
+    width: 98%
+}
+
+.nav-item a{
+    font-weight: 600 !important;
+    color: black !important;
 }
 
 
@@ -135,13 +143,14 @@ form button{
     right:5px ;
 }
 
-.icon__cart {
+.icon__cart{
     display: flex;
     font-weight: 300;
-    margin-top: 41px; 
+    margin-top: 3.8em; 
     position: absolute;
     top: 0;
     right: 17em;
+    margin-right: -2em;
 }
 
 .icon__cart ion-icon{
@@ -428,6 +437,10 @@ h6{
 footer{
     background-color: black;
     margin-top: 1em;
+}
+
+.container-footer h5{
+    color: #FFFF;
 }
 
 /* HOVER */

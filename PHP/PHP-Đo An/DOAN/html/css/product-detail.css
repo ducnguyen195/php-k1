@@ -118,7 +118,7 @@ p{
 }
 
 .add__bag{
-    background-color: rgba(237,28,36,0.15);
+    background-color: rgba(244, 116, 42, 0.493);
     color: red;
     width: 40%;
     height: 2.5em;
@@ -131,7 +131,7 @@ p{
     width: 30%;
     height: 2.5em;
     border-radius: 5px;
-    background-color: red;
+    background-color: rgb(0, 60, 255);
     color: #FFFF;
     border: none;
     outline: none;
@@ -167,12 +167,12 @@ p{
 }
 
 .detail__add .add__bag:hover{
-    background-color: red;
+    background-color: rgb(33, 196, 68);
     color: #FFFF;
 }
 
 .detail__add .add__cart:hover{
-    background-color: blue;
+    background-color: rgb(33, 196, 68);
 }
 .product-add{
     background-color: #FFFF;
