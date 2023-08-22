@@ -27,6 +27,7 @@
 /* HOVER */
 .list-detail a:hover{
     color: blue;
+    background-color: orange;
 }
 
 /* <<<>>> */

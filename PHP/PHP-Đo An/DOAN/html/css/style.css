@@ -444,9 +444,6 @@ footer{
 }
 
 /* HOVER */
-.hover__nav:hover{
-
-}
 .hearder__search-icon:hover{
     background-color: #2828b6;
 }
@@ -457,7 +454,7 @@ footer{
 }
 
 .list__products:hover{
-    box-shadow: 3px 5px 4px 0px rgb(233, 232, 232);
+    box-shadow: 3px 5px 4px 0px rgb(233, 232, 232), 2px 3px 4px 0px inset rgb(233, 232, 232);
 }
 
 .list__products:hover .hover__product{

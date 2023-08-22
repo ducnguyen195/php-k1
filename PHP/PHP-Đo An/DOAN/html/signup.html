@@ -11,35 +11,38 @@
 <div class="section">
     <div class="form-box">
         <div class="form-value">
-            <form action="">
-                <h2> ĐĂNG KÝ </h2>
-                <div class="inputbox">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <input type="email" required>
-                    <label for="">Email</label>
-                </div>
-                <div class="inputbox">
-                    <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" required>
-                    <label for="">Mật Khẩu</label>
-                </div>
-                <div class="inputbox">
-                    <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" required>
-                    <label for="">Nhập Lại Mật Khẩu</label>
-                </div>                    
-                <button id="signup">Đăng Ký</button>
-                <div class="register">
-                    <p> Đã Có Tài Khoản <a href="login.html">Đăng Nhập</a></p>
-                </div>
-                <div class="forget">
-                    <label for=""> <a  style="margin-left:100px; font-weight: 600;" href="../index.html">Về Trang Chủ</a></label>
-                </div>
-            </form>
+            <h2> ĐĂNG KÝ </h2>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input id="email" type="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input id="password" type="password" required>
+                <label for="">Mật Khẩu</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input id="confirm-password" type="password" required>
+                <label for="">Nhập Lại Mật Khẩu</label>
+            </div>                    
+            <button id="btn-signup">Đăng Ký</button>
+            <div class="register">
+                <p> Đã Có Tài Khoản <a href="login.html">Đăng Nhập</a></p>
+            </div>
+            <div class="forget">
+                <label for=""> <a  style="margin-left:100px; font-weight: 600;" href="../index.html">Về Trang Chủ</a></label>
+            </div>
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+crossorigin="anonymous">
+</script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="../js/signup.js"></script>
 </body>
 </html>
