@@ -145,12 +145,8 @@ form button{
 
 .icon__cart{
     display: flex;
-    font-weight: 300;
-    margin-top: 3.8em; 
-    position: absolute;
-    top: 0;
-    right: 17em;
-    margin-right: -2em;
+    font-weight: 300; 
+    margin-right: 11em;
 }
 
 .icon__cart ion-icon{
@@ -387,7 +383,7 @@ h6{
     margin-top: 3px;
     border: none;
     outline: none;
-    background-color: #FFFF;
+    background-color: #e4e4e49c;
 }
 
 .ion-star{
@@ -442,6 +438,8 @@ footer{
 .container-footer h5{
     color: #FFFF;
 }
+
+
 
 /* HOVER */
 .hearder__search-icon:hover{

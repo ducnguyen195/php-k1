@@ -85,9 +85,7 @@ let listProducts =JSON.stringify(products)
 localStorage.setItem('products', listProducts);
 };
 renderUI(products);
-
 $('#btn-search').click( function(){
-
     let productName = $('#search-category').val();
     let productSearch = products;
     if(productName){
@@ -99,12 +97,10 @@ let randomArr = Math.floor(Math.random() *10);
 console.log(randomArr);
 function handleAdd(id) {
     let product = products.find(e => e.id ===id);
-    
     let data = JSON.stringify(product);
     localStorage.setItem('Add',data);
-    
 };
-handleAdd()
+handleAdd();
 
 
 

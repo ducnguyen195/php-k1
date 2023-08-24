@@ -16,6 +16,9 @@ $('#btn-login').click(function(){
             swal("Lỗi", "Sai Email hoặc Mật khẩu", "warning");
         } else {
             swal("Thành công", " Dang nhap thanh cong", "success");
+            setTimeout(function(){
+                window.location.replace('../index.html')
+            }, 2000);
         };
     };
 });

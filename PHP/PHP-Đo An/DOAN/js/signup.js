@@ -18,7 +18,10 @@ $('#btn-signup').click(function(){
     } else{
         swal("Thành công", "Đăng ký thành công", "success");
         let data =JSON.stringify(user);
-        localStorage.setItem('use',data)
+        localStorage.setItem('user', data)
+        setTimeout(function(){
+            window.location.replace('./login.html')
+        }, 2000);
     }
 });
 
