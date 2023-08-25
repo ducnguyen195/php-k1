@@ -139,19 +139,17 @@ let listProduct = [
         img:'giavi1.webp',
         category: 'Gia vị',
     },
-
 ];
-
-function renderList (){
+function renderList (sortPrice = listProduct){
     let html = '';
-    for (let i = 0; i < listProduct.length; i++) {
+    for (let i = 0; i < sortPrice.length; i++) {
         html += `
         <div class="list__products col-md-4 mt-2" >
             <div class="product-1">
-                <a href="./product-detail.html"> <img src="./image/${listProduct[i].img}" alt=""></a>
+                <a href="./product-detail.html"> <img src="./image/${sortPrice[i].img}" alt=""></a>
             </div>
             <div class="product-imfor">
-                <p> ${listProduct[i].price} VND </p>
+                <p> ${sortPrice[i].price} VND </p>
                 <div class="ion-star">
                     <ion-icon name="star-outline"></ion-icon>
                     <ion-icon name="star-outline"></ion-icon>
@@ -159,7 +157,7 @@ function renderList (){
                     <ion-icon name="star-outline"></ion-icon>
                     <ion-icon name="star-outline"></ion-icon>
                 </div>
-                <a class="padding-bottom: 10px;" href="./product-detail.html"> ${listProduct[i].name} </a>
+                <a class="padding-bottom: 10px;" href="./product-detail.html"> ${sortPrice[i].name} </a>
             </div>
             <div class="hover__product">
                 <div class="hove__heart">
@@ -175,11 +173,24 @@ function renderList (){
 $('#list-product').html(html);
 };
 renderList(listProduct);
+// Event select
+$('#searchSelect').on('change',function(){
+    let sortMinMax  = $('#searchSelect').val();
+    let sortPrice = listProduct;
+    if (sortMinMax ==='') {
+        
+    }
+    if (sortMinMax ==='min') {
+        sortPrice = listProduct.sort( (a,b) => a.price - b.price); 
+    }
+    if (sortMinMax ==='max') {
+        sortPrice = listProduct.sort( (a,b) => b.price - a.price);
+    }
+    renderList(sortPrice)
+});
 
 
-    let priceMin = $('#min').val();
-    let priceMax = $('#max').val();
-        priceMin = listProduct.sort((a,b) => a.price - b.price)
 
-    
-    
+
+
+

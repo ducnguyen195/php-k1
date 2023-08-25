@@ -1,9 +1,8 @@
 $('#btn-login').click(function(){
-    console.log(1);
     let username = $('#email').val();
     let password = $('#password').val();
     let regex = new RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
-    let user = localStorage.getItem('use');
+    let user = localStorage.getItem('user');
     let data = JSON.parse(user);
     if(username.length ===0 || password.length ===0){
         swal("Lỗi", "Vui lòng nhập email và password", "error");
@@ -19,6 +18,12 @@ $('#btn-login').click(function(){
             setTimeout(function(){
                 window.location.replace('../index.html')
             }, 2000);
+            let allUser =[];
+            allUser.push(data)
+            allUser = data
+            dataUser = JSON.stringify(allUser);
+            localStorage.setItem('dataAll', dataUser)
         };
+        
     };
 });

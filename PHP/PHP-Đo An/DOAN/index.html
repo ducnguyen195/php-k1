@@ -23,8 +23,10 @@
                 <ion-icon name="call-outline"></ion-icon>
                 Hotline : 09.12.18.2772 
             </div>
-            <div class="title__item title-login"><a href="./html/login.html"> ĐĂNG NHẬP </a></div>
-            <div class="title__item title-register"><a href="./html/signup.html"> ĐĂNG KÝ </a></div>
+            <div class="checklogin  d-flex">
+                <div class="title__item title-login"><a href="./html/login.html"> ĐĂNG NHẬP </a></div>
+                <div class="title__item title-register "><a href="./html/signup.html"> ĐĂNG KÝ </a></div>
+            </div>
         </div>
     </div>
 </div>
@@ -53,8 +55,8 @@
             </li>
             </ul>
             <form class="d-flex" >
-            <input style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Tìm kiêm</button>
+            <input id="box-input" style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+            <button id="btn-search" class="btn btn-outline-success" type="submit">Tìm kiêm</button>
             </form>
         </div>
         <div class="icon__cart">
@@ -67,6 +69,68 @@
                 <a href="./html/cart.html"><ion-icon name="cart-outline"> </ion-icon> </a>
                 <p> 0 </p>
                 <strong> Giỏ Hàng </strong>
+                <div id="mini-cart" class="mini-cart" >
+                    <div>
+                        <span class="icon-arrow"> <ion-icon style="color: ;" name="caret-up-outline"></ion-icon></span>
+                    </div>
+                    <div class="mini-cart__content">
+                        <div class="cart-info">
+                            <span style="padding-top:.5em"> Giỏ hàng của bạn</span>
+                            <a name="checkout" href="./html/cart.html" class="btn btn-default"> Xem chi tiết </a>
+                        </div>
+                        
+                        <div class="scroll-wrapper scrollbar-macosx" style="position: relative;"><div class="scrollbar-macosx scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 146.6px;">
+                            <ul class="cart-list">
+                                <li class=" box__item" >
+                                    <div class="item-thumb">
+                                        <a href="./html/list-products.html" title="" class="">
+                                            <img alt="" src="html/image/rau3.png" width="50%">
+                                        </a>
+                                    </div>
+                                    <div class="item-title">
+                                        <a href="./html/list-products.html"  > Rau mồng tơi</a>
+                                        <div class="item-quantity">
+                                            <span class="quantity__mini-cart" >1</span>x
+                                            <span class="price__mini-cart" >8.000 VND</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-action">
+                                        <a class="btn-remove" href="">
+                                            <ion-icon style="color: red; height: 1em;" name="trash-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </li>                    
+                            </ul>
+                        </div>
+                        <div class="scroll-element scroll-x">
+                            <div class="scroll-element_outer">
+                                <div class="scroll-element_size">
+
+                                </div>
+                                <div class="scroll-element_track">
+
+                                </div><div class="scroll-bar" style="width: 0px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-element scroll-y">
+                            <div class="scroll-element_outer">
+                                <div class="scroll-element_size"></div>
+                                <div class="scroll-element_track"></div>
+                                <div class="scroll-bar" style="height: 0px;">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="cart-total text-center">
+                            <label>Tổng tiền</label>
+                            <span class="price ng-binding">8.000 VND</span>
+                        </div>
+                        <div class="cart-link">
+                            <a name="checkout" class="btn btn-primary" href="./html/payment.html"> Thanh toán <i class="fa fa-angle-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -149,7 +213,7 @@
                                 <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
                             </div>
                             <div class=" hover__cart">
-                                <button title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                                <button onclick="handleAdd()" title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
                             </div>
                         </div>
                     </div>
@@ -277,6 +341,8 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous">
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./js/index.js" ></script>
 <script src="./js/common.js"></script>
 </body>
 </html>
