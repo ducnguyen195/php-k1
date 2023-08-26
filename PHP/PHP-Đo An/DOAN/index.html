@@ -54,10 +54,10 @@
                 <a class="nav-link disabled" href="#"> LIÊN HỆ</a>
             </li>
             </ul>
-            <form class="d-flex" >
+            <div class="d-flex" >
             <input id="box-input" style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-            <button id="btn-search" class="btn btn-outline-success" type="submit">Tìm kiêm</button>
-            </form>
+            <button id="btn-search" class="btn btn-outline-success" type="submit" >Tìm kiêm</button>
+            </div>
         </div>
         <div class="icon__cart">
             <div class="like">
@@ -70,16 +70,13 @@
                 <p> 0 </p>
                 <strong> Giỏ Hàng </strong>
                 <div id="mini-cart" class="mini-cart" >
-                    <div>
                         <span class="icon-arrow"> <ion-icon style="color: ;" name="caret-up-outline"></ion-icon></span>
-                    </div>
                     <div class="mini-cart__content">
                         <div class="cart-info">
                             <span style="padding-top:.5em"> Giỏ hàng của bạn</span>
                             <a name="checkout" href="./html/cart.html" class="btn btn-default"> Xem chi tiết </a>
                         </div>
-                        
-                        <div class="scroll-wrapper scrollbar-macosx" style="position: relative;"><div class="scrollbar-macosx scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 146.6px;">
+                        <div class="scroll-wrapper " ><div class="scrollbar-macosx scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 146.6px;">
                             <ul class="cart-list">
                                 <li class=" box__item" >
                                     <div class="item-thumb">
@@ -184,7 +181,9 @@
                 <h4> Thực Phẩm</h4> 
             </div>
             <div class="btn__more">
-                <button style="border: none;  padding:.4em; outline: none;"> XEM THÊM</button>
+                <button style="border: none;  padding:.4em; outline: none;">
+                    <a style="text-decoration: none;" href="./html/list-products.html">  XEM THÊM </a>
+                </button>
             </div>
         </div>
         <div class="list__product">

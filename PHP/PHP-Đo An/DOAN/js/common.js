@@ -1,4 +1,4 @@
-let allProduct= [
+let listProduct = [
     {
         id:1,
         name: 'Quả hồ đào Calo Nuts',
@@ -29,7 +29,7 @@ let allProduct= [
     },
     {
         id:5,
-        name: 'Hạt dẻ cười Calo Nuts',
+        name: 'Ngũ cốc Granola',
         price: '160.000',
         img:'product5.jpg',
         category: ' Hạt',
@@ -150,7 +150,26 @@ $('#logout').click(function(){
     localStorage.removeItem('dataAll')
     $('.title-register').css('display', 'block')
 });
-    
+
+$('#btn-search').click(function(){
+    let searchProduct = product;
+    let input = $('#box-input').val();
+    console.log(input);
+    if(input.length === 0){
+        alert ('Chưa nhập nội dung');
+    } else if (input.length !== 0){
+        searchProduct = listProduct.filter( e => e.name.toLocaleLowerCase().includes(input))
+        console.log(searchProduct);
+        
+    }else if (searchProduct ===false){
+        alert('Không có sản phẩm ');
+        input = "";
+    }
+    renderUI(searchProduct);
+}); 
+
+
+
 
 
 

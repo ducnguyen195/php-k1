@@ -29,7 +29,7 @@ let product = [
     },
     {
         id:5,
-        name: 'Ngũ cốc Granola Calo Nuts',
+        name: 'Ngũ cốc Granola',
         price: '160.000',
         img:'product5.jpg',
         category:'Trái cây'
@@ -56,16 +56,16 @@ let product = [
         category:'Trái cây'
     },
 ];
-function renderUI(){
+function renderUI(searchProduct ){
     let html ='';
-    for (let i = 0; i < product.length; i++) {
+    for (let i = 0; i < searchProduct.length; i++) {
         html += `
-        <div  class="list__products col-md-3 col-sm-6 mt-2" style="padding: 5px 5px; border-radius: 5px;">
+        <div  class="list__products col-md-3 col-sm-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
             <div class="product-1">
-                <a href="./html/product-detail.html"> <img src="./html/image/${product[i].img}" alt=""></a>
+                <a href="./html/product-detail.html"> <img src="./html/image/${searchProduct[i].img}" alt=""></a>
             </div>
             <div class="product-imfor">
-                <p> ${product[i].price} VND</p>
+                <p> ${searchProduct[i].price} VND</p>
                 <div class="ion-star">
                     <ion-icon name="star-outline"></ion-icon>
                     <ion-icon name="star-outline"></ion-icon>
@@ -73,14 +73,14 @@ function renderUI(){
                     <ion-icon name="star-outline"></ion-icon>
                     <ion-icon name="star-outline"></ion-icon>
                 </div>
-                <a href="./html/product-detail.html"> ${product[i].name} </a>
+                <a href="./html/product-detail.html"> ${searchProduct[i].name} </a>
             </div>
             <div class="hover__product">
                 <div class="hove__heart">
                     <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
                 </div>
                 <div class=" hover__cart">
-                    <button onclick="handleAdd(${product[i].id})" title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                    <button onclick="handleAdd(${searchProduct[i].id})" title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
                 </div>
             </div>
         </div>
