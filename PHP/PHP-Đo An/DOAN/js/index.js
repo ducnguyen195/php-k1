@@ -60,7 +60,7 @@ function renderUI(searchProduct ){
     let html ='';
     for (let i = 0; i < searchProduct.length; i++) {
         html += `
-        <div  class="list__products col-md-3 col-sm-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
+        <div  class="list__products col-lg-3 col-md-3 col-sm-6 col-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
             <div class="product-1">
                 <a href="./html/product-detail.html"> <img src="./html/image/${searchProduct[i].img}" alt=""></a>
             </div>
@@ -89,3 +89,20 @@ function renderUI(searchProduct ){
 $('#products').html(html);
 };
 renderUI(product);
+
+$('#btn-search').click(function(){
+    let searchProduct = product;
+    let input = $('#box-input').val();
+    console.log(input);
+    if(input.length === 0){
+        alert ('Chưa nhập nội dung');
+    } else if (input.length !== 0){
+        searchProduct = listProduct.filter( e => e.name.toLocaleLowerCase().includes(input))
+        console.log(searchProduct);
+        
+    }else if (searchProduct ===false){
+        alert('Không có sản phẩm ');
+        input = "";
+    }
+    renderUI(searchProduct);
+}); 

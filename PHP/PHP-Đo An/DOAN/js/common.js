@@ -151,22 +151,10 @@ $('#logout').click(function(){
     $('.title-register').css('display', 'block')
 });
 
-$('#btn-search').click(function(){
-    let searchProduct = product;
-    let input = $('#box-input').val();
-    console.log(input);
-    if(input.length === 0){
-        alert ('Chưa nhập nội dung');
-    } else if (input.length !== 0){
-        searchProduct = listProduct.filter( e => e.name.toLocaleLowerCase().includes(input))
-        console.log(searchProduct);
-        
-    }else if (searchProduct ===false){
-        alert('Không có sản phẩm ');
-        input = "";
-    }
-    renderUI(searchProduct);
-}); 
+function handleAdd(){
+    
+}
+
 
 
 

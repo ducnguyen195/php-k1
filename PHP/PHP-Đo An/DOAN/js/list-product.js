@@ -3,7 +3,7 @@ function renderList (sortPrice){
     let html = '';
     for (let i = 0; i < sortPrice.length; i++) {
         html += `
-        <div class="list__products col-md-4 mt-3" >
+        <div class="list__products col-lg-4 col-md-4 col-sm-6 col-6 mt-3" >
             <div class="product-1">
                 <a href="./product-detail.html"> <img src="./image/${sortPrice[i].img}" alt=""></a>
             </div>
@@ -48,6 +48,22 @@ $('#searchSelect').on('change',function(){
     renderList(sortPrice)
 });
 
+$('#btn-search').click(function(){
+    let searchProduct = listProduct;
+    let input = $('#box-input').val();
+    console.log(input);
+    if(input.length === 0){
+        alert ('Chưa nhập nội dung');
+    } else if (input.length !== 0){
+        searchProduct = listProduct.filter( e => e.name.toLowerCase().includes(input))
+        console.log(searchProduct);
+        
+    }else if (searchProduct ===false){
+        alert('Không có sản phẩm ');
+        input = "";
+    }
+    renderList(searchProduct);
+}); 
 
 
 

@@ -47,8 +47,8 @@
             </li>
             </ul>
             <div class="d-flex" >
-            <input style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Tìm kiêm</button>
+            <input id="box-input" style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+            <button id="btn-search" class="btn btn-outline-success" type="submit">Tìm kiêm</button>
             </div>
         </div>
         <div class="icon__cart" >
@@ -170,11 +170,11 @@
                     <div>
                         <input class="mt-2" style="border-radius: 5px; padding: 0 10px;" type="text" placeholder="Từ giá...">
                         <input  class="mt-2" style="border-radius: 5px; padding: 0 10px;" type="text" placeholder="Đến giá...">
-                        <button class=" mt-3 btn btn-primary"> Tìm Kiếm</button>
+                        <button class=" mt-3 btn btn-primary" style="width: 50%;"> Tìm Kiếm</button>
                     </div>
                 </div>                    
                 <div id="list-product" onclick="renderList()" class="row product col-md-9">
-                    <div class="list__products col-md-4" >
+                    <div class="list__products col-lg-4  col-md-4 col-sm-6 col-6" >
                         <div class="product-1">
                             <a href="./product-detail.html"> <img src="./image/product1.jpg" alt=""></a>
                         </div>
