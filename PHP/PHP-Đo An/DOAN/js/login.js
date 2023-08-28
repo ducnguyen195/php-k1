@@ -18,11 +18,10 @@ $('#btn-login').click(function(){
             setTimeout(function(){
                 window.location.replace('../index.html')
             }, 2000);
-            let allUser =[];
+            let allUser = [];
             allUser.push(data)
-            allUser = data
-            dataUser = JSON.stringify(allUser);
-            localStorage.setItem('dataAll', dataUser)
+            allUser = JSON.stringify(allUser);
+            localStorage.setItem('allUser', allUser);
         };
         
     };

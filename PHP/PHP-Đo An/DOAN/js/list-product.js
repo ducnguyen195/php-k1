@@ -1,5 +1,5 @@
 
-function renderList (sortPrice){
+function renderList (sortPrice = listProduct){
     let html = '';
     for (let i = 0; i < sortPrice.length; i++) {
         html += `
@@ -8,7 +8,7 @@ function renderList (sortPrice){
                 <a href="./product-detail.html"> <img src="./image/${sortPrice[i].img}" alt=""></a>
             </div>
             <div class="product-imfor">
-                <p> ${sortPrice[i].price} VND </p>
+                <p> ${sortPrice[i].price.toLocaleString()} VND </p>
                 <div class="ion-star">
                     <ion-icon name="star-outline"></ion-icon>
                     <ion-icon name="star-outline"></ion-icon>
@@ -64,6 +64,7 @@ $('#btn-search').click(function(){
     }
     renderList(searchProduct);
 }); 
+
 
 
 
