@@ -4,6 +4,7 @@ let listProduct = [
         name: 'Quả hồ đào Calo Nuts',
         price: 160000,
         img:'product1.jpg',
+        quantity:1,
         category: ' Hạt',
     },
     {
@@ -11,6 +12,7 @@ let listProduct = [
         name: 'Hạt hạnh nhân Calo Nuts',
         price: 150000,
         img:'product2.jpg',
+        quantity:1,
         category: ' Hạt',
     },
     {
@@ -18,6 +20,7 @@ let listProduct = [
         name: 'Hạt dẻ cười Calo Nuts',
         price: 150000,
         img:'product3.jpg',
+        quantity:1,
         category: ' Hạt',
     },
     {
@@ -25,6 +28,7 @@ let listProduct = [
         name: 'Hạt mắc ca Úc Calo Nuts',
         price: 200000,
         img:'product4.jpg',
+        quantity:1,
         category: ' Hạt',
     },
     {
@@ -32,6 +36,7 @@ let listProduct = [
         name: 'Ngũ cốc Granola',
         price: 160000,
         img:'product5.jpg',
+        quantity:1,
         category: ' Hạt',
     },
     {
@@ -39,6 +44,7 @@ let listProduct = [
         name: 'Hạt điều Bình Phước Calo Nuts',
         price: 170000,
         img:'product6.jpg',
+        quantity:1,
         category: ' Hạt',
     },
     {
@@ -46,6 +52,7 @@ let listProduct = [
         name: 'Hạt chia Calo Nuts',
         price: 150000,
         img:'product7.jpg',
+        quantity:1,
         category: ' Hạt',
     },
     {
@@ -53,6 +60,7 @@ let listProduct = [
         name: 'Hạt óc chó Calo Nuts',
         price: 160000,
         img:'product8.jpg',
+        quantity:1,
         category: ' Hạt',
     },
     {
@@ -60,6 +68,7 @@ let listProduct = [
         name: 'Thanh Long Tím',
         price: 20000,
         img:'thanhlong.jpg',
+        quantity:1,
         category: 'Trái Cây',
     },
     {
@@ -67,6 +76,7 @@ let listProduct = [
         name: 'Củ cải trắng',
         price: 10000,
         img:'cucai.jpg',
+        quantity:1,
         category: 'Rau củ',
     },
     {
@@ -74,6 +84,7 @@ let listProduct = [
         name: 'Carot baby Đà Lạt',
         price: 15000,
         img:'carot.jpg',
+        quantity:1,
         category: 'Trái Cây',
     },
     {
@@ -81,6 +92,7 @@ let listProduct = [
         name: 'Bún ngô',
         price: 50000,
         img:'product9.png',
+        quantity:1,
         category: 'Thực phẩm',
     },
     {
@@ -88,6 +100,7 @@ let listProduct = [
         name: 'Cải bắp tím ',
         price: 10000,
         img:'rau1.jpg',
+        quantity:1,
         category: 'Rau củ',
     },
     {
@@ -95,6 +108,7 @@ let listProduct = [
         name: 'Rau mùi tàu ',
         price: 5000,
         img:'rau2.png',
+        quantity:1,
         category: 'Rau củ',
     },
     {
@@ -102,6 +116,7 @@ let listProduct = [
         name: 'Rau mồng tơi ',
         price: 8000,
         img:'rau3.png',
+        quantity:1,
         category: 'Rau củ',
     },
     {
@@ -109,6 +124,7 @@ let listProduct = [
         name: 'Xoài cát ',
         price: 20000,
         img:'xoai1.jpg',
+        quantity:1,
         category: 'Trái cây',
     },
     {
@@ -116,6 +132,7 @@ let listProduct = [
         name: 'Xoài Úc ',
         price: 30000,
         img:'xoai2.jpg',
+        quantity:1,
         category: 'Trái cây',
     },
     {
@@ -123,6 +140,7 @@ let listProduct = [
         name: 'Xoài Thái',
         price: 50000,
         img:'xoai3.jpg',
+        quantity:1,
         category: 'Trái cây',
     },
     {
@@ -130,6 +148,7 @@ let listProduct = [
         name: 'Ngũ vị hương',
         price: 15000,
         img:'giavi.png',
+        quantity:1,
         category: 'Gia vị',
     },
     {
@@ -137,6 +156,7 @@ let listProduct = [
         name: 'Muối Tây Ninh',
         price: 20000,
         img:'giavi1.webp',
+        quantity:1,
         category: 'Gia vị',
     },
 ];
@@ -151,15 +171,17 @@ $('#logout').click(function(){
     $('.title-register').css('display', 'block')
 });
 
-function handleAdd(id){
-    let productAdd= [] ;
-    let productId = listProduct.find( e => e.id == id);
-        productAdd.push(productId)
-        productAdd = JSON.stringify(productAdd);
-        localStorage.setItem('productAdd', productAdd);
-    
+function updateQuantity (quantityProduct){
+    let quantityUp = 0 ;
+    var getProduct = localStorage.getItem('addProduct');
+    var quantityProduct = JSON.parse(getProduct);
+    for (let i = 0; i < quantityProduct.length; i++) {
+        quantityUp += quantityProduct[i].quantity
+    }
+    $('#quantity-cart').text(quantityUp);
 }
-handleAdd();
+
+
 
 
 

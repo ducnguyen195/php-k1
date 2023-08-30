@@ -1,4 +1,4 @@
-
+//Render products//
 function renderList (sortPrice = listProduct){
     let html = '';
     for (let i = 0; i < sortPrice.length; i++) {
@@ -30,6 +30,9 @@ function renderList (sortPrice = listProduct){
         `
     }
 $('#list-product').html(html);
+var itemsLocal= localStorage.getItem('addProduct');
+var items = JSON.parse(itemsLocal);
+handleMiniCart(items);
 };
 renderList(listProduct);
 // Event select
@@ -48,22 +51,97 @@ $('#searchSelect').on('change',function(){
     renderList(sortPrice)
 });
 
+// Event search
 $('#btn-search').click(function(){
     let searchProduct = listProduct;
     let input = $('#box-input').val();
-    console.log(input);
     if(input.length === 0){
         alert ('Chưa nhập nội dung');
     } else if (input.length !== 0){
         searchProduct = listProduct.filter( e => e.name.toLowerCase().includes(input))
-        console.log(searchProduct);
-        
-    }else if (searchProduct ===false){
+    } else{
         alert('Không có sản phẩm ');
-        input = "";
     }
     renderList(searchProduct);
-}); 
+});
+//Event add product in cart
+function handleAdd (id) {
+    const addProduct = JSON.parse(localStorage.getItem('addProduct')) || [];
+    let products = listProduct.find(e => e.id === id);
+    if(addProduct.length === 0) {
+        addProduct.push(products)
+    }else {
+        let isCompare = false;
+            let index = null;
+            for (let i = 0; i < addProduct.length; i++) {
+                if (addProduct[i].id == products.id) {
+                    isCompare = true;
+                    index = i;
+                };
+            };
+            if (isCompare == true) {
+                addProduct[index].quantity += 1;
+            } else {
+                addProduct.push(products)
+            }
+        }
+        localStorage.setItem("addProduct", JSON.stringify(addProduct));
+        handleMiniCart(addProduct);
+}
+// Render product in cart
+function handleMiniCart(miniCartProduct) {
+    let html = '';
+    for (let i = 0; i < miniCartProduct.length; i++) {
+        html +=`
+        <li class=" box__item" >
+            <div class="item-thumb">
+                <a href="./html/list-products.html" title="" class="">
+                    <img alt="" src="./image/${miniCartProduct[i].img}" width="50%">
+                </a>
+            </div>
+            <div class="item-title">
+                <a href="./list-products.html"  > ${miniCartProduct[i].name}</a>
+                <div class="item-quantity">
+                    <span class="quantity__mini-cart" > ${miniCartProduct[i].quantity} </span>x
+                    <span class="price__mini-cart" >  ${miniCartProduct[i].price.toLocaleString()} VND</span>
+                </div>
+            </div>
+            <div class="item-action">
+                <button onclick="handleRemove(${miniCartProduct[i].id})" id="render__mini-cart" class="btn-remove" href="">
+                    <ion-icon style="color: red; height: 1em;" name="trash-outline"></ion-icon>
+                </button>
+            </div>
+        </li>  
+    `
+    }
+$('#render__mini-cart').html(html);
+var itemsLocal= localStorage.getItem('addProduct');
+var items = JSON.parse(itemsLocal);
+updateTotalPrice(items)
+updateQuantity (items)
+}
+//Total price
+function updateTotalPrice(addProduct){
+    let totalPrice = 0;
+    for (let i = 0; i < addProduct.length; i++) {
+        const e = addProduct[i];
+        totalPrice += e.quantity * e.price;
+    }
+    $('#price').text(totalPrice.toLocaleString() + ' ' + 'VND');
+};
+//Event remove product
+function handleRemove (id) {
+    var product = localStorage.getItem('addProduct')
+    var addProduct = JSON.parse(product)
+    for (let i = 0; i < addProduct.length; i++) { 
+        if (addProduct[i].id == id) {
+            addProduct.splice(i, 1);
+        }
+        localStorage.setItem('addProduct', JSON.stringify(addProduct));    
+    }
+    handleMiniCart(addProduct);
+};
+
 
 
 

@@ -90,9 +90,7 @@ div .sticky{
     position: relative;
     top: 0;
 }
-.btn{
-    width: 100%;
-}
+
 .form-control{
     width: 250%;
 }
@@ -203,8 +201,10 @@ div .sticky{
     padding-left:6px;
     font-size: 12px;
 }
-
-
+button{
+    outline: none;
+    border: none;
+}
 
 .mini-cart{
     width: 23em;
@@ -219,6 +219,8 @@ div .sticky{
 
 .cart-list{
     border-top:1px solid  rgba(220, 220, 220, 0.499);
+    height: 9em;
+    overflow: auto;
 }
 
 

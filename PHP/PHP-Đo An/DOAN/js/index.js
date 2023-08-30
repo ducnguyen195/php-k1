@@ -5,6 +5,7 @@ let product = [
         price: 160000,
         img:'product1.jpg',
         category: ' Hạt',
+        quantity :1,
     },
     {
         id:2,
@@ -12,6 +13,7 @@ let product = [
         price: 150000,
         img:'product2.jpg',
         category: ' Hạt',
+        quantity :1,
     },
     {
         id:3,
@@ -19,6 +21,7 @@ let product = [
         price: 150000,
         img:'product3.jpg',
         category: ' Hạt',
+        quantity :1,
     },
     {
         id:4,
@@ -26,6 +29,7 @@ let product = [
         price: 200000,
         img:'product4.jpg',
         category: ' Hạt',
+        quantity :1,
     },
     {
         id:5,
@@ -33,6 +37,7 @@ let product = [
         price: 160000,
         img:'product5.jpg',
         category: ' Hạt',
+        quantity :1,
     },
     {
         id:6,
@@ -40,6 +45,7 @@ let product = [
         price: 170000,
         img:'product6.jpg',
         category: ' Hạt',
+        quantity :1,
     },
     {
         id:7,
@@ -47,6 +53,7 @@ let product = [
         price: 150000,
         img:'product7.jpg',
         category: ' Hạt',
+        quantity :1,
     },
     {
         id:8,
@@ -54,9 +61,11 @@ let product = [
         price: 160000,
         img:'product8.jpg',
         category: ' Hạt',
+        quantity :1,
     },
 ];
-function renderUI(searchProduct ){
+
+function renderUI(searchProduct = product ){
     let html ='';
     for (let i = 0; i < searchProduct.length; i++) {
         html += `
@@ -87,13 +96,15 @@ function renderUI(searchProduct ){
         `        
     }
 $('#products').html(html);
+var itemsLocal= localStorage.getItem('addProduct');
+var items = JSON.parse(itemsLocal);
+handleMiniCart(items);
 };
 renderUI(product);
 
 $('#btn-search').click(function(){
     let searchProduct = product;
     let input = $('#box-input').val();
-    console.log(input);
     if(input.length === 0){
         alert ('Chưa nhập nội dung');
     } else if (input.length !== 0){
@@ -105,4 +116,82 @@ $('#btn-search').click(function(){
         input = "";
     }
     renderUI(searchProduct);
-}); 
+});
+//Event add product in cart
+function handleAdd (id) {
+    const addProduct = JSON.parse(localStorage.getItem('addProduct')) || [];
+    let products = product.find(e => e.id === id);
+    if(addProduct.length === 0) {
+        addProduct.push(products)
+    }else {
+        let isCompare = false;
+            let index = null;
+            for (let i = 0; i < addProduct.length; i++) {
+                if (addProduct[i].id == products.id) {
+                    isCompare = true;
+                    index = i;
+                };
+            };
+            if (isCompare == true) {
+                addProduct[index].quantity += 1;
+            } else {
+                addProduct.push(products)
+            }
+        }
+        localStorage.setItem("addProduct", JSON.stringify(addProduct));
+        handleMiniCart(addProduct);
+}
+// Render product in cart
+function handleMiniCart(miniCartProduct) {
+    let html = '';
+    for (let i = 0; i < miniCartProduct.length; i++) {
+        html +=`
+            <li class=" box__item" >
+                <div class="item-thumb">
+                    <a href="./html/list-products.html" title="" class="">
+                        <img alt="" src="html/image/${miniCartProduct[i].img}" width="50%">
+                    </a>
+                </div>
+                <div class="item-title">
+                    <a href="./html/list-products.html"  > ${miniCartProduct[i].name}</a>
+                    <div class="item-quantity">
+                        <span class="quantity__mini-cart" > ${miniCartProduct[i].quantity}</span>x
+                        <span class="price__mini-cart" > ${miniCartProduct[i].price.toLocaleString()} VND</span>
+                    </div>
+                </div>
+                <div class="item-action">
+                    <button onclick="handleRemove(${miniCartProduct[i].id})" class="btn-remove" style="outline: none; border" href="">
+                        <ion-icon style="color: red; height: 1em;" name="trash-outline"></ion-icon>
+                    </button>
+                </div>
+        </li>                   
+    `
+    }
+$('#render__mini-cart').html(html);
+var itemsLocal= localStorage.getItem('addProduct');
+var items = JSON.parse(itemsLocal);
+updateTotalPrice(items)
+updateQuantity (items)
+}
+//Total price
+function updateTotalPrice(addProduct){
+    let totalPrice = 0;
+    for (let i = 0; i < addProduct.length; i++) {
+        const e = addProduct[i];
+        totalPrice += e.quantity * e.price;
+    }
+    $('#price').text(totalPrice.toLocaleString() + ' ' + 'VND');
+};
+//Event remove product
+function handleRemove (id) {
+    var product = localStorage.getItem('addProduct')
+    var addProduct = JSON.parse(product)
+    for (let i = 0; i < addProduct.length; i++) { 
+        if (addProduct[i].id == id) {
+            addProduct.splice(i, 1);
+        }
+        localStorage.setItem('addProduct', JSON.stringify(addProduct));    
+    }
+    handleMiniCart(addProduct);
+};
+

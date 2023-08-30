@@ -56,7 +56,7 @@
             </ul>
             <div class="d-flex" >
             <input id="box-input" style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-            <button id="btn-search" class="btn btn-outline-success" type="submit" >Tìm kiêm</button>
+            <button id="btn-search" class="btn btn-outline-success" type="submit" style="width: 100%" >Tìm kiêm</button>
             </div>
         </div>
         <div class="icon__cart">
@@ -67,7 +67,7 @@
             </div>
             <div  class="cart">
                 <a href="./html/cart.html"><ion-icon name="cart-outline"> </ion-icon> </a>
-                <p> 0 </p>
+                <p id="quantity-cart"> 0 </p>
                 <strong> Giỏ Hàng </strong>
                 <div id="mini-cart" class="mini-cart" >
                         <span class="icon-arrow"> <ion-icon style="color: ;" name="caret-up-outline"></ion-icon></span>
@@ -77,24 +77,24 @@
                             <a name="checkout" href="./html/cart.html" class="btn btn-default"> Xem chi tiết </a>
                         </div>
                         <div class="scroll-wrapper " ><div class="scrollbar-macosx scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 146.6px;">
-                            <ul class="cart-list">
+                            <ul onclick="handleMiniCart()" id="render__mini-cart" class="cart-list">
                                 <li class=" box__item" >
                                     <div class="item-thumb">
                                         <a href="./html/list-products.html" title="" class="">
-                                            <img alt="" src="html/image/rau3.png" width="50%">
+                                            <img alt="" src="html/image/" width="50%">
                                         </a>
                                     </div>
                                     <div class="item-title">
-                                        <a href="./html/list-products.html"  > Rau mồng tơi</a>
+                                        <a href="./html/list-products.html"  > </a>
                                         <div class="item-quantity">
-                                            <span class="quantity__mini-cart" >1</span>x
-                                            <span class="price__mini-cart" >8.000 VND</span>
+                                            <span class="quantity__mini-cart" ></span>
+                                            <span class="price__mini-cart" > </span>
                                         </div>
                                     </div>
                                     <div class="item-action">
-                                        <a class="btn-remove" href="">
+                                        <button  onclick="handleRemove()" class="btn-remove" href="">
                                             <ion-icon style="color: red; height: 1em;" name="trash-outline"></ion-icon>
-                                        </a>
+                                        </button>
                                     </div>
                                 </li>                    
                             </ul>
@@ -119,9 +119,9 @@
                             </div>
                         </div>
                         </div>
-                        <div class="cart-total text-center">
-                            <label>Tổng tiền</label>
-                            <span class="price ng-binding">8.000 VND</span>
+                        <div class="cart-total text-center" style="margin-top: 2em;">
+                            <label>Tổng tiền : </label>
+                            <span id="price" class="price ng-binding">8.000 VND</span>
                         </div>
                         <div class="cart-link">
                             <a name="checkout" class="btn btn-primary" href="./html/payment.html"> Thanh toán <i class="fa fa-angle-right"></i> </a>
