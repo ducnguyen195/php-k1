@@ -69,7 +69,7 @@ function renderUI(searchProduct = product ){
     let html ='';
     for (let i = 0; i < searchProduct.length; i++) {
         html += `
-        <div  class="list__products col-lg-3 col-md-3 col-sm-6 col-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
+        <div onchange="handleDetail(${searchProduct[i].id})"  class="list__products col-lg-3 col-md-3 col-sm-6 col-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
             <div class="product-1">
                 <a href="./html/product-detail.html"> <img src="./html/image/${searchProduct[i].img}" alt=""></a>
             </div>
@@ -139,7 +139,7 @@ function handleAdd (id) {
             }
         }
         localStorage.setItem("addProduct", JSON.stringify(addProduct));
-        handleMiniCart(addProduct);
+        handleMiniCart(items);
 }
 // Render product in cart
 function handleMiniCart(miniCartProduct) {
@@ -194,4 +194,16 @@ function handleRemove (id) {
     }
     handleMiniCart(addProduct);
 };
+function updateQuantity (quantityProduct){
+    let quantityUp = 0 ;
+    var getProduct = localStorage.getItem('addProduct');
+    var quantityProduct = JSON.parse(getProduct);
+    for (let i = 0; i < quantityProduct.length; i++) {
+        quantityUp += quantityProduct[i].quantity
+    }
+    $('#quantity-cart').text(quantityUp);
+}
+
+
+
 

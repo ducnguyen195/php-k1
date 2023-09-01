@@ -1,4 +1,4 @@
-let listProduct = [
+let listProduct = [ 
     {
         id:1,
         name: 'Quả hồ đào Calo Nuts',
@@ -171,15 +171,9 @@ $('#logout').click(function(){
     $('.title-register').css('display', 'block')
 });
 
-function updateQuantity (quantityProduct){
-    let quantityUp = 0 ;
-    var getProduct = localStorage.getItem('addProduct');
-    var quantityProduct = JSON.parse(getProduct);
-    for (let i = 0; i < quantityProduct.length; i++) {
-        quantityUp += quantityProduct[i].quantity
-    }
-    $('#quantity-cart').text(quantityUp);
-}
+
+
+
 
 
 
