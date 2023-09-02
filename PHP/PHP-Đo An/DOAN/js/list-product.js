@@ -5,7 +5,7 @@ function renderList (sortPrice = listProduct){
         html += `
         <div class="list__products col-lg-4 col-md-4 col-sm-6 col-6 mt-3" >
             <div class="product-1">
-                <a href="./product-detail.html"> <img src="./image/${sortPrice[i].img}" alt=""></a>
+                <a href="./product-detail.html?id=${listProduct[i].id}"> <img src="./image/${sortPrice[i].img}" alt=""></a>
             </div>
             <div class="product-imfor">
                 <p> ${sortPrice[i].price.toLocaleString()} VND </p>
@@ -150,6 +150,19 @@ function updateQuantity (quantityProduct){
         quantityUp += quantityProduct[i].quantity
     }
     $('#quantity-cart').text(quantityUp);
+}
+//Function search price
+function handleSearch (){
+    let productSearch = listProduct;
+    let minPrice = $('#min').val();
+    let maxPrice = $('#max').val();
+    if(minPrice){
+        productSearch = listProduct.filter(item => item.price >=minPrice)
+    };
+    if(maxPrice){
+        productSearch = listProduct.filter(item => item.price <=maxPrice)
+    };
+    renderList(productSearch);
 }
 
 

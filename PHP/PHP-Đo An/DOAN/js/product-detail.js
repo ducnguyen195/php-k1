@@ -1,16 +1,21 @@
+
 //Event render product detail
-function handleDetail (id) {
-    console.log(id);
+function handleDetail (a) {
+    var url = window.location.href
+        url = new URL(url);
+    var a = url.searchParams.get('id');
     let html = '';
-    for (let i = 0; i < product.length ; i++) {
-        if (product[i].id == id) {
+    for (let i = 0; i < listProduct.length ; i++) {
+        if (listProduct[i].id == a) {
+            console.log(a);
             html +=`
+            <div  class="detail__img col-xl-6 d-flex">
                 <div class="detail__img-sm">
-                    <img src="./image/${product[i].img}" width="100px" height="100px" alt=" Ảnh">
+                    <img src="./image/${listProduct[i].img}" width="100px" height="100px" alt=" Ảnh">
                 </div>
                 <div>
                     <div class="detail__img-lg">
-                        <img src="./image/${product[i].img}" width="400px" height=" 400px" alt=" Ảnh">
+                        <img src="./image/${listProduct[i].img}" width="400px" height=" 400px" alt=" Ảnh">
                     </div>
                     <div class="imfor__detail">
                         <p style="font-size: 20px; font-weight: 500;"> Thông tin sản phẩm : </p>
@@ -24,7 +29,7 @@ function handleDetail (id) {
             </div>
             <div class="content__detail col-xl-6 ">
                 <div >
-                    <h3> ${product[i].name}</h3>
+                    <h3> ${listProduct[i].name}</h3>
                     <div class="ion-star">
                         <ion-icon name="star-outline"></ion-icon>
                         <ion-icon name="star-outline"></ion-icon>
@@ -42,8 +47,23 @@ function handleDetail (id) {
                     <button> Chat với Người bán</button>
                 </div>
                 <div class="detail__price">
-                    <span> <p>Giá bán :</p> <strong> ${product[i].price.toLocaleString()} VND</strong> <p> /500g</p></span>
+                    <span> <p>Giá bán :</p> <strong> ${listProduct[i].price.toLocaleString() + 'VND'} </strong> <p> /500g</p></span>
                 </div>
+                <div  class="detail__quantity" style="display: flex;">
+                    <p style="margin-top: 10px;"> Số lượng : </p>
+                    <button  class="minus"> - </button><input type="text" value="1"> <button class="plus"> + </button>
+                    <p style="margin-left: 10px; margin-top:10px"> (10 còn hàng)</p>
+                </div>
+                <div class="price__total">
+                    <p>Tổng tiền :</p> <strong> 150.000 VND</strong>
+                </div>
+                <div class="detail__add">
+                    <button class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
+                    <button class="add__cart"> <ion-icon name="cart-outline"></ion-icon> Mua ngay</button>
+                </div>
+                <div class="add__like">
+                    <a style="text-decoration: none;" href=""> Thêm vào danh sách yêu thích </a>
+                </div>             
             `
         }
         $('#detail-product').html(html);

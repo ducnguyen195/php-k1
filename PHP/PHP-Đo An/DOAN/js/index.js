@@ -69,9 +69,9 @@ function renderUI(searchProduct = product ){
     let html ='';
     for (let i = 0; i < searchProduct.length; i++) {
         html += `
-        <div onchange="handleDetail(${searchProduct[i].id})"  class="list__products col-lg-3 col-md-3 col-sm-6 col-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
+        <div  class="list__products col-lg-3 col-md-3 col-sm-6 col-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
             <div class="product-1">
-                <a href="./html/product-detail.html"> <img src="./html/image/${searchProduct[i].img}" alt=""></a>
+                <a  href="./html/product-detail.html?id=${searchProduct[i].id}"> <img src="./html/image/${searchProduct[i].img}" alt=""></a>
             </div>
             <div class="product-imfor">
                 <p> ${searchProduct[i].price.toLocaleString()} VND</p>

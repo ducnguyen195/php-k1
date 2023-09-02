@@ -16,7 +16,7 @@ function renderCart() {
                         <input style="width: 25px; padding-left:8px; " type="text" value="${productCart[i].quantity}">
                         <button id="plus"> + </button>
                     </div>
-                    <div   class="cart__price-item" style="font-size: 18px; margin-right: -1em; color: red;"> <strong id="is-price">  </strong> </div>
+                    <div   class="cart__price-item" style="font-size: 18px; margin-right: -1em; color: red;"> <strong id="is-price-${productCart[i].id}">  </strong> </div>
                     <div class="cart__price-item" style="margin-right: -2.5em; ">
                         <button onclick="handleRemove(${productCart[i].id})" style="background-color: rgba(237, 28, 36, 0.15);"> 
                             <ion-icon style="color: red;" name="trash-outline"></ion-icon> 
@@ -33,20 +33,19 @@ function renderCart() {
 }
 renderCart();
 // Function total price
-function priceTotal(price) {
-    let totalMoney = '';
-    let priceProducts = '';
+function priceTotal(prices) {
+    let totalMoney = 0 ;
+    let priceProducts = 0;
     var addProduct = localStorage.getItem('addProduct');
-    var price = JSON.parse(addProduct);
-    for (let i = 0; i < price.length; i++) {
-        const e = price[i];
+    var prices = JSON.parse(addProduct);
+    for (let i = 0; i < prices.length; i++) {
+        const e = prices[i];
         priceProducts = e.quantity * e.price;
-        totalMoney +=  e.quantity * e.price;
+        $('#is-price-'+ prices[i].id).text(priceProducts.toLocaleString() + ' ' + 'VND')
+        totalMoney +=  priceProducts;
     }
-    $('#is-price').text(priceProducts.toLocaleString() + 'VND')
-    $('#total-money').text(totalMoney.toLocaleString() + 'VND')
+    $('#total-money').text(totalMoney.toLocaleString() + ' ' + 'VND')
 };
-
 //Event remove product
 function handleRemove (id) {
     var product = localStorage.getItem('addProduct')
@@ -59,3 +58,13 @@ function handleRemove (id) {
     }
     renderCart(addProducts);
 };
+// Function print quantity product
+function updateQuantity (quantityProduct){
+    let quantityUp = 0 ;
+    var getProduct = localStorage.getItem('addProduct');
+    var quantityProduct = JSON.parse(getProduct);
+    for (let i = 0; i < quantityProduct.length; i++) {
+        quantityUp += quantityProduct[i].quantity
+    }
+    $('#quantity-cart').text(quantityUp);
+}
