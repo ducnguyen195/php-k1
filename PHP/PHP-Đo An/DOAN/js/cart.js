@@ -66,7 +66,6 @@ function updateQuantity (quantityProduct){
     var quantityProduct = JSON.parse(getProduct);
     for (let i = 0; i < quantityProduct.length; i++) {
         quantityUp += quantityProduct[i].quantity
-        console.log(quantityUp);
     }
     $('#quantity-cart').text(quantityUp);
 };

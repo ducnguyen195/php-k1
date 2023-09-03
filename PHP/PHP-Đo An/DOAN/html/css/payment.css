@@ -74,6 +74,14 @@ body{
     border: 1px solid #e6e5e551;
 }
 
+.item__product{
+    border-top: 1px solid #e6e5e551;
+}
+
+.prime-item{
+    
+}
+
 .block__item p{
     margin:0;
 }

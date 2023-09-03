@@ -48,7 +48,7 @@
             </ul>
             <form class="d-flex" >
             <input style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Tìm kiêm</button>
+            <button class="btn btn-outline-success" type="submit" style="width: 100%;" >Tìm kiêm</button>
             </form>
         </div>
         <div class="icon__cart">
@@ -111,38 +111,28 @@
                 <div class="name__product d-flex">
                     <div  class="payment__imfor d-flex">
                         <p>Tên sản phẩm</p>
-                        <p> Số lượng</p>
                         <p>Thành tiền</p>
                     </div>
                 </div>
-                <div  class="imfor__product d-flex">
-                    <div class="" >
-                        <p> Bún Ngô</p>
-                        <p> 150.000</p> 
-                    </div>
-                    <div>
-                        <p> 2</p>
-                    </div>
-                    
-                    <div>
-                        <p>300.000 VND</p>
-                    </div>
-                </div>
-                <div  class="imfor__product d-flex">
-                    <div >
-                        <p> Hạt óc chó Mỹ Calo Nuts</p>
-                        <p> 150.000</p> 
-                    </div>
-                    <div>
-                        <p> 2</p>
-                    </div>                    
-                    <div>
-                        <p>300.000 VND</p>
+                <div onclick="renderDetailPayment()" id="payment-render" class="imfor__product" >
+                    <div style="display: flex;">
+                        <div class="item__product mt-2 ">
+                            <div>
+                                <p> </p>
+                            </div>
+                            <div style="display: flex;">
+                                <p>  <p> x </p></p> 
+                                <p id="quantity-payment">  </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p id="total__price-" class="price-item"> 300.000 VND</p>
+                        </div>
                     </div>
                 </div>
-                <div class="payment__total d-flex">
+                <div class="payment__total d-flex" style="padding: 0 10px;">
                     <p> Tổng tiền :</p>
-                    <strong> 600.000 VND</strong>
+                    <strong id="total__payment"> 600.000 VND</strong>
                 </div>
                 
             </div>
@@ -169,7 +159,7 @@
 <footer class="text-center text-lg-start text-muted" style="background-color: black;">
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div class="me-5 d-none d-lg-block">
-            <span > NÔNG SẢN VIỆT</span>
+            <span > </span>
         </div>
         <div>
             <a href="" class="me-4 text-reset">
@@ -257,5 +247,11 @@
 </footer>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous">
+</script>
+<script src="../js/common.js"></script>
+<script src="../js/payment.js"></script>
 </body>
 </html>
