@@ -80,9 +80,9 @@
                     <div class="imfor__detail">
                         <p style="font-size: 20px; font-weight: 500;"> Thông tin sản phẩm : </p>
                         <ul class="list__imfor">
-                            <li> Xuất xứ : Việt Nam </li>
-                            <li> Đóng gói : Hộp 500g </li>
-                            <li> HSD : 12  tháng</li>
+                            <li>  </li>
+                            <li>  </li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
             </div>
             <div class="content__detail col-xl-6 ">
                 <div >
-                    <h3> Quả hồ đào Calo Nuts</h3>
+                    <h3></h3>
                     <div class="ion-star">
                         <ion-icon name="star-outline"></ion-icon>
                         <ion-icon name="star-outline"></ion-icon>
@@ -102,21 +102,23 @@
                 </div>
                 <div class="content__detail-item" style="display: flex;">
                     <div class="detail__item-1">
-                        <p> Được bán bởi:</p>
-                        <strong> Calo Nuts</strong>
+                        <p></p>
+                        <strong></strong>
                     </div>
-                    <button> Chat với Người bán</button>
+                    <button> </button>
                 </div>
                 <div class="detail__price">
-                    <span> <p>Giá bán :</p> <strong> 150.000 VND</strong> <p> /500g</p></span>
+                    <span> <p>Giá bán :</p> <strong> </strong> <p> /500g</p></span>
                 </div>
                 <div  class="detail__quantity" style="display: flex;">
                     <p style="margin-top: 10px;"> Số lượng : </p>
-                    <button class="minus"> - </button><input type="text" value="1"> <button class="plus"> + </button>
+                    <button onclick="handleQuantityMinus()" class="minus"> - </button>
+                    <input onchange="handleQUantityInput()" type="text" value="1">
+                    <button onclick="handleQuantityPlus()" class="plus"> + </button>
                     <p style="margin-left: 10px; margin-top:10px"> (10 còn hàng)</p>
                 </div>
                 <div class="price__total">
-                    <p>Tổng tiền :</p> <strong> 150.000 VND</strong>
+                    <p>Tổng tiền : </p> <strong> </strong>
                 </div>
                 <div class="detail__add">
                     <button class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
@@ -124,11 +126,10 @@
                 </div>
                 <div class="add__like">
                     <a style="text-decoration: none;" href=""> Thêm vào danh sách yêu thích </a>
-                </div>                
+                </div>               
             </div>
         </div>
     </div>
-
         <div class="product-add" style="border-radius: 5px;">
             <div class="title__add-product"> <h3>Sản phẩm tương ứng</h3></div>
             <div class="row col-md-12 ml-1 pb-3 mt-2">
@@ -231,9 +232,6 @@
             </div>
 
         </div>
-
-
-
 </div>                  
 <footer class="text-center text-lg-start text-muted" style="background-color: black;">
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -329,7 +327,7 @@
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous">
 </script>
-<script src="../js/index.js"></script>
+
 <script src="../js/common.js"></script>
 <script src="../js/product-detail.js"></script>
 </body>

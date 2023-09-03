@@ -12,9 +12,9 @@ function renderCart() {
                 <div class="cart__price col-md-8 d-flex">
                     <div class="cart__price-item" style="font-size: 18px; margin-left: -1em;"> <strong> ${productCart[i].price.toLocaleString()} VND</strong> </div>
                     <div class="cart__price-item ml-2">
-                        <button id="minus"> - </button>
-                        <input style="width: 25px; padding-left:8px; " type="text" value="${productCart[i].quantity}">
-                        <button id="plus"> + </button>
+                        <button onclick="handleQuantityMinus(${productCart[i].id})" id="minus"> - </button>
+                        <input onchange="handleQuantityInput(${productCart[i].id})" id="input-cart" style="width: 25px; padding-left:8px; " type="text" value="${productCart[i].quantity}">
+                        <button onclick="handleQuantityPlus(${productCart[i].id})" id="plus"> + </button>
                     </div>
                     <div   class="cart__price-item" style="font-size: 18px; margin-right: -1em; color: red;"> <strong id="is-price-${productCart[i].id}">  </strong> </div>
                     <div class="cart__price-item" style="margin-right: -2.5em; ">
@@ -30,6 +30,7 @@ function renderCart() {
     var itemLocal = localStorage.getItem('addProduct')
     var items = JSON.parse(itemLocal)
     priceTotal(items)
+    updateQuantity (items)
 }
 renderCart();
 // Function total price
@@ -65,6 +66,42 @@ function updateQuantity (quantityProduct){
     var quantityProduct = JSON.parse(getProduct);
     for (let i = 0; i < quantityProduct.length; i++) {
         quantityUp += quantityProduct[i].quantity
+        console.log(quantityUp);
     }
     $('#quantity-cart').text(quantityUp);
-}
+};
+// Event update quantity product
+function handleQuantityMinus(id){
+    var addProduct = localStorage.getItem('addProduct');
+    var product = JSON.parse(addProduct);
+    for (let i = 0; i < product.length; i++) {
+        if (product[i].id == id) {
+            product[i].quantity--
+        }
+    }
+    localStorage.setItem('addProduct',JSON.stringify(product));
+    renderCart(product)
+};
+function handleQuantityPlus(id){
+    var addProduct = localStorage.getItem('addProduct');
+    var product = JSON.parse(addProduct);
+    for (let i = 0; i < product.length; i++) {
+        if (product[i].id == id) {
+            product[i].quantity++
+        }
+    }
+    localStorage.setItem('addProduct',JSON.stringify(product));
+    renderCart(product)
+};
+function handleQuantityInput(id) {
+    let upQuantity = $('#input-cart').val();
+    var addProduct = localStorage.getItem('addProduct');
+    var product = JSON.parse(addProduct);
+    for (let i = 0; i < product.length; i++) {
+        if (product[i].id == id) {
+            product[i].quantity = upQuantity;
+        }
+    }
+    localStorage.setItem('addProduct',JSON.stringify(product));
+    renderCart(product)
+};  

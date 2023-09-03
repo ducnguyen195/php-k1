@@ -1,13 +1,11 @@
-
 //Event render product detail
 function handleDetail (a) {
-    var url = window.location.href
+    var url = window.location.href;
         url = new URL(url);
     var a = url.searchParams.get('id');
     let html = '';
     for (let i = 0; i < listProduct.length ; i++) {
         if (listProduct[i].id == a) {
-            console.log(a);
             html +=`
             <div  class="detail__img col-xl-6 d-flex">
                 <div class="detail__img-sm">
@@ -51,11 +49,13 @@ function handleDetail (a) {
                 </div>
                 <div  class="detail__quantity" style="display: flex;">
                     <p style="margin-top: 10px;"> Số lượng : </p>
-                    <button  class="minus"> - </button><input type="text" value="1"> <button class="plus"> + </button>
+                    <button  onclick="handleQuantityMinus(${listProduct[i].id})" class="minus"> - </button>
+                    <input onchange="handleQUantityInput(${listProduct[i].id})" id="input-cart" type="text" value="1">
+                    <button onclick="handleQuantityPlus(${listProduct[i].id})" class="plus"> + </button>
                     <p style="margin-left: 10px; margin-top:10px"> (10 còn hàng)</p>
                 </div>
                 <div class="price__total">
-                    <p>Tổng tiền :</p> <strong> 150.000 VND</strong>
+                    <p >Tổng tiền :</p> <strong >  </strong>
                 </div>
                 <div class="detail__add">
                     <button class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
@@ -63,10 +63,11 @@ function handleDetail (a) {
                 </div>
                 <div class="add__like">
                     <a style="text-decoration: none;" href=""> Thêm vào danh sách yêu thích </a>
-                </div>             
+                </div>      
             `
         }
         $('#detail-product').html(html);
     }
 };
 handleDetail();
+

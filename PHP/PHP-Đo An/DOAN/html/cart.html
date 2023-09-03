@@ -80,16 +80,16 @@
     </div>
     <div id="render-cart"  class="row col-md-12 cart__product-css">
         <div class="d-flex">
-            <div class="carl__product col-md-4 ">
+            <div class="carl__product col-l-4 col-md-4  ">
                 <img src="./image/product4.jpg" width="20%" alt="Ảnh">
                 <strong> Hạt Macca Úc Calo Nuts</strong>
             </div>
             <div class="cart__price col-md-8 d-flex">
                 <div class="cart__price-item" style="font-size: 18px; margin-left: -1em;"> <strong> 150.000 VND</strong> </div>
                 <div class="cart__price-item ml-2">
-                    <button id="minus"> - </button>
-                    <input style="width: 25px; padding-left:8px; " type="text" value="1">
-                    <button id="plus"> + </button>
+                    <button onclick="handleQuantityMinus()" id="minus"> - </button>
+                    <input onchange="handleQuantityInput()" id="input-cart" style="width: 25px; padding-left:8px; " type="text" value="1">
+                    <button onclick="handleQuantityPlus()" id="plus"> + </button>
                 </div>
                 <div  class="cart__price-item" style="font-size: 18px; margin-right: -1em; color: red   ;"> <strong id="is-price-" > 0 VND </strong> </div>
                 <div class="cart__price-item" style="margin-right: -2.5em; ">

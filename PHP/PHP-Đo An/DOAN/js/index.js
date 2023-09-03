@@ -64,7 +64,6 @@ let product = [
         quantity :1,
     },
 ];
-
 function renderUI(searchProduct = product ){
     let html ='';
     for (let i = 0; i < searchProduct.length; i++) {
@@ -96,21 +95,19 @@ function renderUI(searchProduct = product ){
         `        
     }
 $('#products').html(html);
-var itemsLocal= localStorage.getItem('addProduct');
-var items = JSON.parse(itemsLocal);
+let itemsLocal= localStorage.getItem('addProduct');
+let items = JSON.parse(itemsLocal);
 handleMiniCart(items);
 };
 renderUI(product);
 
-$('#btn-search').click(function(){
+$('#btn-search').click(function () {
     let searchProduct = product;
     let input = $('#box-input').val();
     if(input.length === 0){
         alert ('Chưa nhập nội dung');
     } else if (input.length !== 0){
-        searchProduct = listProduct.filter( e => e.name.toLocaleLowerCase().includes(input))
-        console.log(searchProduct);
-        
+        searchProduct = listProduct.filter( e => e.name.toLocaleLowerCase().includes(input));        
     }else if (searchProduct ===false){
         alert('Không có sản phẩm ');
         input = "";
@@ -135,7 +132,7 @@ function handleAdd (id) {
             if (isCompare == true) {
                 addProduct[index].quantity += 1;
             } else {
-                addProduct.push(products)
+                addProduct.push(products);
             }
         }
         localStorage.setItem("addProduct", JSON.stringify(addProduct));
@@ -195,7 +192,7 @@ function handleRemove (id) {
     handleMiniCart(addProduct);
 };
 function updateQuantity (quantityProduct){
-    let quantityUp = 0 ;
+    let quantityUp = 0;
     var getProduct = localStorage.getItem('addProduct');
     var quantityProduct = JSON.parse(getProduct);
     for (let i = 0; i < quantityProduct.length; i++) {
