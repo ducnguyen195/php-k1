@@ -60,8 +60,67 @@
             </div>
             <div  class="cart">
                 <a href="./cart.html"><ion-icon name="cart-outline"> </ion-icon> </a>
-                <p> 0 </p>
+                <p id="quantity-cart-item"> 0 </p>
                 <strong> Giỏ Hàng </strong>
+                <div id="mini-cart" class="mini-cart" >
+                    <span class="icon-arrow"> <ion-icon style="color: ;" name="caret-up-outline"></ion-icon></span>
+                <div class="mini-cart__content">
+                    <div class="cart-info">
+                        <span style="padding-top:.5em"> Giỏ hàng của bạn</span>
+                        <a name="checkout" href="./cart.html" class="btn btn-default"> Xem chi tiết </a>
+                    </div>
+                    <div class="scroll-wrapper " ><div class="scrollbar-macosx scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 146.6px;">
+                        <ul onclick="handleMiniCart()" id="render__mini-cart" class="cart-list">
+                            <li class=" box__item" >
+                                <div class="item-thumb">
+                                    <a href="./html/list-products.html" title="" class="">
+                                        <img alt="" src="./image/" width="50%">
+                                    </a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="./list-products.html"  > </a>
+                                    <div class="item-quantity">
+                                        <span class="quantity__mini-cart" ></span>
+                                        <span class="price__mini-cart" ></span>
+                                    </div>
+                                </div>
+                                <div class="item-action">
+                                    <button onclick="handleRemove()"  class="btn-remove" href="">
+                                        <ion-icon style="color: red; height: 1em;" name="trash-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </li>                    
+                        </ul>
+                    </div>
+                    <div class="scroll-element scroll-x">
+                        <div class="scroll-element_outer">
+                            <div class="scroll-element_size">
+
+                            </div>
+                            <div class="scroll-element_track">
+
+                            </div><div class="scroll-bar" style="width: 0px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-element scroll-y">
+                        <div class="scroll-element_outer">
+                            <div class="scroll-element_size"></div>
+                            <div class="scroll-element_track"></div>
+                            <div class="scroll-bar" style="height: 0px;">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="cart-total text-center">
+                        <label>Tổng tiền : </label>
+                        <span id="price" class="price ng-binding">8.000 VND</span>
+                    </div>
+                    <div class="cart-link">
+                        <a name="checkout" class="btn btn-primary" href="./payment.html"> Thanh toán <i class="fa fa-angle-right"></i> </a>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -121,8 +180,8 @@
                     <p>Tổng tiền : </p> <strong> </strong>
                 </div>
                 <div class="detail__add">
-                    <button class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
-                    <button class="add__cart"> <ion-icon name="cart-outline"></ion-icon> Mua ngay</button>
+                    <button  onclick="handleAddProduct()" class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
+                    <button onclick="handleBuy()" class="add__cart"> <ion-icon name="cart-outline"></ion-icon> Mua ngay</button>
                 </div>
                 <div class="add__like">
                     <a style="text-decoration: none;" href=""> Thêm vào danh sách yêu thích </a>

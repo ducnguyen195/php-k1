@@ -28,6 +28,7 @@ function renderDetailPayment() {
     totalPayment(items)
 }
 renderDetailPayment();
+// Function price product
 function totalPayment() {
     let totalProduct = 0;
     let totalPrice = 0;
@@ -41,3 +42,4 @@ function totalPayment() {
     }
     $('#total__payment').text(totalPrice.toLocaleString() + ' ' + 'VND')
 };
+//
