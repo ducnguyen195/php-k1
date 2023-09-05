@@ -1,10 +1,8 @@
 function renderDetailPayment() {
     let itemLocal = localStorage.getItem('addProduct');
     let productLocal = JSON.parse(itemLocal);
-    
     let html = '';
     for (let i = 0; i < productLocal.length; i++) {
-        console.log(productLocal);
         html +=`
         <div style="display: flex; justify-content: space-between; ">
             <div>
@@ -43,3 +41,18 @@ function totalPayment() {
     $('#total__payment').text(totalPrice.toLocaleString() + ' ' + 'VND')
 };
 //
+$('#click-payment').click(function(){
+    let regex = new RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
+    let inputName = $('#input-name').val();
+    let inputAddress = $('#input-address').val();
+    let inputPhone = $('#input-phone').val();
+    let inputEmail = $('#input-email').val();
+    if (inputAddress.length == 0 || inputEmail.length == 0 ||
+        inputName.length ==0 ||inputPhone == 0) {
+        swal("Lỗi!", "Vui lòng nhập đầy đủ thông tin khách hàng!", "warning");
+    } else if(!regex.test(inputEmail.trim())) {
+        swal("Lỗi!", "Vui lòng nhập đúng Email của bạn !", "warning");
+    }  else {
+        swal("Thành Công!", " Đặt hàng thành công , nhân viên sẽ liên hệ xác nhận với bạn sau ít phút !", "success");
+    };
+});

@@ -26,8 +26,8 @@
         </div>
     </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a style="margin-left: 7em;" class="navbar-brand" href="#"><img src="./image/ogo.png" height="140px" alt=""></a>
+    <div class="container-fluid" id="nav-reponsive">
+        <a class="nav-brand" style="margin-left: 7em;" class="navbar-brand" href="#"><img src="./image/ogo.png" height="140px" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -82,7 +82,7 @@
             </div>
             <div>
                 <p>Họ và Tên :</p>
-                <input type="text" placeholder=" Nhập Họ và Tên....">
+                <input id="input-name" type="text" placeholder=" Nhập Họ và Tên....">
             </div>
             <div>
                 <p>Giới tính :</p>
@@ -94,15 +94,15 @@
             </div>
             <div>
                 <p> Địa chỉ:</p>
-                <input type="text" placeholder="Nhập địa chỉ....">
+                <input id="input-address" type="text" placeholder="Nhập địa chỉ....">
             </div>
             <div>
                 <p> Điện thoại :</p>
-                <input type="text" placeholder="Nhập số điện thoại...">
+                <input id="input-phone" type="number" placeholder="Nhập số điện thoại...">
             </div>
             <div>
                 <p>Email</p>
-                <input type="text" placeholder="Nhập Email...">
+                <input id="input-email" type="email" placeholder="Nhập Email...">
             </div>
         </div>
         <div class="col-md-5 ca">
@@ -142,7 +142,7 @@
             </div>
         </div>
     </div>
-    <div class=" payments">
+    <div class="payments">
         <form style="margin-left:0" action="">
             <h4> Hình thức thanh toán</h4>
             <input type="radio" name="price" id=" tiền mặt" value="Tiền mặt">
@@ -152,7 +152,7 @@
         </form>
     </div>
     <div class="btn__oder">
-        <button class=" btn btn-primary"> Đặt hàng </button>
+        <button id="click-payment" class=" btn btn-primary"> Đặt hàng </button>
     </div>
 </div>
 <footer class="text-center text-lg-start text-muted" style="background-color: black;">
@@ -244,6 +244,7 @@
     © 2023 - Bản quyền thuộc về Duc Nguyen Media
     </div>
 </footer>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

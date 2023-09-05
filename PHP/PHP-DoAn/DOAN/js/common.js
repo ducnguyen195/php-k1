@@ -164,17 +164,28 @@ let allUser = localStorage.getItem('allUser')
 if(allUser.length !==0){
     $('.title-login').html(`<div id="logout" class="title__item title-login "><a href="./index.html"> ĐĂNG XUẤT </a></div>`)
     $('.title-register').css('display', 'none')
-}
-
+};
 $('#logout').click(function(){
     localStorage.removeItem('allUser')
     $('.title-register').css('display', 'block')
 });
+$('.navbar-toggler').click( function() {
+    $('#navbarSupportedContent').toggle();
+});
 
-function navbarClick () {
-    $('#navbarSupportedContent').css('display','block')
-};
 
+
+function scrollFunction() {
+    if ($('body').scrollTop > 20 || $('html').scrollTop > 20) {
+        $('#backtop').css('display','block');
+    } else {
+        $('#backtop').css('display','none');
+    }
+}
+$('#backtop').click(function(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
 
 
 
