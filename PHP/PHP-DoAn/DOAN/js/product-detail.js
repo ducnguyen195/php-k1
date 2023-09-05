@@ -1,3 +1,4 @@
+
 //Event render product detail
 function handleDetail (a) {
     var url = window.location.href;
@@ -49,13 +50,12 @@ function handleDetail (a) {
                 </div>
                 <div  class="detail__quantity" style="display: flex;">
                     <p style="margin-top: 10px;"> Số lượng : </p>
-                    <button  onclick="handleQuantityMinus(${listProduct[i].id})" class="minus"> - </button>
-                    <input onchange="handleQUantityInput(${listProduct[i].id})" id="input-cart" type="text" value="${listProduct[i].quantity}">
-                    <button onclick="handleQuantityPlus(${listProduct[i].id})" class="plus"> + </button>
+                    <button   class="minus"> - </button>
+                    <input  id="input-cart" type="text" value="${listProduct[i].quantity}">
+                    <button  class="plus"> + </button>
                     <p style="margin-left: 10px; margin-top:10px"> (10 còn hàng)</p>
                 </div>
                 <div class="price__total">
-                    <p >Tổng tiền :</p> <strong >  </strong>
                 </div>
                 <div class="detail__add">
                     <button onclick="handleAddProduct(${listProduct[i].id})" class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
@@ -68,17 +68,29 @@ function handleDetail (a) {
         }
         $('#detail-product').html(html);
     }
-    let local = localStorage.getItem('addProduct');
-    let items = JSON.parse(local);
-    handleMiniCart(items)
+    var local = localStorage.getItem('addProduct');
+    var itemLocal = JSON.parse(local);
+    handleMiniCart(itemLocal)
 };
 handleDetail();
-
+//Even add product
 function handleAddProduct (id) {
+    let plus = $('.plus').val();
+    let minus = $('.minus').val();
+    let quantity = $('#input-cart').val();
     const addProduct = JSON.parse(localStorage.getItem('addProduct')) || [];
     let products = listProduct.find(e => e.id === id);
     if(addProduct.length === 0) {
-        addProduct.push(products)
+        if (quantity !==1) {
+            products.quantity = parseInt(quantity)
+            addProduct.push(products)
+        } else if (plus) {
+            quantity += quantity
+        } else if (minus && quantity > 1) {
+            quantity -= quantity
+        } else {
+            addProduct.push(products)
+        }
     }else {
         let isCompare = false;
             let index = null;
@@ -89,7 +101,11 @@ function handleAddProduct (id) {
                 };
             };
             if (isCompare == true) {
-                addProduct[index].quantity += 1;
+                if (quantity ) {
+                    addProduct[index].quantity += parseInt(quantity);
+                } else{
+                    addProduct[index].quantity += 1;
+                }
             } else {
                 addProduct.push(products)
             }
@@ -100,6 +116,11 @@ function handleAddProduct (id) {
 // Render product in cart
 function handleMiniCart(miniCartProduct) {
     let html = '';
+    if (miniCartProduct.length == 0) {
+        html +=`
+            <h5 style="margin:3em; "><ion-icon name="sad-outline" style="margin-left:4em"></ion-icon> Chưa có sản phẩm nào </h5>
+        `
+    };
     for (let i = 0; i < miniCartProduct.length; i++) {
         html +=`
         <li class=" box__item" >
@@ -125,9 +146,9 @@ function handleMiniCart(miniCartProduct) {
     }
 $('#render__mini-cart').html(html);
 let itemsLocal= localStorage.getItem('addProduct');
-let items = JSON.parse(itemsLocal);
-updateTotalPrice(items)
-updateQuantity (items)
+let itemLocal = JSON.parse(itemsLocal);
+updateTotalPrice(itemLocal)
+updateQuantity (itemLocal)
 }
 //Total price
 function updateTotalPrice(addProduct){
@@ -159,40 +180,43 @@ function updateQuantity (quantityProduct){
     }
     $('#quantity-cart-item').text(quantityUp);
 };
-// Event update quantity product
-function handleQuantityMinus(id){
-    var addProduct = localStorage.getItem('addProduct');
-    var product = JSON.parse(addProduct);
-    let upQuantity = $('#input-cart').val();
-        upQuantity = 1
-    var product = JSON.parse(addProduct);
-    for (let i = 0; i < product.length; i++) {
-        if (product[i].id !== id && upQuantity > 1 ) {
-            upQuantity --
+// Function respective products
+function respectiveProduct(b) {
+    var url = window.location.href;
+        url = new URL(url);
+    var b = url.searchParams.get('category');
+    let html = '';
+    for (let i = 0; i < listProduct.length; i++) {
+        if (listProduct[i].category == b) {
+            html += `
+            <div class="list__products col-md-3" >
+                <div class="product-1">
+                    <a href="./product-detail.html?category=${listProduct[i].category}&id=${listProduct[i].id}"> <img src="./image/${listProduct[i].img}" alt=""></a>
+                </div>
+                <div class="product-imfor">
+                    <p style="font-weight:600; font-size:1em">${listProduct[i].price.toLocaleString() +' '+ 'VND'} </p>
+                    <div class="ion-star">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <a href="./product-detail.html"> ${listProduct[i].name} </a>
+                </div>
+                <div class="hover__product">
+                    <div class="hove__heart">
+                        <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
+                    </div>
+                    <div class=" hover__cart">
+                        <button onclick="handleAddProduct(${listProduct[i].id})" title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
+                    </div>
+                </div>
+            </div>
+            `
         }
+        $('#respective').html(html)
     }
-    localStorage.setItem('addProduct',JSON.stringify(product));
-    handleDetail(product)
 };
-function handleQuantityPlus(id){
-    var addProduct = localStorage.getItem('addProduct');
-    var product = JSON.parse(addProduct);
-    let upQuantity = $('#input-cart').val();
-    for (let i = 0; i < product.length; i++) {
-        if (product[i].id !== id) {
-            upQuantity ++
-        }
-    }
-};
-function handleQuantityInput(id) {
-    let upQuantity = $('#input-cart').val();
-    var addProduct = localStorage.getItem('addProduct');
-    var product = JSON.parse(addProduct);
-    for (let i = 0; i < product.length; i++) {
-        if (product[i].id == id) {
-            product[i].quantity = upQuantity;
-        }
-    }
-    handleDetail(product)
-};  
+respectiveProduct();
 

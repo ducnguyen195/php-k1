@@ -4,7 +4,7 @@ let product = [
         name: 'Quả hồ đào Calo Nuts',
         price: 160000,
         img:'product1.jpg',
-        category: ' Hạt',
+        category: 'Hạt',
         quantity :1,
     },
     {
@@ -12,7 +12,7 @@ let product = [
         name: 'Hạt hạnh nhân Calo Nuts',
         price: 150000,
         img:'product2.jpg',
-        category: ' Hạt',
+        category: 'Hạt',
         quantity :1,
     },
     {
@@ -20,7 +20,7 @@ let product = [
         name: 'Hạt dẻ cười Calo Nuts',
         price: 150000,
         img:'product3.jpg',
-        category: ' Hạt',
+        category: 'Hạt',
         quantity :1,
     },
     {
@@ -28,7 +28,7 @@ let product = [
         name: 'Hạt mắc ca Úc Calo Nuts',
         price: 200000,
         img:'product4.jpg',
-        category: ' Hạt',
+        category: 'Hạt',
         quantity :1,
     },
     {
@@ -36,7 +36,7 @@ let product = [
         name: 'Ngũ cốc Granola',
         price: 160000,
         img:'product5.jpg',
-        category: ' Hạt',
+        category: 'Thựcphẩm',
         quantity :1,
     },
     {
@@ -44,7 +44,7 @@ let product = [
         name: 'Hạt điều Bình Phước Calo Nuts',
         price: 170000,
         img:'product6.jpg',
-        category: ' Hạt',
+        category: 'Hạt',
         quantity :1,
     },
     {
@@ -52,7 +52,7 @@ let product = [
         name: 'Hạt chia Calo Nuts',
         price: 150000,
         img:'product7.jpg',
-        category: ' Hạt',
+        category: 'Hạt',
         quantity :1,
     },
     {
@@ -60,7 +60,7 @@ let product = [
         name: 'Hạt óc chó Calo Nuts',
         price: 160000,
         img:'product8.jpg',
-        category: ' Hạt',
+        category: 'Hạt',
         quantity :1,
     },
 ];
@@ -70,7 +70,7 @@ function renderUI(searchProduct = product ){
         html += `
         <div  class="list__products col-lg-3 col-md-3 col-sm-6 col-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
             <div class="product-1">
-                <a  href="./html/product-detail.html?id=${searchProduct[i].id}"> <img src="./html/image/${searchProduct[i].img}" alt=""></a>
+                <a  href="./html/product-detail.html?category=${searchProduct[i].category}&id=${searchProduct[i].id}"> <img src="./html/image/${searchProduct[i].img}" alt=""></a>
             </div>
             <div class="product-imfor">
                 <p> ${searchProduct[i].price.toLocaleString()} VND</p>
@@ -95,22 +95,24 @@ function renderUI(searchProduct = product ){
         `        
     }
 $('#products').html(html);
-let itemsLocal= localStorage.getItem('addProduct');
-let items = JSON.parse(itemsLocal);
-handleMiniCart(items);
+var itemsLocal= localStorage.getItem('addProduct');
+var item = JSON.parse(itemsLocal);
+handleMiniCart(item)
 };
 renderUI(product);
 
 $('#btn-search').click(function () {
     let searchProduct = product;
     let input = $('#box-input').val();
-    if(input.length === 0){
+    if(input.trim().length === 0){
         alert ('Chưa nhập nội dung');
     } else if (input.length !== 0){
-        searchProduct = listProduct.filter( e => e.name.toLocaleLowerCase().includes(input));        
-    }else if (searchProduct ===false){
+        searchProduct = listProduct.filter( e => e.name.toLocaleLowerCase().includes(input));
+
+    }else if (input.length !== 0){
+        searchProduct = listProduct.filter( e => e.category.toLocaleLowerCase().includes(input));
+    } else {
         alert('Không có sản phẩm ');
-        input = "";
     }
     renderUI(searchProduct);
 });
@@ -136,11 +138,18 @@ function handleAdd (id) {
             }
         }
         localStorage.setItem("addProduct", JSON.stringify(addProduct));
-        handleMiniCart(items);
+        var itemsLocal= localStorage.getItem('addProduct');
+        var item = JSON.parse(itemsLocal);
+        handleMiniCart(item);
 }
 // Render product in cart
 function handleMiniCart(miniCartProduct) {
     let html = '';
+    if (miniCartProduct.length == 0) {
+        html +=`
+            <h5 style="margin:3em; "><ion-icon name="sad-outline" style="margin-left:4em"></ion-icon> Chưa có sản phẩm nào </h5>
+        `
+    };
     for (let i = 0; i < miniCartProduct.length; i++) {
         html +=`
             <li class=" box__item" >
@@ -165,8 +174,8 @@ function handleMiniCart(miniCartProduct) {
     `
     }
 $('#render__mini-cart').html(html);
-var itemsLocal= localStorage.getItem('addProduct');
-var items = JSON.parse(itemsLocal);
+let itemsLocal= localStorage.getItem('addProduct');
+let items = JSON.parse(itemsLocal);
 updateTotalPrice(items)
 updateQuantity (items)
 }
@@ -181,8 +190,8 @@ function updateTotalPrice(addProduct){
 };
 //Event remove product
 function handleRemove (id) {
-    var product = localStorage.getItem('addProduct')
-    var addProduct = JSON.parse(product)
+    const product = localStorage.getItem('addProduct')
+    const addProduct = JSON.parse(product)
     for (let i = 0; i < addProduct.length; i++) { 
         if (addProduct[i].id == id) {
             addProduct.splice(i, 1);

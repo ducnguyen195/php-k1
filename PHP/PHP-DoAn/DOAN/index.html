@@ -30,7 +30,7 @@
         </div>
     </div>
 </div>
-<div class="box-fixed">
+<div class="box-fixed" style=" z-index: 10;">
     <button> <ion-icon name="caret-up-outline"></ion-icon></button>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,7 +39,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <div onclick="navbarClick()" class="collapse navbar-collapse" id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
                 <a class="nav-link "  href="./index.html"> TRANG CHỦ </a>
@@ -136,15 +136,15 @@
 </nav>
 <div class="container">
     <div class="row mt-3">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 99%;">
+        <div id="carouselExampleControls"  class="carousel slide" data-ride="carousel" style="width: 100%; padding-left: 15px; padding-right: 15px;">
             <div class="carousel-inner">
-                <div class="carousel-item active ">
-                    <img class="d-block "  src="./html/image/image1.jpg" width="100%" alt="Ảnh">
+                <div class="carousel-item active  pd-15">
+                    <img class="d-block "  src="./html/image/image1.jpg" width="100%" alt="Ảnh" >
                 </div>
-                <div class="carousel-item ">
+                <div class="carousel-item pd-15 ">
                     <img class="d-block "  src="./html/image/image2.jpg" width="100%" alt="Ảnh">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item pd-15">
                     <img class="d-block "  src="./html/image/image3.jpg"  width="100%" alt="Ảnh">
                 </div>
             </div>
@@ -236,11 +236,10 @@
                     </div>
         </div>  
     </div>
-</div>
+
 <footer class="text-center text-lg-start text-muted" style="background-color: black;">
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div class="me-5 d-none d-lg-block">
-            <span > NÔNG SẢN VIỆT</span>
         </div>
         <div>
             <a href="" class="me-4 text-reset">

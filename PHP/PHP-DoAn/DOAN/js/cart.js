@@ -4,7 +4,7 @@ function renderCart() {
     let html = '';
     for (let i = 0; i < productCart.length; i++) {
         html += `
-            <div class="d-flex mt-3">
+            <div class="d-flex mt-3" style="width:67.5em">
                 <div class="carl__product col-md-4">
                 <img src="./image/${productCart[i].img}" width="20%" alt="Ảnh">
                 <strong> ${productCart[i].name}</strong>

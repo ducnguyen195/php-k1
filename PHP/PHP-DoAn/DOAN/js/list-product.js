@@ -5,7 +5,7 @@ function renderList (sortPrice = listProduct){
         html += `
         <div class="list__products col-lg-4 col-md-4 col-sm-6 col-6 mt-3" >
             <div class="product-1">
-                <a href="./product-detail.html?id=${listProduct[i].id}"> <img src="./image/${sortPrice[i].img}" alt=""></a>
+                <a href="./product-detail.html?category=${listProduct[i].category}&id=${listProduct[i].id}"> <img src="./image/${sortPrice[i].img}" alt=""></a>
             </div>
             <div class="product-imfor">
                 <p> ${sortPrice[i].price.toLocaleString()} VND </p>
@@ -30,9 +30,9 @@ function renderList (sortPrice = listProduct){
         `
     }
 $('#list-product').html(html);
-var itemsLocal= localStorage.getItem('addProduct');
-var items = JSON.parse(itemsLocal);
-handleMiniCart(items);
+let itemsLocal= localStorage.getItem('addProduct');
+let item = JSON.parse(itemsLocal);
+handleMiniCart(item);
 };
 renderList(listProduct);
 // Event select
@@ -91,6 +91,11 @@ function handleAdd (id) {
 // Render product in cart
 function handleMiniCart(miniCartProduct) {
     let html = '';
+    if (miniCartProduct.length == 0) {
+        html +=`
+            <h5 style="margin:3em; "><ion-icon name="sad-outline" style="margin-left:4em"></ion-icon> Chưa có sản phẩm nào </h5>
+        `
+    }
     for (let i = 0; i < miniCartProduct.length; i++) {
         html +=`
         <li class=" box__item" >
@@ -116,9 +121,9 @@ function handleMiniCart(miniCartProduct) {
     }
 $('#render__mini-cart').html(html);
 var itemsLocal= localStorage.getItem('addProduct');
-var items = JSON.parse(itemsLocal);
-updateTotalPrice(items)
-updateQuantity (items)
+var item = JSON.parse(itemsLocal);
+updateTotalPrice(item)
+updateQuantity (item)
 }
 //Total price
 function updateTotalPrice(addProduct){

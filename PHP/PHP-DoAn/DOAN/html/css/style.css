@@ -99,22 +99,9 @@ div .sticky{
     background-color: #FFFF !important;
 }
 
-.carousel {
-    width: 98%;
-}
-
-.carousel-item{
-    width: 98%;
-    right: -1em;
-}
-
-.carousel-item img{
-    width: 98%
-}
-
 .nav-item a{
     font-weight: 600 !important;
-    color: black !important;
+    color: gray !important;
 }
 
 .navbar{

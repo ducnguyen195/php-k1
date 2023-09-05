@@ -5,7 +5,7 @@ let listProduct = [
         price: 160000,
         img:'product1.jpg',
         quantity:1,
-        category: ' Hạt',
+        category: 'Hạt',
     },
     {
         id:2,
@@ -13,7 +13,7 @@ let listProduct = [
         price: 150000,
         img:'product2.jpg',
         quantity:1,
-        category: ' Hạt',
+        category: 'Hạt',
     },
     {
         id:3,
@@ -21,7 +21,7 @@ let listProduct = [
         price: 150000,
         img:'product3.jpg',
         quantity:1,
-        category: ' Hạt',
+        category: 'Hạt',
     },
     {
         id:4,
@@ -29,7 +29,7 @@ let listProduct = [
         price: 200000,
         img:'product4.jpg',
         quantity:1,
-        category: ' Hạt',
+        category: 'Hạt',
     },
     {
         id:5,
@@ -37,7 +37,7 @@ let listProduct = [
         price: 160000,
         img:'product5.jpg',
         quantity:1,
-        category: ' Hạt',
+        category: 'Thựcphẩm',
     },
     {
         id:6,
@@ -45,7 +45,7 @@ let listProduct = [
         price: 170000,
         img:'product6.jpg',
         quantity:1,
-        category: ' Hạt',
+        category: 'Hạt',
     },
     {
         id:7,
@@ -53,7 +53,7 @@ let listProduct = [
         price: 150000,
         img:'product7.jpg',
         quantity:1,
-        category: ' Hạt',
+        category: 'Hạt',
     },
     {
         id:8,
@@ -61,7 +61,7 @@ let listProduct = [
         price: 160000,
         img:'product8.jpg',
         quantity:1,
-        category: ' Hạt',
+        category: 'Hạt',
     },
     {
         id:9,
@@ -69,7 +69,7 @@ let listProduct = [
         price: 20000,
         img:'thanhlong.jpg',
         quantity:1,
-        category: 'Trái Cây',
+        category: 'Tráicây',
     },
     {
         id:10,
@@ -77,7 +77,7 @@ let listProduct = [
         price: 10000,
         img:'cucai.jpg',
         quantity:1,
-        category: 'Rau củ',
+        category: 'Raucủ',
     },
     {
         id:11,
@@ -85,7 +85,7 @@ let listProduct = [
         price: 15000,
         img:'carot.jpg',
         quantity:1,
-        category: 'Trái Cây',
+        category: 'Raucủ',
     },
     {
         id:12,
@@ -93,7 +93,7 @@ let listProduct = [
         price: 50000,
         img:'product9.png',
         quantity:1,
-        category: 'Thực phẩm',
+        category: 'Thựcphẩm',
     },
     {
         id:13,
@@ -101,7 +101,7 @@ let listProduct = [
         price: 10000,
         img:'rau1.jpg',
         quantity:1,
-        category: 'Rau củ',
+        category: 'Raucủ',
     },
     {
         id:14,
@@ -109,7 +109,7 @@ let listProduct = [
         price: 5000,
         img:'rau2.png',
         quantity:1,
-        category: 'Rau củ',
+        category: 'Raucủ',
     },
     {
         id:15,
@@ -117,7 +117,7 @@ let listProduct = [
         price: 8000,
         img:'rau3.png',
         quantity:1,
-        category: 'Rau củ',
+        category: 'Raucủ',
     },
     {
         id:16,
@@ -125,7 +125,7 @@ let listProduct = [
         price: 20000,
         img:'xoai1.jpg',
         quantity:1,
-        category: 'Trái cây',
+        category: 'Tráicây',
     },
     {
         id:17,
@@ -133,7 +133,7 @@ let listProduct = [
         price: 30000,
         img:'xoai2.jpg',
         quantity:1,
-        category: 'Trái cây',
+        category: 'Tráicây',
     },
     {
         id:18,
@@ -141,7 +141,7 @@ let listProduct = [
         price: 50000,
         img:'xoai3.jpg',
         quantity:1,
-        category: 'Trái cây',
+        category: 'Tráicây',
     },
     {
         id:19,
@@ -149,7 +149,7 @@ let listProduct = [
         price: 15000,
         img:'giavi.png',
         quantity:1,
-        category: 'Gia vị',
+        category: 'Giavị',
     },
     {
         id:20,
@@ -157,7 +157,7 @@ let listProduct = [
         price: 20000,
         img:'giavi1.webp',
         quantity:1,
-        category: 'Gia vị',
+        category: 'Giavị',
     },
 ];
 let allUser = localStorage.getItem('allUser')
@@ -170,6 +170,10 @@ $('#logout').click(function(){
     localStorage.removeItem('allUser')
     $('.title-register').css('display', 'block')
 });
+
+function navbarClick () {
+    $('#navbarSupportedContent').css('display','block')
+};
 
 
 
