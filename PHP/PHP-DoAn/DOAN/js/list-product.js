@@ -85,8 +85,10 @@ function handleAdd (id) {
                 addProduct.push(products)
             }
         }
+        
         localStorage.setItem("addProduct", JSON.stringify(addProduct));
         handleMiniCart(addProduct);
+        showSuccessToast()
 }
 // Render product in cart
 function handleMiniCart(miniCartProduct) {
@@ -145,6 +147,7 @@ function handleRemove (id) {
         localStorage.setItem('addProduct', JSON.stringify(addProduct));    
     }
     handleMiniCart(addProduct);
+    showErrorToast()
 };
 // Function print quantity
 function updateQuantity (quantityProduct){

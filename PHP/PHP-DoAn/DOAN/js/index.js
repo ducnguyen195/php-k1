@@ -136,8 +136,10 @@ function handleAdd (id) {
             } else {
                 addProduct.push(products);
             }
+            showSuccessToast()
         }
         localStorage.setItem("addProduct", JSON.stringify(addProduct));
+
         var itemsLocal= localStorage.getItem('addProduct');
         var item = JSON.parse(itemsLocal);
         handleMiniCart(item);
@@ -199,6 +201,7 @@ function handleRemove (id) {
         localStorage.setItem('addProduct', JSON.stringify(addProduct));    
     }
     handleMiniCart(addProduct);
+    showErrorToast()
 };
 function updateQuantity (quantityProduct){
     let quantityUp = 0;

@@ -21,9 +21,9 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
         error: "fas fa-exclamation-circle"
     };
     const icon = icons[type];
-    const delay = (duration / 1000).toFixed(2);
+    const delay = (duration / 4000).toFixed(2);
     toast.classList.add("toast", `toast--${type}`);
-    toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+    toast.style.animation = `slideInLeft ease 1s, fadeOut linear 2s ${delay}s forwards`;
     toast.innerHTML = `
         <div class="toast__icon">
             <i class="${icon}"></i>
@@ -44,15 +44,15 @@ function showSuccessToast() {
         title: "Thành công!",
         message: "Thêm sản phẩm vào giỏ hàng thành công.",
         type: "success",
-        duration: 3000
+        duration: 5000
     });
 }
 
 function showErrorToast() {
     toast({
-        title: "Thất bại!",
+        title: "Thành công!",
         message: "Đã xóa 1 sản phẩm khỏi giỏ hàng.",
         type: "error",
-        duration: 3000
+        duration: 5000
     });
 }

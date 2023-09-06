@@ -170,6 +170,7 @@ function handleRemove (id) {
         localStorage.setItem('addProduct', JSON.stringify(addProduct));    
     }
     handleMiniCart(addProduct);
+    showErrorToast()
 };
 //Function shows quantity product
 function updateQuantity (quantityProduct){
