@@ -59,7 +59,7 @@ function handleDetail (a) {
                 </div>
                 <div class="detail__add">
                     <button onclick="handleAddProduct(${listProduct[i].id})" class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon>  Thêm giỏ hàng </button>
-                    <button onclick="handleBuy(${listProduct[i].id})" class="add__cart"> <ion-icon name="cart-outline"></ion-icon> Mua ngay</button>
+                    <button onclick="handleBuy(${listProduct[i].id})" class="add__cart"> <ion-icon name="cart-outline"></ion-icon> <a style="text-decoration: none; color:#FFFF" href="./cart.html"> Mua ngay </a></button>
                 </div>
                 <div class="add__like">
                     <a style="text-decoration: none;" href=""> Thêm vào danh sách yêu thích </a>
@@ -219,4 +219,44 @@ function respectiveProduct(b) {
     }
 };
 respectiveProduct();
+function handleBuy(id){
+    let plus = $('.plus').val();
+    let minus = $('.minus').val();
+    let quantity = $('#input-cart').val();
+    const addProduct = JSON.parse(localStorage.getItem('addProduct')) || [];
+    let products = listProduct.find(e => e.id === id);
+    if(addProduct.length === 0) {
+        if (quantity !==1) {
+            products.quantity = parseInt(quantity)
+            addProduct.push(products)
+        } else if (plus) {
+            quantity += quantity
+        } else if (minus && quantity > 1) {
+            quantity -= quantity
+        } else {
+            addProduct.push(products)
+        }
+    }else {
+        let isCompare = false;
+            let index = null;
+            for (let i = 0; i < addProduct.length; i++) {
+                if (addProduct[i].id == products.id) {
+                    isCompare = true;
+                    index = i;
+                };
+            };
+            if (isCompare == true) {
+                if (quantity ) {
+                    addProduct[index].quantity += parseInt(quantity);
+                } else{
+                    addProduct[index].quantity += 1;
+                }
+            } else {
+                addProduct.push(products)
+            }
+        }
+        localStorage.setItem("addProduct", JSON.stringify(addProduct));
+        handleMiniCart(addProduct);
+}
+
 
