@@ -174,9 +174,39 @@ p{
 .detail__add .add__cart:hover{
     background-color: rgb(33, 196, 68);
 }
+
 .product-add{
     background-color: #FFFF;
     margin-top:20px;
 }
 
+@media only screen and (max-width:46.1875em) {
+    .icon__cart{
+        margin-right: 0;
+    }
 
+    .nav-brand img{
+        margin-left: 4em !important;
+    }
+
+    .detail__img-sm{
+        display: none;
+    }
+    .detail__img-lg{
+        margin: 0 10px;
+    }
+
+    .content__detail{
+        margin-left: 1em;
+    }
+}
+
+@media only screen and (min-width:46.1875em) and (max-width:63.9375em){
+    .detail__img-lg img{
+        width: 200%;
+    }
+
+    .content__detail{
+        margin-left: 2em;
+    }
+}

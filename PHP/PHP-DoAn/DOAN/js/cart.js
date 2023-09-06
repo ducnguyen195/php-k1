@@ -4,14 +4,14 @@ function renderCart() {
     let html = '';
     for (let i = 0; i < productCart.length; i++) {
         html += `
-            <div class="d-flex mt-3" style="width:67.5em">
-                <div class="carl__product col-md-4">
-                <img src="./image/${productCart[i].img}" width="20%" alt="Ảnh">
-                <strong> ${productCart[i].name}</strong>
+            
+                <div class="carl__product mt-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                    <img src="./image/${productCart[i].img}" width="20%" alt="Ảnh">
+                    <strong > ${productCart[i].name}</strong>
                 </div>
-                <div class="cart__price col-md-8 d-flex">
-                    <div class="cart__price-item" style="font-size: 18px; margin-left: -1em;"> <strong> ${productCart[i].price.toLocaleString()} VND</strong> </div>
-                    <div class="cart__price-item ml-2">
+                <div class="cart__price  d-flex col-lg-8 col-md-8 col-sm-6 col-6">
+                    <div class="cart__price-item" style="font-size: 18px; margin-left: -3em;"> <strong> ${productCart[i].price.toLocaleString()} VND</strong> </div>
+                    <div class="cart__price-item ml-2 col-lg-">
                         <button onclick="handleQuantityMinus(${productCart[i].id})" id="minus"> - </button>
                         <input onchange="handleQuantityInput(${productCart[i].id})" id="input-cart" style="width: 25px; padding-left:8px; " type="text" value="${productCart[i].quantity}">
                         <button onclick="handleQuantityPlus(${productCart[i].id})" id="plus"> + </button>
@@ -23,7 +23,7 @@ function renderCart() {
                         </button>
                     </div>
                 </div>
-            </div>
+            
         `
     }
     $('#render-cart').html(html)

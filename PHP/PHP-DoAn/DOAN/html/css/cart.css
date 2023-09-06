@@ -8,6 +8,8 @@
     display: flex;
     align-items: center;
     height: 4em;
+    justify-content: space-around;
+    margin-left: -2em;
 }
 
 .title__cart-product p {
@@ -74,8 +76,34 @@
     outline: none;
 }
 
+.total{
+    margin-right: 5em;
+}
+
 /* HOVER */
 .cart__payment button:hover{
     background-color: blue;
 }
 
+@media only screen and (max-width:46.1875em) {
+    .name-product{
+        display: none;
+    }
+    
+    .cart__product-css{
+        display: table-caption;
+    }
+
+    .cart__payment button {
+        width: 32%;
+    }
+
+    .add__bag{
+        outline: none;
+    }
+}
+@media only screen and (min-width:740px) and (max-width:990px) {
+    .title__cart-product{
+        margin-left: -1em;
+    }
+}

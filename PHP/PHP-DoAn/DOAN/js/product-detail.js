@@ -8,13 +8,13 @@ function handleDetail (a) {
     for (let i = 0; i < listProduct.length ; i++) {
         if (listProduct[i].id == a) {
             html +=`
-            <div  class="detail__img col-xl-6 d-flex">
-                <div class="detail__img-sm">
-                    <img src="./image/${listProduct[i].img}" width="100px" height="100px" alt=" Ảnh">
+            <div  class="detail__img col-lg-6 col-md-6 d-flex">
+                <div class="detail__img-sm col-lg-2">
+                    <img src="./image/${listProduct[i].img}" width="100%" height="" alt=" Ảnh">
                 </div>
                 <div>
-                    <div class="detail__img-lg">
-                        <img src="./image/${listProduct[i].img}" width="400px" height=" 400px" alt=" Ảnh">
+                    <div class="detail__img-lg    ">
+                        <img src="./image/${listProduct[i].img}" width="100%" height="50% " alt=" Ảnh">
                     </div>
                     <div class="imfor__detail">
                         <p style="font-size: 20px; font-weight: 500;"> Thông tin sản phẩm : </p>
@@ -58,7 +58,7 @@ function handleDetail (a) {
                 <div class="price__total">
                 </div>
                 <div class="detail__add">
-                    <button onclick="handleAddProduct(${listProduct[i].id})" class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon> Thêm vào giỏ hàng </button>
+                    <button onclick="handleAddProduct(${listProduct[i].id})" class="add__bag"><ion-icon name="bag-handle-outline"></ion-icon>  Thêm giỏ hàng </button>
                     <button onclick="handleBuy(${listProduct[i].id})" class="add__cart"> <ion-icon name="cart-outline"></ion-icon> Mua ngay</button>
                 </div>
                 <div class="add__like">
@@ -189,7 +189,7 @@ function respectiveProduct(b) {
     for (let i = 0; i < listProduct.length; i++) {
         if (listProduct[i].category == b) {
             html += `
-            <div class="list__products col-md-3" >
+            <div class="list__products col-lg-3 col-md-3 col-sm-6 col-6" >
                 <div class="product-1">
                     <a href="./product-detail.html?category=${listProduct[i].category}&id=${listProduct[i].id}"> <img src="./image/${listProduct[i].img}" alt=""></a>
                 </div>

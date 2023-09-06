@@ -28,7 +28,7 @@
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid" id="nav-reponsive">
-        <a class="nav-brand" style="margin-left: 7em;" class="navbar-brand" href="#"><img src="./image/ogo.png" height="140px" alt=""></a>
+        <a class="nav-brand"  class="navbar-brand" href="#"><img src="./image/ogo.png" height="140px" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -67,24 +67,22 @@
     </div>
 </nav>
 <div class="container container__cart">
-    <div class="row col-md-12">
-        <div class="title__cart-product col-md-4">
-            <p> Sản Phẩm</p>
-        </div>
-        <div class="title__cart-imfor col-md-8 d-flex">
-            <p> Giá bán</p>
+    <div >
+        <div class="title__cart-product">
+            <p class="name-product"> Sản Phẩm</p>
+            <p style="margin-left: 3em;"> Giá bán</p>
             <p> Số lượng</p>
-            <p style="margin-right: 1.5em;"> TỔNG TIỀN</p>        
+            <p class="total"> TỔNG TIỀN</p>        
         </div>
     </div>
     <div id="render-cart"  class="row col-md-12 cart__product-css">
-        <div class="d-flex">
+        <!-- <div class="d-flex"> -->
             <div class="carl__product col-l-4 col-md-4  ">
                 <img src="./image/product4.jpg" width="20%" alt="Ảnh">
                 <strong> Hạt Macca Úc Calo Nuts</strong>
             </div>
             <div class="cart__price col-md-8 d-flex">
-                <div class="cart__price-item" style="font-size: 18px; margin-left: -1em;"> <strong> 150.000 VND</strong> </div>
+                <div class="cart__price-item" style="font-size: 18px; margin-left: -3em;"> <strong> 150.000 VND</strong> </div>
                 <div class="cart__price-item ml-2">
                     <button onclick="handleQuantityMinus()" id="minus"> - </button>
                     <input onchange="handleQuantityInput()" id="input-cart" style="width: 25px; padding-left:8px; " type="text" value="1">
@@ -97,7 +95,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
     <div class="price__cart-total d-flex" >
         <p>Tạm tính :</p>
