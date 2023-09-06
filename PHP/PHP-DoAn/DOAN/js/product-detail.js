@@ -171,6 +171,7 @@ function handleRemove (id) {
     }
     handleMiniCart(addProduct);
 };
+//Function shows quantity product
 function updateQuantity (quantityProduct){
     let quantityUp = 0;
     var getProduct = localStorage.getItem('addProduct');
@@ -219,6 +220,7 @@ function respectiveProduct(b) {
     }
 };
 respectiveProduct();
+// Event buy now
 function handleBuy(id){
     let plus = $('.plus').val();
     let minus = $('.minus').val();
@@ -257,6 +259,6 @@ function handleBuy(id){
         }
         localStorage.setItem("addProduct", JSON.stringify(addProduct));
         handleMiniCart(addProduct);
-}
+};
 
 
