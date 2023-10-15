@@ -232,8 +232,13 @@ button{
 .item-action{
     margin-top: 1.5em;
     display: inline-block;
-    margin-left: 1em;
+    margin-right: 1em;
 
+}
+
+.icon-inner {
+    background-color: #FFFF;
+    outline: none;
 }
 
 .cart-link{
@@ -246,6 +251,10 @@ button{
 .cart-total{
     border-top: 1px solid rgba(220, 220, 220, 0.499);
     padding-top: 1em;
+}
+
+.btn-remover {
+    outline: none
 }
 
 .hover__nav{
@@ -278,6 +287,16 @@ h6{
     background-color:rgba(238, 71, 45, 0.707);
     padding-top:10px;
     padding-left: 10px;
+}
+
+.icon-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.icon-arrow ion-icon {
+    float:inline-end;
 }
 
 .hover__menu ion-icon{
@@ -379,21 +398,27 @@ h6{
 .list__products{
     border: 1px solid  rgb(233, 232, 232);
     padding-bottom: 20px;
-    padding: 5px 5px;
     border-radius: 5px;
     position: relative;
+    width: 250px;
+    margin-bottom:15px ;
+    margin-left:1rem;
 }
 
 .list__products img{
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
 }
 
 .product-imfor{
     padding-left: 10px;
+    padding-bottom:10px;
 }
 
 .product-imfor p{
     margin-top:15px;
+    font-weight: 600;
 }
 
 .product-img img{
@@ -406,6 +431,8 @@ h6{
 
 .product-imfor a{
     text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .hover__product{
@@ -430,11 +457,11 @@ h6{
     background-color: #e4e4e49c;
 }
 
-.ion-star{
+.ion-star {
     margin-top: -8px;
 }
 
-.list__product__sample{
+.list__product__sample {
     padding-bottom:30px;
 }
 
@@ -494,7 +521,7 @@ footer{
 }
 
 .list__products:hover{
-    box-shadow: 3px 5px 4px 0px rgb(233, 232, 232), 2px 3px 4px 0px inset rgb(233, 232, 232);
+    box-shadow: 1px 3px 2px 0px rgb(233, 232, 232), 2px 3px 4px 0px inset rgb(233, 232, 232);
 }
 
 .list__products:hover .hover__product{
@@ -517,170 +544,6 @@ footer{
 .nav-brand{
     margin-left: 10em
 }
+
 /* REPONSIVE */
 /* MOBILE: width < 740px */
-@media only screen and (max-width:46.1875em) {
-    .nav-brand{
-        margin-left: 0 !important;
-        height: 7em;
-    }
-
-    .nav-brand img{
-        margin-left: 3.6em;
-        width: 100%;
-        height: 10em;
-        margin-top: -.8em;
-    }
-    
-    .like{
-        display: none;
-    }
-
-    .icon__cart{
-        margin-top: .6em;
-        margin-right: 1em;
-    }
-
-    #nav-reponsive{
-        height: auto;
-    }
-    
-    .navbar-toggler{
-        margin-right: 9em;
-    }
-
-    .product-img{
-        display: none;
-    }
-
-    .item__img-6 , .item__img-7{
-        display: none;
-    }
-
-    .item__img-9{
-        margin-top: 10px;
-    }
-
-    #btn-search{
-        width: 28% !important;
-    }
-
-    #box-input{
-        width: 50%;
-    }
-
-    .list__product{
-        width: ;
-    }
-
-    #products{
-        padding: 0 7px 0 21px;
-    }
-
-    .box__brand{
-        margin-left: 6em;
-    }
-
-}
-/* TABLET : 740px - 1024px */
-@media only screen and (min-width:740px) and (max-width:990px) {
-    .product-img{
-        display: none;
-    }
-
-    #nav-reponsive{
-        align-items: end;
-    }
-
-    .navbar-toggler{
-        margin-right: 19em;
-        
-    }
-
-    .nav-brand{
-        margin-left: 13em;
-        height: 10em;
-        margin-top: -.8em;
-    }
-
-    .icon__cart{
-        margin-top: .6em;
-        margin-right: 1em;
-    }
-
-    #btn-search{
-        width: 28% !important;
-    }
-
-    #box-input{
-        width: 50%;
-    }
-
-    .nav-brand img{
-        width: 100%;
-        height: 20em;
-        margin-top: -1.5em;
-    }
-}
-
-@media only screen  and (max-width: 328px){
-    .nav-brand img{
-        margin-left: 2em;
-        width: 100%;
-        height: 10em;
-        margin-top: -.8em;
-    }
-
-    .navbar-toggler{
-        margin-right: 5em;
-    }
-
-    #btn-search{
-        width: 37% !important;
-    }
-
-    .brand-item{
-        height: 6em;
-    }
-}
-
-@media only screen  and (width: 540px){
-    .nav-brand img{
-        margin-left: 7em;
-        width: 100%;
-        height: 12em;
-        margin-top: -.8em;
-    }
-
-    .navbar-toggler{
-        margin-right: 10em;
-    }
-
-    #btn-search{
-        width: 37% !important;
-    }
-
-    .brand-item{
-        height: 6em;
-    }
-}
-
-
-@media only screen and (min-width:990px) and (max-width:1246px) {
-    .icon__cart{
-        margin-right: 0;
-        margin-right: 2em ;
-    }
-
-    .nav-brand{
-        margin-left: 0;
-    }
-
-}
-
-
-
-
-
-
-

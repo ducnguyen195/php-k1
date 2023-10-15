@@ -170,11 +170,9 @@ $('#logout').click(function(){
     $('.title-register').css('display', 'block')
 });
 $('.navbar-toggler').click( function() {
-    $('#navbarSupportedContent').toggle();
+    console.log(1);
+    $('.toggle-open').toggle();
 });
-
-
-
 function scrollFunction() {
     if ($('body').scrollTop > 20 || $('html').scrollTop > 20) {
         $('#backtop').css('display','block');

@@ -24,6 +24,16 @@
     padding-bottom:10px;
 }
 
+.product-1 {
+    width: 248px;
+    height: 248px;
+}
+
+.product-1 img {
+    width: 100%;
+    height: 100%;
+}
+
 /* HOVER */
 .list-detail a:hover{
     color: blue;

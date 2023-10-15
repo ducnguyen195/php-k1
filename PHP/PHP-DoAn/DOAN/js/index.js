@@ -68,7 +68,7 @@ function renderUI(searchProduct = product ){
     let html ='';
     for (let i = 0; i < searchProduct.length; i++) {
         html += `
-        <div  class="list__products col-lg-3 col-md-3 col-sm-6 col-6 mt-3" style="padding: 5px 5px; border-radius: 5px;">
+        <div  class="list__products" style="border-radius: 5px;">
             <div class="product-1">
                 <a  href="./html/product-detail.html?category=${searchProduct[i].category}&id=${searchProduct[i].id}"> <img src="./html/image/${searchProduct[i].img}" alt=""></a>
             </div>
@@ -154,22 +154,24 @@ function handleMiniCart(miniCartProduct) {
     };
     for (let i = 0; i < miniCartProduct.length; i++) {
         html +=`
-            <li class=" box__item" >
-                <div class="item-thumb">
-                    <a href="./html/list-products.html" title="" class="">
-                        <img alt="" src="html/image/${miniCartProduct[i].img}" width="50%">
-                    </a>
-                </div>
-                <div class="item-title">
-                    <a href="./html/list-products.html"  > ${miniCartProduct[i].name}</a>
-                    <div class="item-quantity">
-                        <span class="quantity__mini-cart" > ${miniCartProduct[i].quantity}</span>x
-                        <span class="price__mini-cart" > ${miniCartProduct[i].price.toLocaleString()} VND</span>
+            <li class=" box__item d-flex" >
+                <div class="d-flex">
+                    <div class="item-thumb">
+                        <a href="./html/list-products.html" title="" class="">
+                            <img alt="" src="html/image/${miniCartProduct[i].img}" width="50%">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./html/list-products.html" style="text-decoration:none"  > ${miniCartProduct[i].name}</a>
+                        <div class="item-quantity">
+                            <span class="quantity__mini-cart" > ${miniCartProduct[i].quantity}</span>x
+                            <span class="price__mini-cart" > ${miniCartProduct[i].price.toLocaleString()} VND</span>
+                        </div>
                     </div>
                 </div>
                 <div class="item-action">
-                    <button onclick="handleRemove(${miniCartProduct[i].id})" class="btn-remove" style="outline: none; border" href="">
-                        <ion-icon style="color: red; height: 1em;" name="trash-outline"></ion-icon>
+                    <button onclick="handleRemove(${miniCartProduct[i].id})" class="btn-remove" style="outline: none; href="">
+                        <ion-icon style="color: red; height: 1em; background-color: #FFFF" name="trash-outline"></ion-icon>
                     </button>
                 </div>
         </li>                   

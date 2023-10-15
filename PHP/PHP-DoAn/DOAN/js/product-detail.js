@@ -124,21 +124,23 @@ function handleMiniCart(miniCartProduct) {
     for (let i = 0; i < miniCartProduct.length; i++) {
         html +=`
         <li class=" box__item" >
-            <div class="item-thumb">
-                <a href="./html/list-products.html" title="" class="">
-                    <img alt="" src="./image/${miniCartProduct[i].img}" width="50%">
-                </a>
-            </div>
-            <div class="item-title">
-                <a href="./list-products.html"  > ${miniCartProduct[i].name}</a>
-                <div class="item-quantity">
-                    <span class="quantity__mini-cart" > ${miniCartProduct[i].quantity} </span>x
-                    <span class="price__mini-cart" >  ${miniCartProduct[i].price.toLocaleString()} VND</span>
+            <div class="d-flex">
+                <div class="item-thumb">
+                    <a href="./html/list-products.html" title="" class="">
+                        <img alt="" src="./image/${miniCartProduct[i].img}" width="50%">
+                    </a>
+                </div>
+                <div class="item-title">
+                    <a href="./list-products.html"  > ${miniCartProduct[i].name}</a>
+                    <div class="item-quantity">
+                        <span class="quantity__mini-cart" > ${miniCartProduct[i].quantity} </span>x
+                        <span class="price__mini-cart" >  ${miniCartProduct[i].price.toLocaleString()} VND</span>
+                    </div>
                 </div>
             </div>
             <div class="item-action">
                 <button onclick="handleRemove(${miniCartProduct[i].id})" id="render__mini-cart" class="btn-remove" href="">
-                    <ion-icon style="color: red; height: 1em;" name="trash-outline"></ion-icon>
+                    <ion-icon style="color: red; height: 1em;background-color: #FFFF" name="trash-outline"></ion-icon>
                 </button>
             </div>
         </li>  
@@ -191,7 +193,7 @@ function respectiveProduct(b) {
     for (let i = 0; i < listProduct.length; i++) {
         if (listProduct[i].category == b) {
             html += `
-            <div class="list__products col-lg-3 col-md-3 col-sm-6 col-6" >
+            <div class="list__products" >
                 <div class="product-1">
                     <a href="./product-detail.html?category=${listProduct[i].category}&id=${listProduct[i].id}"> <img src="./image/${listProduct[i].img}" alt=""></a>
                 </div>
