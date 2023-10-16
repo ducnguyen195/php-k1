@@ -159,6 +159,22 @@ let listProduct = [
         quantity:1,
         category: 'Giavị',
     },
+    {
+        id:21,
+        name: 'Khô gà bơ tỏi',
+        price: 50000,
+        img:'add1.jpg',
+        category: 'Đồănvặt',
+        quantity :1,
+    },
+    {
+        id:22,
+        name: 'Bánh tráng lá Phô Mai Dứa',
+        price: 150000,
+        img:'add2.png',
+        category: 'Bánhkẹo',
+        quantity :1,
+    },
 ];
 let allUser = localStorage.getItem('allUser')
 if(allUser.length !==0){
@@ -170,7 +186,6 @@ $('#logout').click(function(){
     $('.title-register').css('display', 'block')
 });
 $('.navbar-toggler').click( function() {
-    console.log(1);
     $('.toggle-open').toggle();
 });
 function scrollFunction() {

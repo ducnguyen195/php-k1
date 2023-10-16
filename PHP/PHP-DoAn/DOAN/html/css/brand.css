@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.brand-title strong {
+    font-size: 30px
+}
+
+.brand-title {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.brand-content {
+    background-color: #FFFF;
+    padding: 12px;
+    flex-wrap: wrap;
+}
+
+.box-brand {
+    border: 1px solid rgba(219, 218, 218, 0.395);
+    width: 207px;
+    height: 104px;
+    margin: 2px 5px;
+    margin-bottom: 10px;
+}
+
+.box-brand a {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.box-brand img {
+    width: auto;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-brand:hover {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.400);
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản Phẩm - Nông Sản Việt</title>
+    <title> Thương Hiệu </title>
     <link rel="icon" type="image/png" sizes="16x16"  href="./image/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -15,6 +15,7 @@
     crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/toast.css">
+    <link rel="stylesheet" href="./css/brand.css">
 </head>
 <body>
 <div class="container-fluid  container-header">
@@ -35,7 +36,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <div class="collapse navbar-collapse toggle-open" id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../index.html">TRANG CHỦ</a>
@@ -43,11 +44,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="./list-products.html"> TẤT CẢ SẢN PHẨM</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="./index.html"> THƯƠNG HIỆU</a>  
+            <li class="nav-item ">
+                <a class="nav-link" href="./brand.html"> THƯƠNG HIỆU</a>  
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="./index.html"> LIÊN HỆ</a>
+                <a class="nav-link" href="./index.html"> LIÊN HỆ</a>
             </li>
             </ul>
             <div class="d-flex" >
@@ -72,50 +73,51 @@
                             <span style="padding-top:.5em"> Giỏ hàng của bạn</span>
                             <a name="checkout" href="./cart.html" class="btn btn-default"> Xem chi tiết </a>
                         </div>
-                        <div class="scroll-wrapper " ><div class="scrollbar-macosx scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 146.6px;">
-                            <ul onclick="handleMiniCart()" id="render__mini-cart" class="cart-list">
-                                <li class=" box__item" >
-                                    <div class="item-thumb">
-                                        <a href="./html/list-products.html" title="" class="">
-                                            <img alt="" src="./image/" width="50%">
-                                        </a>
-                                    </div>
-                                    <div class="item-title">
-                                        <a href="./list-products.html"  > </a>
-                                        <div class="item-quantity">
-                                            <span class="quantity__mini-cart" ></span>
-                                            <span class="price__mini-cart" ></span>
+                        <div class="scroll-wrapper " >
+                            <div class="scrollbar-macosx scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 146.6px;">
+                                <ul onclick="handleMiniCart()" id="render__mini-cart" class="cart-list">
+                                    <li class=" box__item" >
+                                        <div class="item-thumb">
+                                            <a href="./html/list-products.html" title="" class="">
+                                                <img alt="" src="./image/" width="50%">
+                                            </a>
                                         </div>
+                                        <div class="item-title">
+                                            <a href="./list-products.html"  > </a>
+                                            <div class="item-quantity">
+                                                <span class="quantity__mini-cart" ></span>
+                                                <span class="price__mini-cart" ></span>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button onclick="handleRemove()" class="btn-remove" href="">
+                                                
+                                            </button>
+                                        </div>
+                                    </li>                    
+                                </ul>
+                            </div>
+                            <div class="scroll-element scroll-x">
+                                <div class="scroll-element_outer">
+                                    <div class="scroll-element_size">
                                     </div>
-                                    <div class="item-action">
-                                        <button onclick="handleRemove()"  class="btn-remove" href="">
-                                            <ion-icon style="color: red; height: 1em;" name="trash-outline"></ion-icon>
-                                        </button>
+                                    <div class="scroll-element_track">
+                                    </div><div class="scroll-bar" style="width: 0px;">
                                     </div>
-                                </li>                    
-                            </ul>
-                        </div>
-                        <div class="scroll-element scroll-x">
-                            <div class="scroll-element_outer">
-                                <div class="scroll-element_size">
-                                </div>
-                                <div class="scroll-element_track">
-                                </div><div class="scroll-bar" style="width: 0px;">
                                 </div>
                             </div>
-                        </div>
-                        <div class="scroll-element scroll-y">
-                            <div class="scroll-element_outer">
-                                <div class="scroll-element_size"></div>
-                                <div class="scroll-element_track"></div>
-                                <div class="scroll-bar" style="height: 0px;">
+                            <div class="scroll-element scroll-y">
+                                <div class="scroll-element_outer">
+                                    <div class="scroll-element_size"></div>
+                                    <div class="scroll-element_track"></div>
+                                    <div class="scroll-bar" style="height: 0px;">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                         <div class="cart-total text-center">
                             <label>Tổng tiền : </label>
-                            <span id="price" class="price ng-binding">8.000 VND</span>
+                            <span id="price" class="price ng-binding"></span>
                         </div>
                         <div class="cart-link">
                             <a name="checkout" class="btn btn-primary" href="./payment.html"> Thanh toán <i class="fa fa-angle-right"></i> </a>
@@ -130,24 +132,24 @@
     <button id="backtop"> <ion-icon name="caret-up-outline"></ion-icon></button>
 </div>
 <div class="container">
-        <div>
+        <div class="brand-title">
             <strong> Tất cả nhãn hiệu</strong>
         </div>
-        <div class="d-grid gap-3">
+        <div class="brand-content d-flex  ">
             <div class="box-brand">
                 <a href="#"> <img src="./image/brand1.png" alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand2.png" alt=""></a>
+                <a href="#"> <img src="./image/brand2.png"  alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand3.png" alt=""></a>
+                <a href="#"> <img src="./image/brand19.png"  alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand4.png" alt=""></a>
+                <a href="#"> <img src="./image/brand4.png"  alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand5.png" alt=""></a>
+                <a href="#"> <img src="./image/brand5.png"  alt=""></a>
             </div>
             <div class="box-brand">
                 <a href="#"> <img src="./image/brand6.png" alt=""></a>
@@ -156,10 +158,10 @@
                 <a href="#"> <img src="./image/brand7.png" alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand8.png" alt=""></a>
+                <a href="#"> <img src="./image/brand8.jpg" alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand9.png" alt=""></a>
+                <a href="#"> <img src="./image/brand9.jpg" alt=""></a>
             </div>
             <div class="box-brand">
                 <a href="#"> <img src="./image/brand10.png" alt=""></a>
@@ -171,22 +173,28 @@
                 <a href="#"> <img src="./image/brand12.png" alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand13.png" alt=""></a>
+                <a href="#"> <img src="./image/brand13.jpg" alt=""></a>
             </div>
             <div class="box-brand">
                 <a href="#"> <img src="./image/brand14.png" alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand15.png" alt=""></a>
+                <a href="#"> <img src="./image/brand8.jpg" alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand16.png" alt=""></a>
+                <a href="#"> <img src="./image/brand16.jpg" alt=""></a>
             </div>
             <div class="box-brand">
-                <a href="#"> <img src="./image/brand17.png" alt=""></a>
+                <a href="#"> <img src="./image/brand17.jpg" alt=""></a>
             </div>
             <div class="box-brand">
                 <a href="#"> <img src="./image/brand18.png" alt=""></a>
+            </div>
+            <div class="box-brand">
+                <a href="#"> <img src="./image/brand7.png" alt=""></a>
+            </div>
+            <div class="box-brand">
+                <a href="#"> <img src="./image/brand9.jpg" alt=""></a>
             </div>
         </div>
     </div>

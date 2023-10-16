@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Roboto',sans-serif;
+    transition: all 0.3s ease;
 }
 
-body{
+body {
     color: #1b1b28;
     background-color: #dedbdb70;
     opacity: 1;
     line-height: 1.5;
 }
 
-div .sticky{
+div .sticky {
     position: sticky;
     top: 0;
     width: 100%;
 }
 
-.box-fixed button{
+.box-fixed button {
     position: fixed;
     bottom:5em;
     right:2em;
@@ -31,13 +32,13 @@ div .sticky{
     z-index: 9999;
 }
 
-.box-fixed ion-icon{
+.box-fixed ion-icon {
     color: #FFFF;
     width:2em;
     height: 2em;
 }
 
-.container-header{
+.container-header {
     width: 100%;
     border-color: #d6d6db;
     display: inline-block;
@@ -48,7 +49,7 @@ div .sticky{
     padding-bottom:0;
 }
 
-.title-row{
+.title-row {
     display: flex;
     justify-content: end;
     border-bottom: 1px  solid;
@@ -56,7 +57,7 @@ div .sticky{
     border-color: #d6d6db;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
 }
@@ -65,7 +66,7 @@ div .sticky{
     margin-bottom: -1px;
 }
 
-.title__item{
+.title__item {
     margin-left:10px;
     color: #5f5f66;
     border-right: 1px solid ;
@@ -74,17 +75,17 @@ div .sticky{
     border-color: #d6d6db;
 }
 
-.title-register{
+.title-register {
     border-right:0;
 }
 
-.title a{
+.title a {
     color: #2828b6;
     font-weight: 400;
     font-size: .9em;
 }
 
-.hearder{
+.hearder {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -92,27 +93,26 @@ div .sticky{
     top: 0;
 }
 
-.form-control{
+.form-control {
     width: 250%;
 }
 
-.bg-light{
+.bg-light {
     background-color: #FFFF !important;
 }
 
-.nav-item a{
+.nav-item a {
     font-weight: 600 !important;
     color: gray !important;
 }
 
-.navbar{
+.navbar {
     position: sticky;
     top: -10px;
     z-index: 10;
 }
 
-
-.menu{
+.menu {
     margin-top: 1.8em;
     height: 2.5em;
     width: 4%;
@@ -122,13 +122,13 @@ div .sticky{
     position: relative;
 }
 
-.menu ion-icon{
+.menu ion-icon {
     margin: 6px 0 0 4px;
     width: 25px;
     height: 25px;
 }
 
-.arrow{
+.arrow {
     width: 6px;
     height: 6px;
     position: absolute;
@@ -136,13 +136,13 @@ div .sticky{
     right:5px ;
 }
 
-.icon__cart{
+.icon__cart {
     display: flex;
     font-weight: 300; 
     margin-right: 11em;
 }
 
-.icon__cart ion-icon{
+.icon__cart ion-icon {
     display: flex;
     width: 30px;
     height: 25px;
@@ -152,12 +152,12 @@ div .sticky{
     font-size:.7em;
 }
 
-.like{
+.like {
     margin-right: 30px;
     position: relative;  
 }
 
-.like p{
+.like p {
     position: absolute;
     top: -5px;
     right: -1px;
@@ -171,11 +171,11 @@ div .sticky{
     font-size: 13px;
 }
 
-.cart{
+.cart {
     position: relative;
 }
 
-.cart p{
+.cart p {
     position: absolute;
     top: -3px;
     right: -5px;
@@ -189,12 +189,12 @@ div .sticky{
     padding-left:6px;
     font-size: 12px;
 }
-button{
+button {
     outline: none;
     border: none;
 }
 
-.mini-cart{
+.mini-cart {
     width: 23em;
     box-shadow: 2px 3px 3px 2px rgba(220, 220, 220, 0.499);
     position: absolute;
@@ -205,31 +205,30 @@ button{
     display:none;
 }
 
-.cart-list{
+.cart-list {
     border-top:1px solid  rgba(220, 220, 220, 0.499);
     height: 9em;
     overflow: auto;
 }
 
-
-.cart-info{
+.cart-info {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
 }
 
-.item-thumb{
+.item-thumb {
     width: 30%;
     height: 5em;
 }
 
-.box__item{
+.box__item {
     display: flex;
     margin-left: 1em;
     margin-top: 1em;
 }
 
-.item-action{
+.item-action {
     margin-top: 1.5em;
     display: inline-block;
     margin-right: 1em;
@@ -241,14 +240,14 @@ button{
     outline: none;
 }
 
-.cart-link{
+.cart-link {
     margin-top: 1em;
     display: flex;
     justify-content: center;
     padding-bottom: 2em;
 }
 
-.cart-total{
+.cart-total {
     border-top: 1px solid rgba(220, 220, 220, 0.499);
     padding-top: 1em;
 }
@@ -257,12 +256,12 @@ button{
     outline: none
 }
 
-.hover__nav{
+.hover__nav {
     display: flex;
     justify-content: center;
 }
 
-.hover__menu{
+.hover__menu {
     margin-top:10px;
     margin-left: -10em;
     width: 15em;
@@ -272,18 +271,18 @@ button{
     text-decoration: none;
 }
 
-.hover__menu li{
+.hover__menu li {
     list-style-type:none;  
     padding: 5px 10px;    
 }
 
-.menu__before{
+.menu__before {
     margin-top:-8px;
     background-color: #ffff;
     z-index: 10;
 }
 
-h6{
+h6 {
     background-color:rgba(238, 71, 45, 0.707);
     padding-top:10px;
     padding-left: 10px;
@@ -299,34 +298,34 @@ h6{
     float:inline-end;
 }
 
-.hover__menu ion-icon{
+.hover__menu ion-icon {
     position: absolute;
     top:-23px ;
     right: 23px;
     color: rgba(238, 71, 45, 0.707) ;
 }
 
-.hover__menu a{
+.hover__menu a {
     text-decoration: none; 
 }
 
-.item__img{
+.item__img {
     margin-top: 20px;
     display: flex;
 }
 
-.item__img-2 img{
+.item__img-2 img {
     height: 12.2em;
 }
 
-.item__img-3 img{
+.item__img-3 img {
     height: 12.2em;
 }
-.item__img-3{
+.item__img-3 {
     margin-top: 10px;
 }
 
-.item__img-row2{
+.item__img-row2 {
     display: flex;
     margin-top:30px;
     
@@ -337,27 +336,27 @@ h6{
     height: 9em;
 }
 
-.item__img-7 img{
+.item__img-7 img {
     margin-left:-1px;
 }
 
-.item__img-8 img{
+.item__img-8 img {
     margin-left: -1px;
 }
 
-.item__img-9 img{
+.item__img-9 img {
     margin-left:-2px
 }
 
-.item__img-10{
+.item__img-10 {
     margin-top:30px;
 }
 
-.item__img-10 img{
+.item__img-10 img {
     width: 100%;
 }
 
-.list__product__sample{
+.list__product__sample {
     margin-top: 20px;
     box-shadow:2px  ;
     border-radius: 5px;
@@ -365,7 +364,7 @@ h6{
     background-color: #ffff;
 }
 
-.list__sample{
+.list__sample {
     align-items: center;
     display: flex;
     border-bottom:1px solid   #e1dede;
@@ -375,27 +374,27 @@ h6{
     font-weight: 600;
 }
 
-.food{
+.food {
     margin-left:33px;
     margin-bottom:0px
 }
 
-.btn__more{
+.btn__more {
     margin-right:33px;
     outline: none;
     border: none;
 }
 
-.element-list{
+.element-list {
     margin-top:20px;
     margin-left: .4px;
 }
 
-.product{
+.product {
     display: flex;
 }
 
-.list__products{
+.list__products {
     border: 1px solid  rgb(233, 232, 232);
     padding-bottom: 20px;
     border-radius: 5px;
@@ -405,37 +404,37 @@ h6{
     margin-left:1rem;
 }
 
-.list__products img{
+.list__products img {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-
 }
 
-.product-imfor{
+.product-imfor {
     padding-left: 10px;
     padding-bottom:10px;
 }
 
-.product-imfor p{
+.product-imfor p {
     margin-top:15px;
     font-weight: 600;
 }
 
-.product-img img{
+.product-img img {
     width: 100%;
 }
 
-.product-1 img{
+.product-1 img {
     width: 100%;
+    height: 248px;
 }
 
-.product-imfor a{
+.product-imfor a {
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
 }
 
-.hover__product{
+.hover__product {
     position: absolute;
     top: 0;
     right: -40px;
@@ -443,11 +442,11 @@ h6{
     transition: .2s linear 1s ;
 }
 
-.hover__product ion-icon{
+.hover__product ion-icon {
     height: 1.8em;
 }
 
-.hover__product button{
+.hover__product button {
     width: 2em;
     height: 2em;
     border-radius: 50%;
@@ -465,16 +464,16 @@ h6{
     padding-bottom:30px;
 }
 
-.item-brand img{
+.item-brand img {
     width: 100%;
 }
 
-.brand{
+.brand {
     background-color: #FFFF;
     margin-top: 30px;
 }
 
-.brand-item{
+.brand-item {
     border-bottom:1px solid rgb(233, 232, 232);
     margin: 0 30px;
     display: flex;
@@ -482,66 +481,68 @@ h6{
     height: 50px;
 }
 
-.brand-item p{
+.brand-item p {
     font-weight:600;
     font-size: 25px;
     margin-bottom: 0;
 }
 
-.box__brand img{
+.box__brand img {
     width: 50%;
     margin-top: 30px;
 }
 
-.block-brand{
+.block-brand {
     justify-content: space-evenly;
 }
 
-.list{
+.list {
     justify-content: space-around;
 }
 
-footer{
+footer {
     background-color: black;
     margin-top: 1em;
 }
 
-.container-footer h5{
+.container-footer h5 {
     color: #FFFF;
 }
 
+
 /* HOVER */
-.hearder__search-icon:hover{
+.hearder__search-icon:hover {
     background-color: #2828b6;
 }
 
-.menu:hover > .hover__menu{
+.menu:hover > .hover__menu {
     display: block;
     z-index: 2;
 }
 
-.list__products:hover{
-    box-shadow: 1px 3px 2px 0px rgb(233, 232, 232), 2px 3px 4px 0px inset rgb(233, 232, 232);
+.list__products:hover {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.400);
 }
 
-.list__products:hover .hover__product{
+.list__products:hover .hover__product {
     display: block;
     top: 5px;
     right: 10px;
 }
 
-.hover__product button:hover{
+.hover__product button:hover {
     background-color: red;
     color: #ffff;
     width: 2.2em;
     height: 2.2em
 }
 
-.cart:hover .mini-cart{
+.cart:hover .mini-cart {
     display: block;
     z-index: 10;
 }
-.nav-brand{
+
+.nav-brand {
     margin-left: 10em
 }
 

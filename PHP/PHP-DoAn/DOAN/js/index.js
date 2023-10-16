@@ -17,10 +17,10 @@ let product = [
     },
     {
         id:3,
-        name: 'Hạt dẻ cười Calo Nuts',
+        name: 'Bánh tráng lá Phô Mai Dứa',
         price: 150000,
-        img:'product3.jpg',
-        category: 'Hạt',
+        img:'add2.png',
+        category: 'Bánhkẹo',
         quantity :1,
     },
     {
@@ -63,6 +63,14 @@ let product = [
         category: 'Hạt',
         quantity :1,
     },
+    {
+        id:9,
+        name: 'Khô gà bơ tỏi',
+        price: 50000,
+        img:'add1.jpg',
+        category: 'Đồănvặt',
+        quantity :1,
+    },
 ];
 function renderUI(searchProduct = product ){
     let html ='';
@@ -100,6 +108,46 @@ var item = JSON.parse(itemsLocal);
 handleMiniCart(item)
 };
 renderUI(product);
+
+// Render product in cart
+function handleMiniCart(miniCartProduct) {
+    let html = '';
+    if (miniCartProduct.length == 0) {
+        html +=`
+            <h5 style="margin:3em; "><ion-icon name="sad-outline" style="margin-left:4em"></ion-icon> Chưa có sản phẩm nào </h5>
+        `
+    };
+    for (let i = 0; i < miniCartProduct.length; i++) {
+        html +=`
+            <li class=" box__item d-flex" >
+                <div class="d-flex">
+                    <div class="item-thumb">
+                        <a href="./html/list-products.html" title="" class="">
+                            <img alt="" src="html/image/${miniCartProduct[i].img}" width="50%">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./html/list-products.html" style="text-decoration:none"  > ${miniCartProduct[i].name}</a>
+                        <div class="item-quantity">
+                            <span class="quantity__mini-cart" > ${miniCartProduct[i].quantity}</span>x
+                            <span class="price__mini-cart" > ${miniCartProduct[i].price.toLocaleString()} VND</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-action">
+                    <button onclick="handleRemove(${miniCartProduct[i].id})" class="btn-remove" style="outline: none; href="">
+                        <ion-icon style="color: red; height: 1em; background-color: #FFFF" name="trash-outline"></ion-icon>
+                    </button>
+                </div>
+        </li>                   
+    `
+    }
+$('#render__mini-cart').html(html);
+let itemsLocal= localStorage.getItem('addProduct');
+let items = JSON.parse(itemsLocal);
+updateTotalPrice(items)
+updateQuantity (items)
+}
 
 $('#btn-search').click(function () {
     let searchProduct = product;
@@ -144,45 +192,7 @@ function handleAdd (id) {
         var item = JSON.parse(itemsLocal);
         handleMiniCart(item);
 }
-// Render product in cart
-function handleMiniCart(miniCartProduct) {
-    let html = '';
-    if (miniCartProduct.length == 0) {
-        html +=`
-            <h5 style="margin:3em; "><ion-icon name="sad-outline" style="margin-left:4em"></ion-icon> Chưa có sản phẩm nào </h5>
-        `
-    };
-    for (let i = 0; i < miniCartProduct.length; i++) {
-        html +=`
-            <li class=" box__item d-flex" >
-                <div class="d-flex">
-                    <div class="item-thumb">
-                        <a href="./html/list-products.html" title="" class="">
-                            <img alt="" src="html/image/${miniCartProduct[i].img}" width="50%">
-                        </a>
-                    </div>
-                    <div class="item-title">
-                        <a href="./html/list-products.html" style="text-decoration:none"  > ${miniCartProduct[i].name}</a>
-                        <div class="item-quantity">
-                            <span class="quantity__mini-cart" > ${miniCartProduct[i].quantity}</span>x
-                            <span class="price__mini-cart" > ${miniCartProduct[i].price.toLocaleString()} VND</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-action">
-                    <button onclick="handleRemove(${miniCartProduct[i].id})" class="btn-remove" style="outline: none; href="">
-                        <ion-icon style="color: red; height: 1em; background-color: #FFFF" name="trash-outline"></ion-icon>
-                    </button>
-                </div>
-        </li>                   
-    `
-    }
-$('#render__mini-cart').html(html);
-let itemsLocal= localStorage.getItem('addProduct');
-let items = JSON.parse(itemsLocal);
-updateTotalPrice(items)
-updateQuantity (items)
-}
+
 //Total price
 function updateTotalPrice(addProduct){
     let totalPrice = 0;

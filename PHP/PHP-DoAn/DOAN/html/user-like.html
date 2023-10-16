@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NÔNG SẢN VIỆT</title>
-    <link rel="icon" type="image/png" sizes="16x16"  href="./html/image/favicon.png">
+    <title> Thương Hiệu </title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="./image/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
@@ -13,93 +13,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
-    <link rel="stylesheet" href="./html/css/style.css">
-    <link rel="stylesheet" href="./html/css/toast.css">
-    
-    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/toast.css">
+    <link rel="stylesheet" href="./css/brand.css">
 </head>
 <body>
-
 <div class="container-fluid  container-header">
     <div class="row title-row">
-        <div class="title col-lg-5 col-md-6 col-sm">
+        <div class="title col-lg-5 col-md-5">
             <div class="title__item title-hotline"> 
                 <ion-icon name="call-outline"></ion-icon>
                 Hotline : 09.12.18.2772 
             </div>
-            <div class="checklogin  d-flex">
-                <div class="title__item title-login"><a href="./html/login.html"> ĐĂNG NHẬP </a></div>
-                <div class="title__item title-register "><a href="./html/signup.html"> ĐĂNG KÝ </a></div>
-            </div>
+            <div class="title__item title-login"><a href="./login.html"> ĐĂNG NHẬP </a></div>
+            <div class="title__item title-register"><a href="./signup.html"> ĐĂNG KÝ </a></div>
         </div>
     </div>
 </div>
-<div class="box-fixed" >
-    <button id="backtop" > <ion-icon name="caret-up-outline"></ion-icon></button>
-</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid" id="nav-reponsive">
-        <a class="nav-brand" class="navbar-brand" href="#"><img src="./html/image/ogo.png" height="140px" alt=""></a>
-        <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="nav-brand" class="navbar-brand" href="#"><img src="./image/ogo.png" height="140px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse toggle-open" id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link "  href="./index.html"> TRANG CHỦ </a>
+                <a class="nav-link active" aria-current="page" href="../index.html">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./html/list-products.html"> TẤT CẢ SẢN PHẨM</a>
+                <a class="nav-link" href="./list-products.html"> TẤT CẢ SẢN PHẨM</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="./html/brand.html"> THƯƠNG HIỆU</a>  
+                <a class="nav-link" href="./brand.html"> THƯƠNG HIỆU</a>  
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="./index.html"> LIÊN HỆ</a>
+                <a class="nav-link" href="./index.html"> LIÊN HỆ</a>
             </li>
             </ul>
             <div class="d-flex" >
             <input id="box-input" style="outline: none;" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-            <button id="btn-search" class="btn btn-outline-success" type="submit" style="width: 100%" >Tìm kiêm</button>
+            <button id="btn-search" class="btn btn-outline-success" type="submit" style="width: 100%">Tìm kiêm</button>
             </div>
         </div>
-        <div class="icon__cart">
+        <div class="icon__cart" >
             <div class="like">
-                <a href=""><ion-icon name="heart-outline"> </ion-icon></a>
+                <a href="./user-like.html"><ion-icon name="heart-outline"> </ion-icon></a>
                 <p> 0 </p>
                 <strong> Yêu Thích </strong>
             </div>
-            
             <div  class="cart">
-                <a href="./html/cart.html"><ion-icon name="cart-outline"> </ion-icon> </a>
-                <p id="quantity-cart">  </p>
+                <a href="./cart.html"><ion-icon name="cart-outline"> </ion-icon> </a>
+                <p  id="quantity-cart"> 0 </p>
                 <strong> Giỏ Hàng </strong>
                 <div id="mini-cart" class="mini-cart" >
-                        <!-- <span class="icon-arrow"> <ion-icon name="caret-up-outline"></ion-icon></span> -->
+                        <span class="icon-arrow"> <ion-icon style="color: ;" name="caret-up-outline"></ion-icon></span>
                     <div class="mini-cart__content">
                         <div class="cart-info">
                             <span style="padding-top:.5em"> Giỏ hàng của bạn</span>
-                            <a name="checkout" href="./html/cart.html" class="btn btn-default"> Xem chi tiết </a>
+                            <a name="checkout" href="./cart.html" class="btn btn-default"> Xem chi tiết </a>
                         </div>
                         <div class="scroll-wrapper " >
                             <div class="scrollbar-macosx scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 146.6px;">
-                                <ul onchange="handleMiniCart()" id="render__mini-cart" class="cart-list">
+                                <ul onclick="handleMiniCart()" id="render__mini-cart" class="cart-list">
                                     <li class=" box__item" >
                                         <div class="item-thumb">
                                             <a href="./html/list-products.html" title="" class="">
-                                                <img alt="" src="html/image/" width="50%">
+                                                <img alt="" src="./image/" width="50%">
                                             </a>
                                         </div>
                                         <div class="item-title">
-                                            <a href="./html/list-products.html"  > </a>
+                                            <a href="./list-products.html"  > </a>
                                             <div class="item-quantity">
                                                 <span class="quantity__mini-cart" ></span>
-                                                <span class="price__mini-cart" > </span>
+                                                <span class="price__mini-cart" ></span>
                                             </div>
                                         </div>
-                                        <div class="item-action" >
-                                            <button  onclick="handleRemove()" class="btn-remove" href="">
-                                                <ion-icon style="color: red; height: 1em;"></ion-icon>
+                                        <div class="item-action">
+                                            <button onclick="handleRemove()" class="btn-remove" href="">
+                                                
                                             </button>
                                         </div>
                                     </li>                    
@@ -123,121 +115,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cart-total text-center" style="margin-top: 2em;">
+                        <div class="cart-total text-center">
                             <label>Tổng tiền : </label>
-                            <span id="price" class="price ng-binding">8.000 VND</span>
+                            <span id="price" class="price ng-binding"></span>
                         </div>
                         <div class="cart-link">
-                            <a  class="btn btn-primary" href="./html/payment.html"> Thanh toán <i class="fa fa-angle-right"></i> </a>
+                            <a name="checkout" class="btn btn-primary" href="./payment.html"> Thanh toán <i class="fa fa-angle-right"></i> </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </nav>
+<div class="box-fixed">
+    <button id="backtop"> <ion-icon name="caret-up-outline"></ion-icon></button>
+</div>
 <div class="container">
-    <div class="row mt-3">
-        <div id="carouselExampleControls"  class="carousel slide" data-ride="carousel" style="width: 100%; padding-left: 15px; padding-right: 15px;">
-            <div class="carousel-inner">
-                <div class="carousel-item active  pd-15">
-                    <img class="d-block "  src="./html/image/image1.jpg" width="100%" alt="Ảnh" >
-                </div>
-                <div class="carousel-item pd-15 ">
-                    <img class="d-block "  src="./html/image/image2.jpg" width="100%" alt="Ảnh">
-                </div>
-                <div class="carousel-item pd-15">
-                    <img class="d-block "  src="./html/image/image3.jpg"  width="100%" alt="Ảnh">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+        <div class="like-title">
+            <strong> Danh sách yêu thích</strong>
         </div>
-    </div>
-    <div class="row item__img-row2">
-        <div class="item__img-6 col-md-3  ">
-            <a href=""> <img src="./html/image/image6.jpg" alt=""> </a>
+        <div class="like-content  d-flex  ">
+            
         </div>
-        <div class="item__img-7 col-md-3 ">
-            <a href="">  <img src="./html/image/image7.jpg" alt=""> </a>
-        </div>
-        <div class="item__img-8 col-md-3 ">
-            <a href=""> <img src="./html/image/image8.jpg" alt=""> </a>
-        </div>
-        <div class="item__img-9 col- col-md-3 ">
-            <a href=""> <img src="./html/image/image9.jpg" alt=""> </a>
-        </div>
-    </div>
-    <div class="item__img-10 ">
-        <a href=""> <img src="./html/image/image8.jpg" alt=""></a>
-    </div>
-    <div class="list__product__sample">
-        <div class="list__sample">
-            <div class=" food">
-                <h4> Thực Phẩm</h4> 
-            </div>
-            <div class="btn__more">
-                <button style="border: none;  padding:.4em; outline: none;">
-                    <a style="text-decoration: none;" href="./html/list-products.html">  XEM THÊM </a>
-                </button>
-            </div>
-        </div>
-        <div class="list__product">
-            <div class="row element-list">
-                <div class="product-img col-lg-3 ">
-                    <img src="./html/image/img-product1.png" alt="">
-                </div>
-                <div id="products" onclick="renderUI()" class="row product col-lg-9 " >
-                    <div onclick="handleDetail()" class="list__products " style="border-radius: 5px;">
-                        <div class="product-1">
-                            <a href="./html/product-detail.html"> <img src="./html/image/product1.jpg" alt=""></a>
-                        </div>
-                        <div class="product-imfor">
-                            <p>  </p>
-                            <div class="ion-star">
-                                <ion-icon name="star-outline"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                            </div>
-                            <a href="./html/product-detail.html">  </a>
-                        </div>
-                        <div class="hover__product">
-                            <div class="hove__heart">
-                                <button title=" Thêm vào danh sách yêu thích"> <ion-icon name="heart-outline"> </ion-icon> </button>
-                            </div>
-                            <div class=" hover__cart">
-                                <button onclick="handleAdd()" title="Thêm vào giỏ hàng"> <ion-icon name="cart-outline"> </ion-icon> </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="brand">
-        <div class="brand-item">
-            <p> Thương hiệu phổ biến </p>
-        </div>
-        <div class="row block-brand">
-            <div class="box__brand col-md-3 col-sm-6">
-                <a href="">  <img src="./html/image/brand3.png" alt=""></a>
-            </div>
-            <div class="box__brand col-md-3 col-sm-6">
-                <a href="">  <img src="./html/image/brand2.png" alt=""></a>
-            </div>
-            <div class="box__brand col-md-3 col-sm-6">
-                <a href="">  <img src="./html/image/brand1.png" alt=""></a>
-            </div>
-        </div>  
     </div>
 </div>
 <div id="toast"></div>
@@ -329,23 +229,13 @@
     © 2023 - Bản quyền thuộc về Duc Nguyen Media
     </div>
 </footer>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>;
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>;
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous">
-</script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="./js/toast.js"></script>
-<script src="./js/index.js" ></script>
-<script src="./js/common.js"></script>
+</script>;
+<script src="../js/toast.js"></script>
+<script src="../js/common.js"></script>
 </body>
 </html>
