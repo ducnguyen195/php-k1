@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Thương Hiệu </title>
+    <title> Danh Sách Yêu Thích </title>
     <link rel="icon" type="image/png" sizes="16x16"  href="./image/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/toast.css">
-    <link rel="stylesheet" href="./css/brand.css">
+    <link rel="stylesheet" href="./css/user-like.css">
 </head>
 <body>
 <div class="container-fluid  container-header">
@@ -132,11 +135,84 @@
     <button id="backtop"> <ion-icon name="caret-up-outline"></ion-icon></button>
 </div>
 <div class="container">
-        <div class="like-title">
-            <strong> Danh sách yêu thích</strong>
+    <div class="block-content d-flex  pt-4">
+        <div class="nav-user col-lg-3">
+            <div class="block-user">
+                <div class="box-icon">
+                    <span><img src="./image/img-user.png" alt=""></span>
+                    <h4 >Nông Sản Việt</h4>
+                    <div class="text-email"> test@gmail.com </div>
+                </div>
+                <div class="box__menu">
+                    <ul class="menu-user mb-3 p-2">
+                        <li >
+                            <a  class="d-flex" href="#">
+                                <span><ion-icon name="home-outline"></ion-icon></span>
+                                <p> Quản lý chung</p>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="d-flex" href="">
+                                <span><ion-icon name="receipt-outline"></ion-icon></span>
+                                <p> Lịch sử mua hàng</p>
+                            </a>
+                        </li>
+                        <li style="background-color: #ED1C2426;" >
+                            <a class="d-flex" href="">
+                                <span><ion-icon name="heart-outline"></ion-icon></span>
+                                <p> Danh sách yêu thích</p>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="d-flex" href="">
+                                <span><ion-icon name="build-outline"></ion-icon></span>
+                                <p> Yêu cầu hỗ trợ</p>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="d-flex" href="">
+                                <span><ion-icon name="person-outline"></ion-icon></span>
+                                <p> Thông tin tài khoản</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sign-product">
+                    <a href="">Đăng ký bán hàng</a>
+                </div>
+            </div>
         </div>
-        <div class="like-content  d-flex  ">
-            
+        <div class="like-content  ">
+            <div class="like-title">
+                <strong> Danh sách yêu thích</strong>
+            </div>
+            <div class="block__like">
+                <div class="box__like">
+                    <div class="box__like-body">
+                        <div class="box__like-img">
+                            <img src="./image/add3.png" alt="">
+                        </div>
+                        <div class="box__like-content">
+                            <strong> Bánh tráng lá Phô Mai Dứa</strong>
+                            <div class="ion-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p> 15000</p>
+                        </div>
+                    </div>
+                    <div class="box__like-footer d-flex">
+                        <ion-icon name="trash-outline"></ion-icon>
+                        <button class="d-flex"> 
+                            <ion-icon name="cart-outline"></ion-icon>
+                            <p> Thêm vào giỏ hàng</p>
+                        </button>
+                    </div>                    
+                </div>
+            </div>
         </div>
     </div>
 </div>

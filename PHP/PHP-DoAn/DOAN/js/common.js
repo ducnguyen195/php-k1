@@ -170,7 +170,7 @@ let listProduct = [
     {
         id:22,
         name: 'Bánh tráng lá Phô Mai Dứa',
-        price: 150000,
+        price: 15000,
         img:'add2.png',
         category: 'Bánhkẹo',
         quantity :1,
