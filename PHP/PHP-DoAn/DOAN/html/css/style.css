@@ -487,9 +487,15 @@ h6 {
     margin-bottom: 0;
 }
 
+.box__brand {
+    width: 250px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+
 .box__brand img {
-    width: 50%;
-    margin-top: 30px;
+    width: 100%;
 }
 
 .block-brand {
